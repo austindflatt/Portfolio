@@ -1,0 +1,83 @@
+[
+    {
+      "id": 0,
+      "name": "JavaScript",
+      "icon": "devicon-javascript-plain"
+    },
+    {
+        "id": 1,
+        "name": "Node.js",
+        "icon": "devicon-nodejs-plain"
+      },
+      {
+        "id": 2,
+        "name": "React/React Native",
+        "icon": "devicon-react-original"
+      },
+      {
+        "id": 3,
+        "name": "Redux",
+        "icon": "devicon-redux-original"
+      },
+      {
+        "id": 4,
+        "name": "Express",
+        "icon": "devicon-express-original"
+      },
+      {
+        "id": 5,
+        "name": "MongoDB",
+        "icon": "devicon-mongodb-plain"
+      },
+      {
+        "id": 6,
+        "name": "GraphQL",
+        "icon": "devicon-graphql-plain"
+      },
+      {
+        "id": 7,
+        "name": "Python/Django",
+        "icon": "devicon-python-plain"
+      },
+      {
+        "id": 8,
+        "name": "PostgreSQL",
+        "icon": "devicon-postgresql-plain"
+      },
+      {
+        "id": 9,
+        "name": "Material UI",
+        "icon": "devicon-materialui-plain"
+      },
+      {
+        "id": 10,
+        "name": "HTML",
+        "icon": "devicon-html5-plain"
+      },
+      {
+        "id": 11,
+        "name": "CSS",
+        "icon": "devicon-css3-plain"
+      },
+      {
+        "id": 12,
+        "name": "Git & GitHub",
+        "icon": "devicon-github-original"
+      },
+      {
+        "id": 13,
+        "name": "Amazon Web Services",
+        "icon": "devicon-amazonwebservices-original"
+      },
+      {
+        "id": 14,
+        "name": "Heroku",
+        "icon": "devicon-heroku-original"
+      },
+      {
+        "id": 15,
+        "name": "Firebase",
+        "icon": "devicon-firebase-plain"
+      }
+
+]

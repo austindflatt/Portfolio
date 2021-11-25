@@ -1,0 +1,14 @@
+[
+    {
+      "id": 0,
+      "title": "Think and Grow Rich",
+      "author": "Napoleon Hill",
+      "imageUrl": "images/projects/portfolio.png"
+    },
+    {
+      "id": 1,
+      "title": "The Science of Success",
+      "author": "Wallace D. Wattles",
+      "imageUrl": "images/projects/sticksy.png"
+    }
+]

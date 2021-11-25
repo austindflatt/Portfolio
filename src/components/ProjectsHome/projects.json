@@ -1,0 +1,20 @@
+[
+    {
+      "id": 0,
+      "name": "Portfolio Website",
+      "description": "My personal portfolio website built with React.js",
+      "github": "https://github.com/austindflatt/portfolio",
+      "link": "https://austinflatt.com/",
+      "imageUrl": "images/projects/portfolio.png",
+      "showViewLive": true
+    },
+    {
+      "id": 1,
+      "name": "Sticksy",
+      "description": "A note taking web app built with React.js",
+      "github": "https://github.com/austindflatt/sticksy",
+      "link": "https://sticksy.herokuapp.com/",
+      "imageUrl": "images/projects/sticksy.png",
+      "showViewLive": true
+    }
+]
