@@ -18,7 +18,7 @@ function Metrics() {
         <br />
         <ContainerSmall>
         <h2 className="section-title">Metrics 📊</h2>
-        <p>This is my dashboard, built with Next.js API routes deployed as serverless functions. This dashboard is to track various metrics across platforms I am on like YouTube, GitHub, and more.</p>
+        <p>This dashboard is to track various metrics across platforms I am on like YouTube, GitHub, and more.</p>
         <br />
         <p>GitHub Commits:</p>
         <p>GitHub Stars:</p>
