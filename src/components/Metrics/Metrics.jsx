@@ -25,7 +25,7 @@ function Metrics() {
         <p>YouTube Subscribers:</p>
         <p>YouTube Views:</p>
         <p>Instagram Followers:</p>
-        <p>All-Time Views:</p>
+        <p>Portfolio Views:</p>
         </ContainerSmall>
         </SectionInner>
         </>

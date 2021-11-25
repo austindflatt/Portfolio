@@ -16,5 +16,14 @@
       "link": "https://sticksy.herokuapp.com/",
       "imageUrl": "images/projects/sticksy.png",
       "showViewLive": true
+    },
+    {
+      "id": 2,
+      "name": "devConnect",
+      "description": "A tech meetup web app built with Python/Django MVT",
+      "github": "https://github.com/austindflatt/Tech_Meetup_Capstone",
+      "link": "",
+      "imageUrl": "images/projects/devconnect.png",
+      "showViewLive": false
     }
 ]

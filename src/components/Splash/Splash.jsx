@@ -57,7 +57,7 @@ export const Social = styled.div`
 	-webkit-box-pack: center;
 
     @media (max-width:639px) {
-            {
+        {
             display: flex;
             align-items: center;
             text-align: center;
@@ -115,6 +115,9 @@ function Splash() {
         </SocialLink>
         </Social>
         <div className="splash-cta"> <Button href={data.resume} rel="noreferrer" target="_blank">Resume</Button>
+        </div>
+        <div class="toggle">
+        <Button href="#">Dark Mode</Button>
         </div>
         </div>
         <div className="splash-media">

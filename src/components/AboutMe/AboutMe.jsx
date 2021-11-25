@@ -77,7 +77,7 @@ function AboutMe() {
         <Container>
         <SectionInner>
         <h2>About Me</h2>
-        <p>{data.aboutMe} <Link to="about">Learn more about me</Link>, and my journey as a software engineer.</p>
+        <p>{data.aboutMe}</p>
         <MemojiSize>
         <Memoji />
         </MemojiSize>
