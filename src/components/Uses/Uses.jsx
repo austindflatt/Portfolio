@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { data } from '../../data/data';
 import Container from '../styles/Container'
 import ContainerSmall from '../styles/ContainerSmall'
 import SectionInner from '../styles/SectionInner'

@@ -77,7 +77,6 @@ export const SocialLink = styled.a`
 `;
 
 function Splash() {
-
     return (
         <>
         <section className="splash">
@@ -117,7 +116,6 @@ function Splash() {
         <div className="splash-cta"> <Button href={data.resume} rel="noreferrer" target="_blank">Resume</Button>
         </div>
         <div class="toggle">
-        <Button href="#">Dark Mode</Button>
         </div>
         </div>
         <div className="splash-media">

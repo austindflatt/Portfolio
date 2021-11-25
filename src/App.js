@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import HeaderNav from './components/Header/Header';
@@ -10,10 +11,7 @@ import Footer from './components/Footer/Footer';
 import PageNotFound from './components/404/404';
 import GlobalStyle from './components/styles/GlobalStyle';
 
-
 const App = () => {
-
-
   return (
     <div>
       <BrowserRouter>

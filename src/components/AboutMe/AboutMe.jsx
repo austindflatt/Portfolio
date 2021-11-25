@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { data } from '../../data/data';
 import skills from './skills.json';
 import styled from 'styled-components';
