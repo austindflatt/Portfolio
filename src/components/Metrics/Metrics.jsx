@@ -8,11 +8,11 @@ function Metrics() {
 
     return (
         <>
-        <Helmet>
+        {/* <Helmet>
             <title>Metrics | Austin Flatt</title>
             <meta name='description' content='Dashboard to track various metrics across platforms I am on like YouTube, GitHub, and more.' />
             <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering equipment, louisville coding' />
-        </Helmet>
+        </Helmet> */}
         <Container />
         <SectionInner>
         <br />

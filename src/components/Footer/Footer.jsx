@@ -8,10 +8,8 @@ export const FooterCopyright = styled.div`
     background-color: #fafafa;
     border-top: 1px solid #eaeaea;
     display: inline-flex;
-    position: relative;
     z-index: 300;
     flex: 50%;
-
     padding-bottom: 20px;
 	display: flex;
 	-webkit-box-pack: center;
@@ -32,7 +30,6 @@ function Footer() {
         <FooterCopyright>
         <br />{footer.info}
         <br />{footer.made}
-        
         </FooterCopyright>
         </>
     )
