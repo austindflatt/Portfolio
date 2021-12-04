@@ -9,6 +9,6 @@
 * Express
 * Styled Components
 
-## ✨ Live Demo
+## ✨ Live Site
 
 [http://austinflatt.com](http://austinflatt.com)
