@@ -48,7 +48,7 @@ const PageNotFound = () => {
         <ContainerSmall>
         <Error>
         <LostSize>
-        <Lost />
+        <Lost loading="lazy" />
         </LostSize>
         <NotFoundHeading>404</NotFoundHeading>
         <NotFoundSubHeading>Sorry, this page doesn't exist.</NotFoundSubHeading>
