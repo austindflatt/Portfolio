@@ -39,7 +39,7 @@ const Contact = () => {
         <Helmet>
             <title>Contact | Austin Flatt</title>
             <meta name='description' content='Get in touch with me' />
-            <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering job, louisville coding, hire software engineer, hire louisville software developer' />
+            <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering job, louisville coder, hire software engineer, hire louisville software developer' />
         </Helmet>
         <Container />
         <SectionInner>

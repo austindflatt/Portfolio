@@ -134,10 +134,16 @@ const GlobalStyle = createGlobalStyle`
 	}
 	
 	.h3 {
-		font-size: 24px;
+		font-size: 20px;
+		font-weight: 400;
 		line-height: 34px;
 		letter-spacing: -0.1px;
 		color: var(--main-text)
+	}
+
+	#skills h3 {
+		font-size: 10px;
+		font-weight: 400;
 	}
 	
 	.h3 sup {

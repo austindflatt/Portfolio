@@ -84,7 +84,10 @@ function AboutMe() {
         <h2>My Toolkit</h2>
         <Tech>
         {skills.map((skill) => (
-        <TechList><i key={skill.id} className={skill.icon}></i></TechList>
+        <TechList>
+            <i key={skill.id} className={skill.icon}></i>
+            <h3 className='skills h3'>{skill.name}</h3>
+        </TechList>
         ))}
         </Tech>
         </SectionInner>

@@ -11,7 +11,7 @@
       },
       {
         "id": 2,
-        "name": "React/React Native",
+        "name": "React",
         "icon": "devicon-react-original"
       },
       {
@@ -36,8 +36,8 @@
       },
       {
         "id": 7,
-        "name": "Python/Django",
-        "icon": "devicon-python-plain"
+        "name": "Vue",
+        "icon": "devicon-vuejs-plain"
       },
       {
         "id": 8,
@@ -61,23 +61,22 @@
       },
       {
         "id": 12,
+        "name": "Bootstrap",
+        "icon": "devicon-bootstrap-plain"
+      },
+      {
+        "id": 13,
         "name": "Git & GitHub",
         "icon": "devicon-github-original"
       },
       {
-        "id": 13,
-        "name": "Amazon Web Services",
+        "id": 14,
+        "name": "AWS",
         "icon": "devicon-amazonwebservices-original"
       },
       {
-        "id": 14,
+        "id": 15,
         "name": "Heroku",
         "icon": "devicon-heroku-original"
-      },
-      {
-        "id": 15,
-        "name": "Firebase",
-        "icon": "devicon-firebase-plain"
       }
-
 ]
