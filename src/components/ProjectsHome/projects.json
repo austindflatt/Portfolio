@@ -25,5 +25,15 @@
       "link": "",
       "imageUrl": "images/projects/devconnect.png",
       "showViewLive": false
+    },
+    {
+      "id": 3,
+      "name": "Crypto Tracker",
+      "description": "A crypto currency tracker built with JavaScript, HTML, & CSS",
+      "github": "https://github.com/austindflatt/crypto-currency-tracker",
+      "link": "https://austindflatt.github.io/crypto-currency-tracker/",
+      "imageUrl": "images/projects/crypto-tracker.png",
+      "showViewLive": true
     }
+
 ]
