@@ -30,7 +30,6 @@ function AboutPage() {
                 ))}
             </ul>
         </p>
-        <Metrics />
         </ContainerSmall>
         </SectionInner>
         </>
