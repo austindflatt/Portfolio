@@ -21,7 +21,7 @@ const App = () => {
         <meta name='description' content='Personal portfolio of Austin Flatt, Software Engineer based in Louisville, Kentucky.' />
         <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, ui/ux designer, mern, react, python, django, html, css, javascript, programmer, coder, seo' />
         <meta property="og:image" content='%PUBLIC_URL%/AustinFlatt.jpg' />
-        <meta property="og:description" content='Personal portfolio website of Austin Flatt, Software Engineer and UI/UX Designer.' />
+        <meta property="og:description" content='Personal portfolio website of Austin Flatt, Software Engineer.' />
       </Helmet>
       <Switch>
       <Route exact path='/' component={Main} />
