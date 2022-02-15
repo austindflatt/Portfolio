@@ -18,26 +18,30 @@ export const ProjectHome = styled.div`
 `;
 
 export const ProjectHomeCard = styled.div`
+@media (min-width:641px) {
     opacity: 0.4;
     border-radius: 6px;
-	padding: 15px;
-	transition: all 0.5s ease 0s;
+    padding: 15px;
+    transition: all 0.5s ease 0s;
 
     &:hover {
     opacity: 1;
-	transition: 0.2s;
+    transition: 0.2s;
     }
+}
 `;
 
 export const ProjectBox = styled.div`
-    opacity: 0.4;
-    border-radius: 6px;
-	padding: 15px;
-	transition: all 0.5s ease 0s;
+    @media (min-width:641px) {
+        opacity: 0.4;
+        border-radius: 6px;
+        padding: 15px;
+        transition: all 0.5s ease 0s;
 
-    &:hover {
-    opacity: 1;
-	transition: 0.2s;
+        &:hover {
+        opacity: 1;
+        transition: 0.2s;
+        }
     }
 `;
 
@@ -92,7 +96,7 @@ function ProjectsHome() {
         <h2>Projects</h2>
         <ProjectHome>
         {projects.slice(0, 9).map((project, key) => (
-        <ProjectHomeCard key={project.id}>
+        <ProjectHomeCard key={key}>
         <ProjectImage src={project.imageUrl} loading="lazy" alt={project.name} />
         <ProjectHomeLinks>
         <ProjectWrapper>
