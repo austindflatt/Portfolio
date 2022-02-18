@@ -18,17 +18,17 @@ export const ProjectHome = styled.div`
 `;
 
 export const ProjectHomeCard = styled.div`
-@media (min-width:641px) {
-    opacity: 0.4;
-    border-radius: 6px;
-    padding: 15px;
-    transition: all 0.5s ease 0s;
+    @media (min-width:641px) {
+        opacity: 0.4;
+        border-radius: 6px;
+        padding: 15px;
+        transition: all 0.5s ease 0s;
 
-    &:hover {
-    opacity: 1;
-    transition: 0.2s;
+        &:hover {
+        opacity: 1;
+        transition: 0.2s;
+        }
     }
-}
 `;
 
 export const ProjectBox = styled.div`

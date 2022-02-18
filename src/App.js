@@ -18,10 +18,12 @@ const App = () => {
       <HeaderNav />
       <Helmet>
         <title>Austin Flatt | Software Engineer</title>
+        <meta name='title' content='Austin Flatt - Software Engineer.' />
         <meta name='description' content='Personal portfolio of Austin Flatt, Software Engineer based in Louisville, Kentucky.' />
-        <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, ui/ux designer, mern, react, python, django, html, css, javascript, programmer, coder, seo' />
-        <meta property="og:image" content='%PUBLIC_URL%/AustinFlatt.jpg' />
-        <meta property="og:description" content='Personal portfolio website of Austin Flatt, Software Engineer.' />
+        <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, mern, react, html, css, javascript, programmer, coder' />
+        <meta property="og:title" content='Austin Flatt - Software Engineer.' />
+        <meta property="og:description" content='Personal portfolio website of Austin Flatt, Software Engineer based in Louisville, Kentucky.' />
+        <meta property="og:image" content='%PUBLIC_URL%/portfolioimage.png' />
       </Helmet>
       <Switch>
       <Route exact path='/' component={Main} />

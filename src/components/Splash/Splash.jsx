@@ -115,7 +115,7 @@ function Splash() {
         </Social>
         <div className="splash-cta"> <Button href={data.resume} rel="noreferrer" target="_blank">Resume</Button>
         </div>
-        <div class="toggle">
+        <div className="toggle">
         </div>
         </div>
         <div className="splash-media">

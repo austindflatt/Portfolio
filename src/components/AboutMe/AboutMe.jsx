@@ -85,8 +85,8 @@ function AboutMe() {
         <Tech>
         {skills.map((skill) => (
         <TechList>
-            <i key={skill.id} className={skill.icon}></i>
-            <h3 className='skills h3'>{skill.name}</h3>
+            <i className={skill.icon}></i>
+            <h3 key={skill.id} className='skills h3'>{skill.name}</h3>
         </TechList>
         ))}
         </Tech>
