@@ -28,8 +28,8 @@ function Footer() {
     return (
         <>
         <FooterCopyright>
-        <br />{footer.info}
-        <br />{footer.made}
+            <br />{footer.info}
+            <br />{footer.made}
         </FooterCopyright>
         </>
     )

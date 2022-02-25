@@ -54,10 +54,10 @@ export const SplashMediaImage = styled.img`
     border-radius: 6px;
 
     @media (max-width: 639px) {
-            width: 300px;
-            background-color: #fafafa;
-            border: 1px solid #eaeaea;
-            border-radius: 6px;
+        width: 300px;
+        background-color: #fafafa;
+        border: 1px solid #eaeaea;
+        border-radius: 6px;
     }
 `;
 

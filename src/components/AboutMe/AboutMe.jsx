@@ -74,23 +74,23 @@ function AboutMe() {
     return (
         <>
         <Container>
-        <SectionInner>
-        <h2>About Me</h2>
-        <p>{data.aboutMe}</p>
-        <MemojiSize>
-        <Memoji />
-        </MemojiSize>
-        <br /><br />
-        <h2>My Toolkit</h2>
-        <Tech>
-        {skills.map((skill) => (
-        <TechList>
-            <i className={skill.icon}></i>
-            <h3 key={skill.id} className='skills h3'>{skill.name}</h3>
-        </TechList>
-        ))}
-        </Tech>
-        </SectionInner>
+            <SectionInner>
+                <h2>About Me</h2>
+                <p>{data.aboutMe}</p>
+                <MemojiSize>
+                <Memoji />
+                </MemojiSize>
+                <br /><br />
+                <h2>My Toolkit</h2>
+                <Tech>
+                {skills.map((skill) => (
+                <TechList>
+                    <i className={skill.icon}></i>
+                    <h3 key={skill.id} className='skills h3'>{skill.name}</h3>
+                </TechList>
+                ))}
+                </Tech>
+            </SectionInner>
         </Container>
         </>
     )

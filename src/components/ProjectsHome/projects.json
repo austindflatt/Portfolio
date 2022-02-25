@@ -34,14 +34,5 @@
       "link": "https://austindflatt.github.io/crypto-currency-tracker/",
       "imageUrl": "images/projects/crypto-tracker.png",
       "showViewLive": true
-    },
-    {
-      "id": 3,
-      "name": "Jeopardy!",
-      "description": "Jeopardy game built JavaScript, HTML, & CSS",
-      "github": "https://github.com/austindflatt/jeopardy",
-      "link": "https://austindflatt.github.io/jeopardy/",
-      "imageUrl": "images/projects/jeopardy.png",
-      "showViewLive": true
     }
 ]
