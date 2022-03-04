@@ -21,11 +21,10 @@ function Metrics() {
         <p>This dashboard is to track various metrics across platforms I am on like YouTube, GitHub, and more.</p>
         <br />
         <p>Portfolio Views:</p>
-        <p>GitHub Commits:</p>
+        <p>GitHub Repos:</p>
         <p>GitHub Stars:</p>
         <p>YouTube Subscribers:</p>
         <p>YouTube Views:</p>
-        <p>Instagram Followers:</p>
         </ContainerSmall>
         </SectionInner>
         </>

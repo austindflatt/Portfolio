@@ -32,7 +32,7 @@ const App = () => {
           <Route exact path='/projects' component={ProjectsCollection} />
           <Route path='/uses' component={Uses} />
           <Route path='/contact' component={Contact} />
-          <Route component={PageNotFound} />
+          <Route path='/*' component={PageNotFound} />
         </Switch>
         <GlobalStyle />
       </BrowserRouter>
