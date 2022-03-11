@@ -19,13 +19,13 @@ export const ProjectHome = styled.div`
 
 export const ProjectHomeCard = styled.div`
     @media (min-width:641px) {
-        opacity: 0.4;
+        opacity: 1;
         border-radius: 6px;
         padding: 15px;
         transition: all 0.5s ease 0s;
 
         &:hover {
-        opacity: 1;
+        opacity: 0.7;
         transition: 0.2s;
         }
     }
@@ -33,13 +33,13 @@ export const ProjectHomeCard = styled.div`
 
 export const ProjectBox = styled.div`
     @media (min-width:641px) {
-        opacity: 0.4;
+        opacity: 1;
         border-radius: 6px;
         padding: 15px;
         transition: all 0.5s ease 0s;
 
         &:hover {
-        opacity: 1;
+        opacity: 0.7;
         transition: 0.2s;
         }
     }
@@ -100,7 +100,7 @@ function ProjectsCollection() {
         <Container>
             <SectionInner>
             <br />
-            <h2>My Projects 🔥</h2>
+            <h2>My Projects</h2>
             <ProjectHome>
                 {projects.slice(0, 21).map((project) => (
                 <ProjectHomeCard key={project.id}>

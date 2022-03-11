@@ -83,12 +83,12 @@ function AboutMe() {
                 <br /><br />
                 <h2>My Toolkit</h2>
                 <Tech>
-                {skills.map((skill) => (
-                <TechList>
-                    <i className={skill.icon}></i>
-                    <h3 key={skill.id} className='skills h3'>{skill.name}</h3>
-                </TechList>
-                ))}
+                    {skills.map((skill) => (
+                    <TechList>
+                        <i className={skill.icon}></i>
+                        <h3 key={skill.id} className='skills h3'>{skill.name}</h3>
+                    </TechList>
+                    ))}
                 </Tech>
             </SectionInner>
         </Container>

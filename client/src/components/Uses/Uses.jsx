@@ -17,7 +17,7 @@ function Uses() {
                 <SectionInner>
                 <br />
                     <ContainerSmall>
-                        <h2>Tools that I use 👨🏻‍💻</h2>
+                        <h2>Tools that I use</h2>
                         <p>Here's a quick look at some of the software and hardware I currently use everyday for development.</p>
                         <h2>Equipment</h2>
                             <ul>
@@ -30,7 +30,7 @@ function Uses() {
                         <h2>Coding and design tools</h2>
                             <ul>
                                 <li>I use <a href="https://code.visualstudio.com/" rel="noreferrer" target="_blank">Visual Studio Code</a> and <a href="https://www.jetbrains.com/pycharm/" rel="noreferrer" target="_blank">PyCharm</a>.</li>
-                                <li>For my terminal, I use the built in MacOS.</li>
+                                <li>For my terminal, I use <a href="https://www.warp.dev/" rel="noreferrer" target="_blank">Warp</a>.</li>
                                 <li><a href="https://www.figma.com/" rel="noreferrer" target="_blank">Figma</a> has had a huge impact on the way I create prototypes and wireframes.</li>
                                 <li><a href="https://www.adobe.com/" rel="noreferrer" target="_blank">Adobe Photoshop</a> for designing and image editing.</li>
                             </ul>
@@ -42,9 +42,8 @@ function Uses() {
                             </ul>
                         <h2>Web App built with 🚀</h2>
                             <ul>
-                                <li><a href="https://reactjs.org/" rel="noreferrer" target="_blank">React.js</a></li>
+                                <li><a href="https://reactjs.org/" rel="noreferrer" target="_blank">React</a></li>
                                 <li><a href="https://nodejs.org/en/" rel="noreferrer" target="_blank">Node.js</a></li>
-                                <li><a href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a></li>
                                 <li>GitHub</li>
                                 <li>Love 💚</li>
                             </ul>

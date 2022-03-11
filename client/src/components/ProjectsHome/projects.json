@@ -1,20 +1,20 @@
 [
     {
       "id": 0,
-      "name": "Portfolio Website",
-      "description": "My personal portfolio website built with React.js",
-      "github": "https://github.com/austindflatt/portfolio",
-      "link": "https://austinflatt.com/",
-      "imageUrl": "images/projects/portfolio.png",
+      "name": "Sticksy",
+      "description": "A note taking web app built with React.js",
+      "github": "https://github.com/austindflatt/sticksy",
+      "link": "https://austindflatt.github.io/sticksy/",
+      "imageUrl": "images/projects/sticksy.png",
       "showViewLive": true
     },
     {
       "id": 1,
-      "name": "Sticksy",
-      "description": "A note taking web app built with React.js",
-      "github": "https://github.com/austindflatt/sticksy",
-      "link": "https://sticksy.herokuapp.com/",
-      "imageUrl": "images/projects/sticksy.png",
+      "name": "GitHub Profile Finder",
+      "description": "A web app that allows a user to search for GitHub usernames and see profile details",
+      "github": "https://github.com/austindflatt/github-profile-finder",
+      "link": "https://github-profile-finder-puce.vercel.app/",
+      "imageUrl": "images/projects/profile-finder.png",
       "showViewLive": true
     },
     {

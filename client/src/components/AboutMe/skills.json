@@ -31,51 +31,31 @@
       },
       {
         "id": 6,
-        "name": "GraphQL",
-        "icon": "devicon-graphql-plain"
-      },
-      {
-        "id": 7,
-        "name": "Vue",
-        "icon": "devicon-vuejs-plain"
-      },
-      {
-        "id": 8,
-        "name": "PostgreSQL",
-        "icon": "devicon-postgresql-plain"
-      },
-      {
-        "id": 9,
         "name": "Material UI",
         "icon": "devicon-materialui-plain"
       },
       {
-        "id": 10,
+        "id": 7,
         "name": "HTML",
         "icon": "devicon-html5-plain"
       },
       {
-        "id": 11,
+        "id": 8,
         "name": "CSS",
         "icon": "devicon-css3-plain"
       },
       {
-        "id": 12,
-        "name": "Bootstrap",
-        "icon": "devicon-bootstrap-plain"
-      },
-      {
-        "id": 13,
+        "id": 9,
         "name": "Git & GitHub",
         "icon": "devicon-github-original"
       },
       {
-        "id": 14,
+        "id": 10,
         "name": "AWS",
         "icon": "devicon-amazonwebservices-original"
       },
       {
-        "id": 15,
+        "id": 11,
         "name": "Heroku",
         "icon": "devicon-heroku-original"
       }

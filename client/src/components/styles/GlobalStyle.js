@@ -476,11 +476,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 }
 	
-	.icon-instagram {
+	.icon-twitch {
 	
 	&:hover {
 		transition: all 300ms ease 0s;
-		fill: #EA4C89;
+		fill: #6f42c1;
 	}
 }
 	

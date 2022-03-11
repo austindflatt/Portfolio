@@ -1,5 +1,5 @@
 export const social = {
-    instagram: 'https://instagram.com/44.aus',
+    twitch: 'https://twitch.com/austindflatt',
     twitter: 'https://twitter.com/austindflatt',
     github: 'https://github.com/austindflatt',
     linkedin: 'https://www.linkedin.com/in/austindflatt/',
