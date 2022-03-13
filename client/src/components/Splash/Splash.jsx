@@ -84,8 +84,8 @@ function Splash() {
                     <div className="splash-inner">
                         <div className="splash-copy">
                             <p className="splash-name">Hey <Hand>👋🏻 </Hand> my name is</p>
-                            <h1 className="splash-title">{data.name}.</h1>
-                            <p className="splash-paragraph">I'm a {data.title} 🚀 living in Louisville, Kentucky.</p>
+                            <h1 className="splash-title">Austin Flatt.</h1>
+                            <p className="splash-paragraph">I'm a Software Engineer 🚀 living in Louisville, Kentucky.</p>
                             <Social>
                             <SocialLink href={social.github} rel="noreferrer" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon-github" width="35" height="40" viewBox="0 0 24 24" fill="#262626">
