@@ -118,7 +118,7 @@ function ProjectsHome() {
                 </ProjectHomeCard>
                 ))}
                 </ProjectHome>
-                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
                     <Link to="projects" className="button button-primary">View All</Link>
                 </div>
                 <br /><br />

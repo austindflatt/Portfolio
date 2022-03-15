@@ -57,7 +57,7 @@ const Contact = () => {
                 <input type="email" id="email" placeholder="name@email.com" required />
                 <Label htmlFor="message">Message *</Label>
                 <textarea id="message" required />
-                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
                 <button type="Submit" class="button button-primary">Submit</button>
                 </div>
               </form>

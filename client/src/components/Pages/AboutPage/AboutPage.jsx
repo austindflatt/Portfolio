@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import Container from '../../styles/Container';
 import ContainerSmall from '../../styles/ContainerSmall';
 import SectionInner from '../../styles/SectionInner';
-import books from './books.json';
 import Metrics from '../../Metrics/Metrics'
 
 function AboutPage() {

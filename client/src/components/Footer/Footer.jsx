@@ -19,8 +19,7 @@ export const FooterCopyright = styled.div`
 	font-size: 0.8rem;
 	font-weight: 400;
 	text-align: center;
-	position: relative;
-	z-index: 300;
+	position: absolute;
 `;
 
 function Footer() {
