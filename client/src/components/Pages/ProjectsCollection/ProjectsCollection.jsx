@@ -23,31 +23,28 @@ export const ProjectHomeCard = styled.div`
         border-radius: 6px;
         padding: 15px;
         transition: all 0.5s ease 0s;
-
-        &:hover {
-        opacity: 0.7;
-        transition: 0.2s;
-        }
     }
 `;
 
 export const ProjectBox = styled.div`
     @media (min-width:641px) {
-        opacity: 1;
         border-radius: 6px;
         padding: 15px;
         transition: all 0.5s ease 0s;
-
-        &:hover {
-        opacity: 0.7;
-        transition: 0.2s;
-        }
     }
 `;
 
 export const ProjectImage = styled.img`
     width: 100%;
+    opacity: 1;
 	border-radius: 4px;
+
+    @media (min-width:641px) {
+        &:hover {
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+    }
 `;
 
 export const ProjectHomeLinks = styled.div`
@@ -79,6 +76,7 @@ export const Container = styled.div`
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
     padding-left: 16px;
     padding-right: 16px;
 

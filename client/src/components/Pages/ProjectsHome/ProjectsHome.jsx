@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import projects from './projects.json';
 import styled from 'styled-components';
+import ProjectModal from '../../ProjectModal/ProjectModal'
 
 export const ProjectHome = styled.div`
     display: grid;
@@ -94,7 +95,9 @@ function ProjectsHome() {
             <ProjectHome>
                 {projects.slice(0, 9).map((project, key) => (
                 <ProjectHomeCard key={key}>
+                    <Link to={<ProjectModal />} style={{ textDecoration: 'none' }}>
                     <ProjectImage src={project.imageUrl} loading="lazy" alt={project.name} />
+                    </Link>
                     <ProjectHomeLinks>
                         <ProjectWrapper>
                             <a href={project.github} target="_blank" rel="noreferrer" className="project-link">
