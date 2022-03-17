@@ -1,5 +1,4 @@
 import React from 'react';
-import { footer } from '../../data/footer';
 import styled from 'styled-components';
 
 export const FooterCopyright = styled.div`
@@ -27,8 +26,8 @@ function Footer() {
     return (
         <>
         <FooterCopyright>
-            <br />{footer.info}
-            <br />{footer.made}
+            <br />Made with 💚 and various tech in Louisville
+            <br />Designed and built by Austin Flatt
         </FooterCopyright>
         </>
     )

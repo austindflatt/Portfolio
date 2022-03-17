@@ -1,47 +1,29 @@
 [
-    {
-      "id": 0,
-      "name": "Sticksy",
-      "description": "A note taking web app built with React.js",
-      "github": "https://github.com/austindflatt/sticksy",
-      "link": "https://austindflatt.github.io/sticksy/",
-      "imageUrl": "images/projects/sticksy.png",
-      "showViewLive": true
-    },
-    {
-      "id": 1,
-      "name": "GitHub Profile Finder",
-      "description": "A web app that allows a user to search for GitHub usernames and see profile details",
-      "github": "https://github.com/austindflatt/github-profile-finder",
-      "link": "https://github-profile-finder-puce.vercel.app/",
-      "imageUrl": "images/projects/profile-finder.png",
-      "showViewLive": true
-    },
-    {
-      "id": 2,
-      "name": "devConnect",
-      "description": "A tech meetup web app built with Python/Django MVT",
-      "github": "https://github.com/austindflatt/Tech_Meetup_Capstone",
-      "link": "",
-      "imageUrl": "images/projects/devconnect.png",
-      "showViewLive": false
-    },
-    {
-      "id": 3,
-      "name": "HODLSELL (React Crypto Tracker)",
-      "description": "A crypto currency tracker built with React, Material UI, & CoinGecko API",
-      "github": "https://github.com/austindflatt/crypto-currency-react",
-      "link": "https://hodlsell.com/",
-      "imageUrl": "images/projects/crypto-react.png",
-      "showViewLive": true
-    },
-    {
-      "id": 4,
-      "name": "Crypto Tracker (JavaScript)",
-      "description": "A crypto currency tracker built with JavaScript, HTML, & CSS",
-      "github": "https://github.com/austindflatt/crypto-currency-tracker",
-      "link": "https://austindflatt.github.io/crypto-currency-tracker/",
-      "imageUrl": "images/projects/crypto-tracker.png",
-      "showViewLive": true
-    }
+  {
+    "id": 0,
+    "name": "HODLSELL (React Crypto Tracker)",
+    "description": "A crypto currency tracker built with React, Material UI, & CoinGecko API",
+    "github": "https://github.com/austindflatt/crypto-currency-react",
+    "link": "https://hodlsell.com/",
+    "imageUrl": "images/projects/crypto-react.png",
+    "showViewLive": true
+  },
+  {
+    "id": 1,
+    "name": "GitHub Profile Finder",
+    "description": "A web app that allows a user to search for GitHub usernames and see profile details",
+    "github": "https://github.com/austindflatt/github-profile-finder",
+    "link": "https://github-profile-finder-puce.vercel.app/",
+    "imageUrl": "images/projects/profile-finder.png",
+    "showViewLive": true
+  },
+  {
+    "id": 0,
+    "name": "Sticksy",
+    "description": "A note taking web app built with React.js",
+    "github": "https://github.com/austindflatt/sticksy",
+    "link": "https://austindflatt.github.io/sticksy/",
+    "imageUrl": "images/projects/sticksy.png",
+    "showViewLive": true
+  }
 ]
