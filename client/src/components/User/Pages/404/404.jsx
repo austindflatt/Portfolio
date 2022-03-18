@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Container from '../../styles/Container';
-import ContainerSmall from '../../styles/ContainerSmall';
-import SectionInner from '../../styles/SectionInner';
+import Container from '../../../styles/Container';
+import ContainerSmall from '../../../styles/ContainerSmall';
+import SectionInner from '../../../styles/SectionInner';
 import styled from 'styled-components';
 
 export const Error = styled.div`

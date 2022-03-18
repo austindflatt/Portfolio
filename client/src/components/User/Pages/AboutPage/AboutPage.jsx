@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Container from '../../styles/Container';
-import ContainerSmall from '../../styles/ContainerSmall';
-import SectionInner from '../../styles/SectionInner';
+import Container from '../../../styles/Container';
+import ContainerSmall from '../../../styles/ContainerSmall';
+import SectionInner from '../../../styles/SectionInner';
 import Metrics from '../../Metrics/Metrics'
+import BuiltWith from '../../BuiltWith/BuiltWith'
 
 function AboutPage() {
 
@@ -29,7 +30,9 @@ function AboutPage() {
                         ))}
                     </ul>
                 </p> */}
-                {/* <Metrics /> */}
+                <Metrics />
+                <br />
+                <BuiltWith />
             </ContainerSmall>
         </SectionInner>
         </>

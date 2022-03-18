@@ -1,9 +1,9 @@
 import React from "react";
 import axios from 'axios'
 import { Helmet } from "react-helmet";
-import Container from '../../styles/Container'
-import ContainerSmall from '../../styles/ContainerSmall'
-import SectionInner from '../../styles/SectionInner'
+import Container from '../../../styles/Container';
+import ContainerSmall from '../../../styles/ContainerSmall';
+import SectionInner from '../../../styles/SectionInner';
 import styled from 'styled-components';
 
 const Label = styled.div`

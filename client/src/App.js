@@ -2,14 +2,15 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import HeaderNav from './components/Header/Header';
-import Main from './components/Main/Main';
-import ProjectsCollection from './components/Pages/ProjectsCollection/ProjectsCollection';
-import AboutPage from './components/Pages/AboutPage/AboutPage';
-import Uses from './components/Pages/Uses/Uses';
-import Contact from './components/Pages/ContactForm/ContactForm';
+import Main from './components/User/Main/Main';
+import ProjectsCollection from './components/User/Pages/ProjectsCollection/ProjectsCollection';
+import AboutPage from './components/User/Pages/AboutPage/AboutPage';
+import Blog from './components/User/Pages/Blog/Blog'
+import Contact from './components/User/Pages/ContactForm/ContactForm';
 import Footer from './components/Footer/Footer';
-import PageNotFound from './components/Pages/404/404';
+import PageNotFound from './components/User/Pages/404/404';
 import GlobalStyle from './components/styles/GlobalStyle';
+
 
 const App = () => {
   return (
@@ -30,14 +31,14 @@ const App = () => {
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={AboutPage} />
           <Route exact path='/projects' component={ProjectsCollection} />
-          <Route path='/uses' component={Uses} />
+          <Route path='/blog' component={Blog} />
           <Route path='/contact' component={Contact} />
           <Route path='/404' component={PageNotFound} />
           <Route path='/*' component={PageNotFound} />
         </Switch>
         <GlobalStyle />
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

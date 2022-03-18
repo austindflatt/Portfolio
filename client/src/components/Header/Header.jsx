@@ -78,8 +78,8 @@ function HeaderNav() {
                     <Link to="/" className="nav-logo">aflatt.</Link>
                     <LinksUnordered>
                         <NavLink exact to="projects" className="links" activeClassName="links-active">Projects</NavLink>
+                        <NavLink exact to="blog" className="links" activeClassName="links-active">Blog</NavLink>
                         <NavLink exact to="about" className="links" activeClassName="links-active">About</NavLink>
-                        <NavLink exact to="uses" className="links" activeClassName="links-active">Uses</NavLink>
                         <NavLink exact to="contact" className="links" activeClassName="links-active">Contact</NavLink>
                     </LinksUnordered>
                 </HeaderInner>
