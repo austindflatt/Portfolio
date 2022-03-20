@@ -1,6 +1,8 @@
-import react, { useEffect, useHistory } from 'react';
+import react, { useEffect, useHistory, useState } from 'react';
 import { createStyles, Text } from '@mantine/core';
 import axios from "axios"
+
+const GITHUB_API = `https://api.github.com/users/austindflatt`;
 
 const useStyles = createStyles((theme) => ({
 	root: {
@@ -59,6 +61,8 @@ const useStyles = createStyles((theme) => ({
 	}));
 
 function Metrics() {
+	const [github, setGithub] = useState(null);
+
 	const { classes } = useStyles();
 	const websiteStats = 
 	<div key={null} className={classes.stat}>
