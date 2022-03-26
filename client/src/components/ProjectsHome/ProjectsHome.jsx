@@ -4,6 +4,7 @@ import projects from '../data/projects.json';
 import { Tooltip } from '@mantine/core';
 import ContainerSmall from '../styles/ContainerSmall';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle } from '../styles/Projects';
+import { Button } from '@mantine/core';
 
 function ProjectsHome() {
   return (
@@ -42,7 +43,9 @@ function ProjectsHome() {
     </ProjectHome>
 
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-      <Link to="projects" className="button button-primary">View All</Link>
+      <Link to='projects'>
+      <Button variant="light" size="md">View All Projects</Button>
+      </Link>
     </div>
     <br /><br />
   </ContainerSmall>

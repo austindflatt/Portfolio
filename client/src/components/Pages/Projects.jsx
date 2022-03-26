@@ -70,7 +70,7 @@ function ProjectsCollection() {
         </ProjectHomeCard>
         ))}
         </ProjectHome>
-        
+
     </SectionInner>
   </ContainerSmall>
   </>

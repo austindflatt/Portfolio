@@ -5,6 +5,7 @@ import Container from '../styles/Container';
 import ContainerSmall from '../styles/ContainerSmall';
 import SectionInner from '../styles/SectionInner';
 import { Error, LostSize, Lost, NotFoundHeading, NotFoundSubHeading } from '../styles/404';
+import { Button } from '@mantine/core';
 
 const PageNotFound = () => {
   return (
@@ -21,7 +22,9 @@ const PageNotFound = () => {
         <LostSize><Lost loading="lazy" /></LostSize>
         <NotFoundHeading>404</NotFoundHeading>
         <NotFoundSubHeading>Sorry, this page doesn't exist.</NotFoundSubHeading>
-        <Link to="/" className="button button-primary">Go Home</Link>
+        <Link to="/">
+        <Button variant="light" size="md">Go Home</Button>
+        </Link>
       </Error>
     </ContainerSmall>
   </SectionInner>

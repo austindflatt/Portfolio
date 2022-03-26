@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "name": "HODLSELL (React Crypto Tracker)",
-    "description": "A crypto currency tracker built with React, Material UI, & CoinGecko API",
+    "name": "hodlsell",
+    "description": "HODLSELL is a crypto currency tracker built with React, Material UI, & CoinGecko API",
     "techUsed": "React",
     "github": "https://github.com/austindflatt/crypto-currency-react",
     "link": "https://hodlsell.com/",

@@ -5,6 +5,8 @@ import Container from '../styles/Container'
 import ContainerSmall from '../styles/ContainerSmall';
 import SectionInner from '../styles/SectionInner';
 import styled from 'styled-components';
+import { TextInput, Textarea, Button } from '@mantine/core';
+import { At, Building, User } from 'tabler-icons-react';
 
 const Label = styled.div`
 `;
@@ -49,19 +51,42 @@ const Contact = () => {
       <ContainerSmall>
         <h2>Get in touch with me</h2>
         <p>Don't hesitate to reach out if you’re in need of a developer. Whether that means you need a website, web app, want to collaborate on a project, or if you’re looking to fill a full-time position. If you have a question or just want to say hello, just fill out the form below and I will get back to you!</p>
-        <br />
         <form onSubmit={handleSubmit}>
-          <Label htmlFor="name">Name *</Label>
-          <input type="text" id="name" placeholder="Full Name" required />
-          <Label htmlFor="name">Organization/Company *</Label>
-          <input type="text" id="company" placeholder="Organization or Company" required />
-          <Label htmlFor="email">E-mail Address *</Label>
-          <input type="email" id="email" placeholder="name@email.com" required />
-          <Label htmlFor="message">Message *</Label>
-          <textarea id="message" required />
+          <TextInput
+          placeholder="Your name"
+          label="Name"
+          id="name"
+          size="lg"
+          icon={<User size={14} />}
+          required
+          />
+          <TextInput
+          placeholder="Apple"
+          label="Organization/Company"
+          id="company"
+          size="lg"
+          icon={<Building size={14} />}
+          required
+          />
+          <TextInput
+          placeholder="Your email"
+          label="Email"
+          id="email"
+          size="lg"
+          icon={<At size={14} />}
+          required
+          />
+          <Textarea
+          label="Message"
+          id="message"
+          size="lg"
+          required
+          />
+
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-            <button type="Submit" class="button button-primary">Submit</button>
+            <Button type="Submit" variant="light">Submit</Button>
           </div>
+
         </form>
       </ContainerSmall>
     </SectionInner>

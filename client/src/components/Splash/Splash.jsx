@@ -41,7 +41,7 @@ function Splash() {
             </SocialLink>
           </Social>
           <div className="splash-cta">
-            <Button href="/resume.pdf" rel="noreferrer" target="_blank">Resume</Button>
+            <Button variant="light" size="md" href="/resume.pdf" rel="noreferrer" target="_blank">Resume</Button>
           </div>
           </div>
           
