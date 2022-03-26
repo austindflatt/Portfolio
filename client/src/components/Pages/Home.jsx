@@ -4,13 +4,13 @@ import AboutMe from '../AboutMe/AboutMe';
 import ProjectsHome from '../ProjectsHome/ProjectsHome'
 
 function Main() {
-    return (
-        <>
-        <Splash />
-        <AboutMe />
-        <ProjectsHome />
-        </>
-    )
+  return (
+  <>
+  <Splash />
+  <AboutMe />
+  <ProjectsHome />
+  </>
+  )
 }
 
 export default Main;
