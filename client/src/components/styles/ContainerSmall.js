@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const ContainerSmall = styled.div`
-    max-width: 848px;
+    max-width: 960px;
     width: 100%;
     margin: 0 auto;
     padding-left: 16px;

@@ -312,13 +312,6 @@ const GlobalStyle = createGlobalStyle`
 		color: var(--blue);
 	}
 	
-	.code-immersives {
-		position: relative;
-		display: inline-block;
-		cursor: pointer;
-		color: var(--orange);
-	}
-	
 	.setup {
 		max-width: 100%;
 		display: block;
@@ -390,7 +383,7 @@ const GlobalStyle = createGlobalStyle`
 		}
 	
 		.splash-media img {
-			width: 400px;
+			width: 330px;
 			border-radius: 6px;
 		}
 	
@@ -586,13 +579,6 @@ const GlobalStyle = createGlobalStyle`
 	color: var(--main-text);
 	opacity: 0.8;
   }
-
-  	.code-immersives {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    color: var(--orange);
-}
 
 	.setup {
 	max-width: 100%;
