@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { HeaderNav, Main, Contact, AboutPage, ProjectsCollection, Blog, PageNotFound, Footer, GlobalStyle } from './components';
+import { HeaderNav, Main, Login, Register, Contact, AboutPage, ProjectsCollection, Blog, PageNotFound, Footer, GlobalStyle } from './components';
 
 const App = () => {
   return (
@@ -18,9 +18,10 @@ const App = () => {
           <meta property="og:description" content='Personal portfolio website of Austin Flatt, Software Engineer based in Louisville, Kentucky.' />
           <meta property="og:image" content='%PUBLIC_URL%/preview.png' />
         </Helmet>
-
         <Switch>
           <Route exact path='/' component={Main} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={AboutPage} />
           <Route exact path='/projects' component={ProjectsCollection} />

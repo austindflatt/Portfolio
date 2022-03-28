@@ -84,7 +84,7 @@ const Contact = () => {
           />
 
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-            <Button type="Submit" variant="light">Submit</Button>
+            <Button type="Submit" variant="light" size="md">Send Message</Button>
           </div>
 
         </form>
