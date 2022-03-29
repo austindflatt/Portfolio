@@ -13,6 +13,7 @@ export const NotFoundHeading = styled.h1`
 
 export const NotFoundSubHeading = styled.p`
     font-size: clamp(30px, 5vw, 50px);
+	font-size: 1rem;
     font-weight: 400;
 `;
 

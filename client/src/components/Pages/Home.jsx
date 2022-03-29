@@ -7,7 +7,6 @@ function Main() {
   return (
   <>
   <Splash />
-  <AboutMe />
   <ProjectsHome />
   </>
   )

@@ -172,7 +172,7 @@ const GlobalStyle = createGlobalStyle`
 		margin-top: 0;
 		margin-bottom: 24px;
 		color: var(--main-text);
-		font-size: 1.3rem;
+		font-size: 1rem;
 		line-height: 1.35;
 		letter-spacing: -0.01em;
 		color: #262626;
@@ -319,7 +319,7 @@ const GlobalStyle = createGlobalStyle`
 	
 	@media (max-width: 639px) {
 		.splash-cta > * {
-			display: flex;
+			justify-content: center;
 		}
 	
 		.splash-cta > * + * {

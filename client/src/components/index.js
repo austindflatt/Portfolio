@@ -2,9 +2,9 @@ import HeaderNav from './Header/Header';
 import Main from './Pages/Home';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import AboutData from './Pages/AboutData';
 import ProjectsCollection from './Pages/Projects';
 import AboutPage from './Pages/About';
-import Blog from './Pages/Blog'
 import Contact from './Pages/ContactForm';
 import Footer from './Footer/Footer';
 import PageNotFound from './Pages/404';
@@ -15,9 +15,9 @@ export {
 	Main,
 	Login,
 	Register,
+	AboutData,
 	ProjectsCollection,
 	AboutPage,
-	Blog,
 	Contact,
 	Footer,
 	PageNotFound,

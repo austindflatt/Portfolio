@@ -21,7 +21,7 @@ const PageNotFound = () => {
       <Error>
         <LostSize><Lost loading="lazy" /></LostSize>
         <NotFoundHeading>404</NotFoundHeading>
-        <NotFoundSubHeading>Sorry, this page doesn't exist.</NotFoundSubHeading>
+        <NotFoundSubHeading>Sorry, this page doesn't exist or you spelled something wrong. I'm guessing you spelled something wrong. Double check that URL :)</NotFoundSubHeading>
         <Link to="/">
         <Button variant="light" size="md">Go Home</Button>
         </Link>

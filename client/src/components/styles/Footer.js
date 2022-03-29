@@ -1,14 +1,9 @@
 import styled from 'styled-components';
 
 export const FooterCopyright = styled.div`
-    flex: none;
     width: 100%;
-    background-color: #fafafa;
     border-top: 1px solid #eaeaea;
-    display: inline-flex;
-    z-index: 300;
-    flex: 50%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 	display: flex;
 	-webkit-box-pack: center;
 	justify-content: center;
@@ -17,5 +12,4 @@ export const FooterCopyright = styled.div`
 	font-size: 0.8rem;
 	font-weight: 400;
 	text-align: center;
-	position: absolute;
 `;

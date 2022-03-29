@@ -4,7 +4,6 @@ export const Header = styled.header`
     width: 100%;
     height: 80px;
     background-color: hsla(0,0%,100%,0.8);
-    border-bottom: 1px solid #eaeaea;
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     display: flex;

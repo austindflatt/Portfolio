@@ -1,7 +1,8 @@
 import React from 'react';
-import Button from '../styles/Button'
+import { Button } from '@mantine/core';
 import ContainerSmall from '../styles/ContainerSmall';
 import { Hand, Social, SocialLink } from '../styles/Splash'
+import { Link } from 'react-router-dom';
 
 function Splash() {
   return (
@@ -41,7 +42,8 @@ function Splash() {
             </SocialLink>
           </Social>
           <div className="splash-cta">
-            <Button variant="light" size="md" href="/resume.pdf" rel="noreferrer" target="_blank">Resume</Button>
+            <Link to='/resume.pdf' style={{ marginRight: '20px' }}><Button variant="light" size="lg">View My Resume</Button></Link>
+            <Link to='/contact'><Button variant="light" size="lg">Contact Me</Button></Link>
           </div>
           </div>
           

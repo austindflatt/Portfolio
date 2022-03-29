@@ -10,11 +10,11 @@ function ProjectsHome() {
   return (
   <>
   <ContainerSmall>
-    <h2 style={{ textAlign: 'center' }}>Some Of My Projects</h2>
+    <h2 style={{ textAlign: 'left' }}>Featured Projects</h2>
     <ProjectHome>
       {projects.slice(0, 9).map((project, key) => (
       <ProjectHomeCard key={key}>
-        <a href={project.link} target='_blank' style={{ textDecoration: 'none' }}>
+        <a href={project.link} target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>
           <ProjectImage src={project.imageUrl} loading="lazy" alt={project.name} />
         </a>
         <ProjectHomeLinks>

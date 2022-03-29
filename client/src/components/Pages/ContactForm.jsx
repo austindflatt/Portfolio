@@ -50,14 +50,18 @@ const Contact = () => {
       <br />
       <ContainerSmall>
         <h2>Get in touch with me</h2>
-        <p>Don't hesitate to reach out if you’re in need of a developer. Whether that means you need a website, web app, want to collaborate on a project, or if you’re looking to fill a full-time position. If you have a question or just want to say hello, just fill out the form below and I will get back to you!</p>
+        <p>
+          Don't hesitate to reach out if you’re in need of a developer. 
+          Whether that means you need a website, web app, want to collaborate on a project, or if you’re looking to fill a full-time position. 
+          If you have a question or just want to say hello, just fill out the form below and I will get back to you!
+        </p>
         <form onSubmit={handleSubmit}>
           <TextInput
           placeholder="Your name"
           label="Name"
           id="name"
           size="lg"
-          icon={<User size={14} />}
+          icon={<User size={24} color='black' />}
           required
           />
           <TextInput
@@ -65,7 +69,7 @@ const Contact = () => {
           label="Organization/Company"
           id="company"
           size="lg"
-          icon={<Building size={14} />}
+          icon={<Building size={24} color='black' />}
           required
           />
           <TextInput
@@ -73,7 +77,7 @@ const Contact = () => {
           label="Email"
           id="email"
           size="lg"
-          icon={<At size={14} />}
+          icon={<At size={24} color='black' />}
           required
           />
           <Textarea

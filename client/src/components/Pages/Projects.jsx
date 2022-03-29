@@ -6,6 +6,7 @@ import { Tooltip, TextInput } from '@mantine/core';
 import ContainerSmall from '../styles/ContainerSmall';
 import SectionInner from '../styles/SectionInner';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle } from '../styles/Projects';
+import { Search } from 'tabler-icons-react';
 
 function ProjectsCollection() {
   const [search, setSearch] = useState('')
@@ -30,6 +31,7 @@ function ProjectsCollection() {
         onChange={(e) => setSearch(e.target.value)}
         rightSectionWidth={42}
         style={{ marginBottom: '20px' }}
+        icon={<Search size={24} color='black' />}
       />
       <ProjectHome>
         {projects.filter((project) => {
@@ -42,7 +44,7 @@ function ProjectsCollection() {
         .slice(0, 12).map((project) => (
         
         <ProjectHomeCard key={project.id}>
-          <a href={project.link} target='_blank' style={{ textDecoration: 'none' }}>
+          <a href={project.link} target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>
             <ProjectImage src={project.imageUrl} loading="lazy" alt={project.name} />
           </a>
           <ProjectHomeLinks>

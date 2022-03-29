@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Container from '../styles/Container';
 import ContainerSmall from '../styles/ContainerSmall';
 import SectionInner from '../styles/SectionInner';
-import Metrics from '../Metrics/Metrics';
+import Skills from '../Skills/Skills';
 
 function AboutPage() {
   return (
@@ -27,7 +27,7 @@ function AboutPage() {
       <p>
         Other than coding, I spend most of my free time playing video games or reading! With the latter being reading, so feel free to reach out to me with any book recommendations!
       </p>
-      <Metrics />
+      {/* <Skills /> */}
       <br />
     </ContainerSmall>
   </SectionInner>
