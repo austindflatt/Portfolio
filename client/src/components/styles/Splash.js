@@ -112,7 +112,7 @@ export const Social = styled.div`
 	text-align: center;
 	-webkit-box-pack: center;
 
-    @media (max-width:639px) {
+    @media (max-width:814px) {
         {
             display: flex;
             align-items: center;

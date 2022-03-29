@@ -105,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
 		color: var(--main-text)
 	}
 	
-	@media (min-width: 641px) {
+	@media (min-width: 814px) {
 		.h1,
 		h1 {
 			font-size: 44px;
@@ -123,7 +123,7 @@ const GlobalStyle = createGlobalStyle`
 		color: var(--main-text)
 	}
 	
-	@media (min-width: 641px) {
+	@media (min-width: 814px) {
 		.h2,
 		h2 {
 			font-size: 38px;
@@ -254,7 +254,7 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 
-	@media (min-width: 641px) {
+	@media (min-width: 814px) {
 		.site-header::before {
 			display: none;
 		}
@@ -327,7 +327,7 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 	
-	@media (min-width: 641px) {
+	@media (min-width: 814px) {
 		.splash {
 			text-align: left;
 			padding-bottom: 50px;
@@ -393,8 +393,9 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 	
-	@media (max-width: 639px) {
+	@media (max-width: 814px) {
 		.splash-media img {
+			display: none;
 			width: 300px;
 			border-radius: 6px;
 		}
@@ -430,7 +431,7 @@ const GlobalStyle = createGlobalStyle`
 		}
 	}
 	
-	@media (min-width: 641px) {
+	@media (min-width: 814px) {
 		.cta .section-paragraph {
 			margin-bottom: 40px;
 			padding-left: 72px;
