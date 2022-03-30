@@ -94,8 +94,8 @@ const AboutData = () => {
 
           <MultiSelect
           data={data}
-          label="Technologies that you are proficient with"
-          placeholder="Pick all that you like"
+          label="Technologies"
+          placeholder="Pick all that you are proficient with"
           />
 
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
