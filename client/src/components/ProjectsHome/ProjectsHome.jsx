@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import projects from '../data/projects.json';
 import { Tooltip } from '@mantine/core';
 import ContainerSmall from '../styles/ContainerSmall';
-import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle } from '../styles/Projects';
+import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../styles/Projects';
 import { Button } from '@mantine/core';
 
 function ProjectsHome() {
@@ -14,9 +14,11 @@ function ProjectsHome() {
     <ProjectHome>
       {projects.slice(0, 9).map((project, key) => (
       <ProjectHomeCard key={key}>
+        <ImageBox>
         <a href={project.link} target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>
           <ProjectImage src={project.imageUrl} loading="lazy" alt={project.name} />
         </a>
+        </ImageBox>
         <ProjectHomeLinks>
           <ProjectWrapper>
             <Tooltip position="bottom" placement="center" gutter={10} label='View Code'>

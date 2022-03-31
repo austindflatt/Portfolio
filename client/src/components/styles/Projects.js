@@ -16,6 +16,7 @@ export const ProjectHome = styled.div`
 
 export const ProjectHomeCard = styled.div`
     @media (min-width:641px) {
+        overflow: hidden;
         opacity: 1;
         border-radius: 6px;
         transition: all 0.5s ease 0s;
@@ -32,15 +33,25 @@ export const ProjectBox = styled.div`
 
 export const ProjectImage = styled.img`
     width: 100%;
+    height: 240px;
     opacity: 1;
 	border-radius: 4px;
+    backgroundImage: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .85) 90%);
+    transition: transform 0.4s ease;
+    transform-origin: 50% 50%;}
 
     @media (min-width:641px) {
         &:hover {
-            opacity: 0.7;
-            transition: 0.2s;
+            transform: scale(1.2);
+            width: 100%;
         }
     }
+`;
+
+export const ImageBox = styled.div`
+    width: 100%;
+    height: 240px;
+    overflow:hidden;
 `;
 
 export const ProjectHomeLinks = styled.div`

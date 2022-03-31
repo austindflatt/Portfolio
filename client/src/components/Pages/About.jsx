@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet';
 import Container from '../styles/Container';
 import ContainerSmall from '../styles/ContainerSmall';
 import SectionInner from '../styles/SectionInner';
-import Skills from '../Skills/Skills';
+import skills from '../data/skills.json';
+import { Chips, Chip } from '@mantine/core';
 
 function AboutPage() {
   return (
@@ -29,6 +30,13 @@ function AboutPage() {
       </p>
       {/* <Skills /> */}
       <br />
+      <h2>My Skills</h2>
+      <p>I’ve learned and gained a solid understanding of these technologies.</p>
+        {skills.map((skill) => (
+        <Chips variant="filled" radius="md" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', }}>
+          <Chip key={skill.id} style={{ marginRight: '10px', marginBottom: '10px' }}>{skill.name}</Chip>
+        </Chips>
+        ))}
     </ContainerSmall>
   </SectionInner>
   </>

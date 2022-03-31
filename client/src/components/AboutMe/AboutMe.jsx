@@ -1,8 +1,7 @@
 import React from 'react';
-import skills from '../data/skills.json';
 import SectionInner from '../styles/SectionInner';
 import ContainerSmall from '../styles/ContainerSmall';
-import { MemojiSize, Memoji, Tech, TechList } from '../styles/AboutMe'
+import { MemojiSize, Memoji } from '../styles/AboutMe'
 
 function AboutMe() {
   return (
@@ -18,16 +17,6 @@ function AboutMe() {
       <MemojiSize>
         <Memoji />
       </MemojiSize>
-      <br /><br />
-      <h2>My Toolkit</h2>
-      <Tech>
-        {skills.map((skill) => (
-        <TechList>
-          <i className={skill.icon}></i>
-          <h3 key={skill.id} className='skills h3'>{skill.name}</h3>
-        </TechList>
-        ))}
-      </Tech>
     </SectionInner>
   </ContainerSmall>
   </>

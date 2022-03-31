@@ -416,51 +416,13 @@ const GlobalStyle = createGlobalStyle`
 
 	.icon {
 		transition: all 300ms ease 0s;
-		color: rgb(79, 184, 255);
 		cursor: pointer;
 		text-decoration: none;
+		&:hover {
+			transition: all 300ms ease 0s;
+			fill: #000;
+		}
 	}
-	
-	.icon-github {
-	
-	&: hover {
-		transition: all 300ms ease 0s;
-		fill: #6f42c1;
-	}
-}
-	
-	.icon-linkedin {
-	
-	&:hover {
-		transition: all 300ms ease 0s;
-		fill: #0a66c2;
-	}
-}
-	
-	.icon-twitch {
-	
-	&:hover {
-		transition: all 300ms ease 0s;
-		fill: #6f42c1;
-	}
-}
-	
-	
-	.icon-twitter {
-	
-	&:hover {
-		transition: all 300ms ease 0s;
-		fill: #1DA1F2;
-	}
-}
-	
-	.icon-youtube {
-	
-	&:hover {
-		transition: all 300ms ease 0s;
-		fill: #c00;
-	}
-}
 
 	.project-link {
 	margin-right: 10px;

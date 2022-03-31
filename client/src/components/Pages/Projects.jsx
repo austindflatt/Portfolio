@@ -5,7 +5,7 @@ import projects from '../data/projects.json';
 import { Tooltip, TextInput } from '@mantine/core';
 import ContainerSmall from '../styles/ContainerSmall';
 import SectionInner from '../styles/SectionInner';
-import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle } from '../styles/Projects';
+import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../styles/Projects';
 import { Search } from 'tabler-icons-react';
 
 function ProjectsCollection() {
@@ -44,9 +44,11 @@ function ProjectsCollection() {
         .slice(0, 12).map((project) => (
         
         <ProjectHomeCard key={project.id}>
+          <ImageBox>
           <a href={project.link} target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>
             <ProjectImage src={project.imageUrl} loading="lazy" alt={project.name} />
           </a>
+          </ImageBox>
           <ProjectHomeLinks>
             <ProjectWrapper>
               <Tooltip position="bottom" placement="center" gutter={10} label='View Code'>

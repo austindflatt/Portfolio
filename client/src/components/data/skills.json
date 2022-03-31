@@ -15,11 +15,6 @@
         "icon": "devicon-react-original"
       },
       {
-        "id": 3,
-        "name": "Redux",
-        "icon": "devicon-redux-original"
-      },
-      {
         "id": 4,
         "name": "Express",
         "icon": "devicon-express-original"
