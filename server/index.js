@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const authRoute = require('./routes/auth');
 const usersRoute = require('./routes/users');
 const projectsRoute = require('./routes/projects');
+const aboutRoute = require('./routes/about');
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/projects', projectsRoute);
+app.use('/api/about', aboutRoute);
 
 app.listen(3001, () => {
 	console.log('Server is running...')
