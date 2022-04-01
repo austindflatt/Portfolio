@@ -1,13 +1,16 @@
-# My Personal Portfolio. Built in ReactJS.
+# My Personal Portfolio
 
 ![preview](https://raw.githubusercontent.com/austindflatt/portfolio/main/screenshot.png)
 
 ## 🛠 Tools Used
 
-* React.js
-* Node.js
+* MongoDB
 * Express
+* Node.js
+* React
 * Styled Components
+* Mantine UI for Client Side
+* Material UI for Admin Dashboard
 
 ## ✨ Live Site
 
