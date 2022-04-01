@@ -14,4 +14,4 @@ const ProjectSchema = new mongoose.Schema({
 	featuredProject: { type: Boolean, default: false }
 }, { timestamps: true })
 
-module.export = mongoose.model("Project", ProjectSchema);
+module.exports = mongoose.model("Project", ProjectSchema);
