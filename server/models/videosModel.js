@@ -5,4 +5,4 @@ const VideosSchema = new mongoose.Schema({
 	image: { type: String, required: true }
 }, { timestamps: true })
 
-module.export = mongoose.model("Videos", VideosSchema);
+module.exports = mongoose.model("Videos", VideosSchema);

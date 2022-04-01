@@ -61,4 +61,18 @@ router.get('/find-project/:id', verify, async (req, res) => {
   }
 });
 
+// GET ALL PROJECTS
+router.get('/', verify, async (req, res) => {
+  if (req.user.isAdmin) {
+    try {
+      const projects = await Project.find();
+      res.status(200).json(projects.reverse());
+    } catch (error) {
+      res.status(500).json(error)
+    }
+  } else {
+    res.status(403).json("You do not have permission!");
+  }
+});
+
 module.exports = router;

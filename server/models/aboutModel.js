@@ -11,4 +11,4 @@ const AboutSchema = new mongoose.Schema({
 	aboutMeShort: { type: String, required: true },
 }, { timestamps: true })
 
-module.export = mongoose.model("About", AboutSchema);
+module.exports = mongoose.model("About", AboutSchema);
