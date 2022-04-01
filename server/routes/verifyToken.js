@@ -1,19 +1,20 @@
 const jwt = require('jsonwebtoken');
 
 const verify = async (req, res, next) => {
-	try {
-		if(req.headers && req.headers.authorization){
-			const slicedToken = req.headers.authorization.slice(7);
-			const decodedToken = jwt.verify(slicedToken, process.env.SECRET_KEY);
-			
-			res.locals.decodedToken = decodedToken;
-			next();
-		} else throw { message: 'You dont have permission' }
-	} catch (error) {
-		res.status(500).json({ error: error.message });
-	}
+  const authHeader = req.headers.token;
+  if (authHeader) {
+    const token = authHeader.split(" ")[1];
+    
+    jwt.verify(token, process.env.SECRET_KEY, (err, user) => {
+      if (err) res.status(403).json('Invalid Token');
+      req.user = user;
+      next();
+    });
+  } else {
+    return res.status(401).json('You are not authenticated');
+  }
 };
 
 module.exports = {
-    verify,
+  verify,
 }

@@ -1,53 +1,54 @@
 const router = require('express').Router();
 const User = require('../models/usersModel');
-const bcrypt = require('bcryptjs');
+const CryptoJS = require("crypto-js");
 const jwt = require('jsonwebtoken');
 
 // REGISTER
 router.post('/register', async (req, res) => {
-	const { username, firstName, lastName, email, password } = req.body;
-
-	let salt = await bcrypt.genSalt(10);
-	let hashedPassword = await bcrypt.hash(password, salt);
-
-	const newUser = new User({
-		username: username,
-		firstName: firstName,
-		lastName: lastName,
-		email: email,
-		password: hashedPassword
-	});
-	try {
-		const user = await newUser.save();
-		res.status(200).json({ message: 'User created successfully', payload: user });
-	} catch (error) {
-		res.status(500).json(error);
-	}
+  const { username, firstName, lastName, email, password } = req.body;
+  
+  const newUser = new User({
+    username: username,
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: CryptoJS.AES.encrypt(
+      password,
+      process.env.SECRET_KEY
+      ).toString(),
+    });
+    
+  try {
+    const user = await newUser.save();
+    res.status(201).json({ message: 'User created successfully', payload: user });
+  } catch (error) {
+    res.status(500).json(error);
+  }
 })
 
 // LOGIN
 router.post('/login', async (req, res) => {
-	try {
-		const { email, password } = req.body;
-		const foundUser = await User.findOne({ email: email });
-		
-		if(foundUser === null) throw { message: 'Email and Password do not match' };
-		
-		const comparedPassword = await bcrypt.compare(password, foundUser.password);
-		if(!comparedPassword) throw { message: 'Email and Password do not match' };
-
-		const jwtToken = jwt.sign({
-			_id: foundUser._id,
-			username: foundUser.username,
-			firstName: foundUser.firstName,
-			lastName: foundUser.lastName,
-			email: foundUser.email,
-			isAdmin: foundUser.isAdmin
-        }, process.env.SECRET_KEY, { expiresIn: '24h' });
-		res.status(200).json({ message: 'Logged in successfully', payload: jwtToken });
-	} catch (error) {
-		res.status(500).json(error);
-	}
+  try {
+    const user = await User.findOne({ email: req.body.email });
+    !user && res.status(401).json({ message: 'Email and Password do not match' });
+    
+    const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET_KEY);
+    const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
+    
+    originalPassword !== req.body.password &&
+    res.status(401).json({ message: 'Email and Password do not match' });
+    
+    const accessToken = jwt.sign(
+      { id: user._id, isAdmin: user.isAdmin },
+      process.env.SECRET_KEY,
+      { expiresIn: "24h" }
+    );
+    
+    const { password, ...info } = user._doc;
+    res.status(200).json({ ...info, accessToken });
+  } catch (error) {
+    res.status(500).json(error);
+  }
 })
 
 module.exports = router;
