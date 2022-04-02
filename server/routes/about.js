@@ -3,7 +3,7 @@ const About = require('../models/aboutModel');
 const { verify } = require('./verifyToken');
 
 // CREATE ABOUT
-router.post('/create-about', verify, async (req, res) => {
+router.post('/create', verify, async (req, res) => {
   if (req.user.isAdmin) {
     const newAbout = new About(req.body);
     try {
@@ -18,7 +18,7 @@ router.post('/create-about', verify, async (req, res) => {
 });
 
 // UPDATE ABOUT
-router.put('/update-about/:id', verify, async (req, res) => {
+router.put('/update/:id', verify, async (req, res) => {
   if (req.user.isAdmin) {
     try {
       const updatedAbout = await About.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true });
@@ -32,7 +32,7 @@ router.put('/update-about/:id', verify, async (req, res) => {
 });
 
 // DELETE ABOUT
-router.delete('/delete-about/:id', verify, async (req, res) => {
+router.delete('/delete/:id', verify, async (req, res) => {
   if (req.user.isAdmin) {
     try {
       await About.findByIdAndDelete(req.params.id);
@@ -46,7 +46,7 @@ router.delete('/delete-about/:id', verify, async (req, res) => {
 });
 
 // GET ABOUT
-router.get('/find-about/:id', verify, async (req, res) => {
+router.get('/find/:id', verify, async (req, res) => {
   if (req.user.isAdmin) {
     try {
       const about = await About.findById(req.params.id);

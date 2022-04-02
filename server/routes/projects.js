@@ -4,7 +4,7 @@ const CryptoJS = require("crypto-js");
 const { verify } = require('./verifyToken');
 
 // CREATE PROJECT
-router.post('/add-project', verify, async (req, res) => {
+router.post('/create', verify, async (req, res) => {
   if (req.user.isAdmin) {
     const newProject = new Project(req.body);
 
@@ -20,7 +20,7 @@ router.post('/add-project', verify, async (req, res) => {
 });
 
 // UPDATE PROJECT
-router.put('/update-project/:id', verify, async (req, res) => {
+router.put('/update/:id', verify, async (req, res) => {
   if (req.user.isAdmin) {
     try {
       const updatedProject = await Project.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true });
@@ -34,7 +34,7 @@ router.put('/update-project/:id', verify, async (req, res) => {
 });
 
 // DELETE PROJECT
-router.delete('/delete-project/:id', verify, async (req, res) => {
+router.delete('/delete/:id', verify, async (req, res) => {
   if (req.user.isAdmin) {
     try {
       await Project.findByIdAndDelete(req.params.id);
@@ -48,7 +48,7 @@ router.delete('/delete-project/:id', verify, async (req, res) => {
 });
 
 // GET PROJECT
-router.get('/find-project/:id', verify, async (req, res) => {
+router.get('/find/:id', verify, async (req, res) => {
   if (req.user.isAdmin) {
     try {
       const project = await Project.findById(req.params.id);

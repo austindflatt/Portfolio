@@ -1,9 +1,6 @@
 # My Personal Portfolio
 
-![preview](https://raw.githubusercontent.com/austindflatt/portfolio/main/screenshot.png)
-
 ## 🛠 Tools Used
-
 * MongoDB
 * Express
 * Node.js

@@ -6,6 +6,8 @@ const authRoute = require('./routes/auth');
 const usersRoute = require('./routes/users');
 const projectsRoute = require('./routes/projects');
 const aboutRoute = require('./routes/about');
+const skillsRoute = require('./routes/skills');
+const videosRoute = require('./routes/videos');
 
 dotenv.config();
 
@@ -24,6 +26,8 @@ app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/projects', projectsRoute);
 app.use('/api/about', aboutRoute);
+app.use('/api/skills', skillsRoute);
+app.use('/api/videos', videosRoute);
 
 app.listen(3001, () => {
 	console.log('Server is running...')
