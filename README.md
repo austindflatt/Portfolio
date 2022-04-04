@@ -7,7 +7,6 @@
 * React
 * Styled Components
 * Mantine UI for Client Side
-* Material UI for Admin Dashboard
 
 ## ✨ Live Site
 
