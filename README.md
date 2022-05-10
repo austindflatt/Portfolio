@@ -3,10 +3,13 @@
 ## 🛠 Tools Used
 * MongoDB
 * Express
-* Node.js
 * React
+* Node
 * Styled Components
-* Mantine UI for Client Side
+* Mantine UI
+
+## View Backend Code
+[Backend Code](https://github.com/austindflatt/portfolio-server)
 
 ## ✨ Live Site
 
