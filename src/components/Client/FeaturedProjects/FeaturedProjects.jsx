@@ -18,8 +18,9 @@ function ProjectsHome() {
   <ContainerSmall>
     <h2 style={{ textAlign: 'left' }}>Featured Projects</h2>
     {isFetching ? 
-    <Loader color="indigo" size="xl" variant="dots" style={{ padding: '20px', width: '100%', display: 'flex', justifyContent: 'center' }}/>
+    <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />
     :
+    <>
     <ProjectHome>
       {projects
       .filter((project) => {
@@ -61,12 +62,13 @@ function ProjectsHome() {
       </ProjectHomeCard>
       ))}
     </ProjectHome>
-    }
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
       <Link to='projects'>
       <Button variant="light" size="md">View All Projects</Button>
       </Link>
     </div>
+    </>
+    }
     <br /><br />
   </ContainerSmall>
   </>

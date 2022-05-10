@@ -81,7 +81,7 @@ const AboutData = () => {
     required
     />
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-      <Button type="Submit" variant="light" size="md">Update Portfolio Details</Button>
+      <Button type="Submit" variant="light" size="sm" color="orange">Update Details</Button>
     </div>
   </form>
   </>

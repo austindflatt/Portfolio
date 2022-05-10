@@ -9,6 +9,7 @@ import { SimpleGrid, Chips, Chip } from '@mantine/core';
 function AboutPage() {
   const [skills, setSkills] = useState([]);
   const [about, setAbout] = useState([]);
+  
   useEffect(() => {
     const getSkills = async () => {
       try {

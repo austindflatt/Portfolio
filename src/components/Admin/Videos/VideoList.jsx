@@ -1,13 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { TextInput, Table, Checkbox, ScrollArea, Button } from '@mantine/core';
+import { TextInput, Table, Checkbox, ScrollArea, Button, Loader } from '@mantine/core';
 import { VideoContext } from '../../../context/videoContext/VideoContext';
 import { deleteVideo, getVideos } from '../../../context/videoContext/apiCalls';
 import { Link } from "react-router-dom";
 import { Search } from 'tabler-icons-react';
+import { Pagination } from '@mui/material';
 
 const VideoList = () => {
-  const { videos, dispatch } = useContext(VideoContext);
+  const { videos, isFetching, dispatch } = useContext(VideoContext);
   const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     getVideos(dispatch);
@@ -28,6 +30,10 @@ const VideoList = () => {
       style={{ marginTop: '20px', marginBottom: '20px' }}
       icon={<Search size={24} color='black' />}
     />
+    {isFetching ?
+    <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />
+    :
+    <>
     <ScrollArea>
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
@@ -49,6 +55,7 @@ const VideoList = () => {
         <tbody>
         {
         videos
+        .slice((page - 1) * 10, (page - 1) * 10 + 10)
         .filter((video) => {
           if(search === ''){
             return true
@@ -81,6 +88,16 @@ const VideoList = () => {
         </tbody>
       </Table>
     </ScrollArea>
+    <Pagination
+    count={(videos.length / 10).toFixed(0)}
+    onChange={(_, value) => {
+      setPage(value);
+      window.scroll(0, 450);
+    }}
+    style={{ padding: 20, width: '100%', display: 'flex', justifyContent: 'center' }}
+    />
+    </>
+    }
     </>
   )
 }

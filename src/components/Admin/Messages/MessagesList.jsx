@@ -1,12 +1,14 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { TextInput, Table, Checkbox, ScrollArea, Button, Modal } from '@mantine/core';
+import { TextInput, Table, Checkbox, ScrollArea, Button, Modal, Loader } from '@mantine/core';
 import { MessageContext } from '../../../context/messageContext/MessageContext';
 import { deleteMessage, getMessages } from '../../../context/messageContext/apiCalls';
 import { Search } from 'tabler-icons-react';
+import { Pagination } from '@mui/material';
 
 const MessagesList = () => {
-  const { messages, dispatch } = useContext(MessageContext);
+  const { messages, isFetching, dispatch } = useContext(MessageContext);
   const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
   const [opened, setOpened] = useState(false);
 
   useEffect(() => {
@@ -43,6 +45,10 @@ const MessagesList = () => {
       style={{ marginTop: '20px', marginBottom: '20px' }}
       icon={<Search size={24} color='black' />}
     />
+    {isFetching ?
+    <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />
+    :
+    <>
     <ScrollArea>
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
@@ -65,6 +71,7 @@ const MessagesList = () => {
         <tbody>
         {
         messages
+        .slice((page - 1) * 10, (page - 1) * 10 + 10)
         .filter((message) => {
           if(search === ''){
             return true
@@ -98,6 +105,16 @@ const MessagesList = () => {
         </tbody>
       </Table>
     </ScrollArea>
+    <Pagination
+    count={(messages.length / 10).toFixed(0)}
+    onChange={(_, value) => {
+      setPage(value);
+      window.scroll(0, 450);
+    }}
+    style={{ padding: 20, width: '100%', display: 'flex', justifyContent: 'center' }}
+    />
+    </>
+    }
     </>
   )
 }

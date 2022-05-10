@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { Tooltip, TextInput } from '@mantine/core';
+import { Tooltip, TextInput, Loader } from '@mantine/core';
 import ContainerSmall from '../../components/styles/ContainerSmall';
 import SectionInner from '../../components/styles/SectionInner';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../../components/styles/Projects';
@@ -10,7 +10,7 @@ import { getProjects } from '../../context/projectContext/apiCalls';
 
 function ProjectsCollection() {
   const [search, setSearch] = useState('');
-  const { projects, dispatch } = useContext(ProjectContext);
+  const { projects, isFetching, dispatch } = useContext(ProjectContext);
   
   useEffect(() => {
     getProjects(dispatch);
@@ -37,6 +37,10 @@ function ProjectsCollection() {
         style={{ marginBottom: '20px' }}
         icon={<Search size={24} color='black' />}
       />
+      {isFetching ?
+      <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />
+      :
+      <>
       <ProjectHome>
         {projects.filter((project) => {
           if(search === ''){
@@ -79,6 +83,8 @@ function ProjectsCollection() {
         </ProjectHomeCard>
         ))}
         </ProjectHome>
+        </>
+        }
 
     </SectionInner>
   </ContainerSmall>
