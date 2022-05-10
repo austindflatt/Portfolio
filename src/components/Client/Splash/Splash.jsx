@@ -59,7 +59,7 @@ function Splash() {
             </SocialLink>
           </Social>
           <div className="splash-cta">
-            <Link to='/resume.pdf' style={{ marginRight: '20px' }}><Button variant="light" size="md">View My Resume</Button></Link>
+            <Link to='/resume.pdf' style={{ marginRight: '20px' }}><Button variant="light" size="md">My Resume</Button></Link>
             {user ? <Link to='/admin'><Button variant="light" size="md">Dashboard</Button></Link> : <Link to='/contact'><Button variant="light" size="md">Contact Me</Button></Link>}
           </div>
           </div>

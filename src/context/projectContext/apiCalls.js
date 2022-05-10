@@ -18,11 +18,7 @@ import {
 export const getProjects = async (dispatch) => {
   dispatch(getProjectsStart())
   try {
-    const res = await axios.get('https://secure-savannah-93086.herokuapp.com/api/projects', {
-      headers: {
-        token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
-      }
-    })
+    const res = await axios.get('https://secure-savannah-93086.herokuapp.com/api/projects')
     dispatch(getProjectsSuccess(res.data))
   } catch (error) {
     dispatch(getProjectsFailure())

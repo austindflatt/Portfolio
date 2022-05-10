@@ -2,12 +2,12 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import ContainerSmall from '../../styles/ContainerSmall';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../../styles/Projects';
-import { Button, Tooltip } from '@mantine/core';
+import { Button, Tooltip, Loader } from '@mantine/core';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 import { getProjects } from '../../../context/projectContext/apiCalls';
 
 function ProjectsHome() {
-  const { projects, dispatch } = useContext(ProjectContext);
+  const { projects, isFetching, dispatch } = useContext(ProjectContext);
 
   useEffect(() => {
     getProjects(dispatch);
@@ -17,6 +17,9 @@ function ProjectsHome() {
   <>
   <ContainerSmall>
     <h2 style={{ textAlign: 'left' }}>Featured Projects</h2>
+    {isFetching ? 
+    <Loader color="indigo" size="xl" variant="dots" style={{ padding: '20px', width: '100%', display: 'flex', justifyContent: 'center' }}/>
+    :
     <ProjectHome>
       {projects
       .filter((project) => {
@@ -58,7 +61,7 @@ function ProjectsHome() {
       </ProjectHomeCard>
       ))}
     </ProjectHome>
-
+    }
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
       <Link to='projects'>
       <Button variant="light" size="md">View All Projects</Button>
