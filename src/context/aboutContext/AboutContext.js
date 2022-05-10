@@ -2,7 +2,7 @@ import AboutReducer from './AboutReducer';
 import { createContext, useReducer } from 'react';
 
 const INITIAL_STATE = {
-  projects: [],
+  about: [],
   isFetching: false,
   error: false,
 }

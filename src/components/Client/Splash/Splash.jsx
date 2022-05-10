@@ -1,26 +1,19 @@
-import React, { useState, useContext, useEffect } from 'react';
-import axios from 'axios';
-import { Button } from '@mantine/core';
+import React, { useContext, useEffect } from 'react';
+import { Button, Skeleton } from '@mantine/core';
 import ContainerSmall from '../../styles/ContainerSmall';
 import { Social, SocialLink } from '../../styles/Splash'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/authContext/AuthContext';
+import { AboutContext } from '../../../context/aboutContext/AboutContext';
+import { getAbout } from '../../../context/aboutContext/apiCalls';
 
 function Splash() {
-  const [about, setAbout] = useState([]);
   const { user } = useContext(AuthContext);
+  const { about, isFetching, dispatch } = useContext(AboutContext);
 
   useEffect(() => {
-    const getAbout = async () => {
-      try {
-        const res = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/about/find/624e72b4c2ce0e16eca4f860`)
-        setAbout(res.data.payload)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getAbout();
-  }, [])
+    getAbout(dispatch);
+  }, [dispatch]);
 
   return (
   <>
@@ -30,7 +23,9 @@ function Splash() {
         <div className="splash-copy">
           <p className="splash-name">Hey my name is</p>
           <h1 className="splash-title">Austin Flatt.</h1>
-          <p className="splash-paragraph">{about.aboutMeShort}</p>
+          <p className="splash-paragraph">
+            {isFetching ? <Skeleton>Software Engineer short bio</Skeleton> : <>{about.aboutMeShort}</>}
+          </p>
           <Social>
             <SocialLink href={about.githubUrl} rel="noreferrer" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="35" height="40" viewBox="0 0 24 24" fill="#6e5494">
@@ -65,7 +60,9 @@ function Splash() {
           </div>
         <div className="splash-media">
           <div className="splash-media-container">
-            <img src={about.headshot} loading="lazy" alt="Headshot" />
+            {isFetching ? 
+            <Skeleton><img width='330px' height='410px' /></Skeleton> : <img src={about.headshot} loading="lazy" alt="Headshot" />
+            }
           </div>
         </div>
       </div>
