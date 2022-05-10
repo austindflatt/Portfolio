@@ -42,14 +42,15 @@ const ProjectsList = () => {
     >
       <EditProject />
     </Modal>
-    <Button type="Submit" variant="light" color="green" size="sm" onClick={() => setOpened(true)}>Add New</Button>
+    <Button type="Submit" variant="light" color="green" size="sm" onClick={() => setOpened(true)}>Add New Project</Button>
     <TextInput
       size="md"
+      variant="unstyled"
       placeholder="Search by title"
       onChange={(e) => setSearch(e.target.value)}
       rightSectionWidth={42}
       style={{ marginTop: '20px', marginBottom: '20px' }}
-      icon={<Search size={24} color='black' />}
+      icon={<Search size={20} color='black' />}
     />
     {isFetching ?
     <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />

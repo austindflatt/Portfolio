@@ -39,11 +39,12 @@ const MessagesList = () => {
     </Modal>
     <TextInput
       size="md"
+      variant="unstyled"
       placeholder="Search by sender"
       onChange={(e) => setSearch(e.target.value)}
       rightSectionWidth={42}
       style={{ marginTop: '20px', marginBottom: '20px' }}
-      icon={<Search size={24} color='black' />}
+      icon={<Search size={20} color='black' />}
     />
     {isFetching ?
     <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />

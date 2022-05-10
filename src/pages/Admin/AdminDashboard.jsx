@@ -29,7 +29,7 @@ const Admin = () => {
       <br />
       <ContainerSmall>
         <h2>Admin Dashboard</h2>
-        <p>Welcome {username} 🤓</p>
+        <p>Welcome {username}</p>
         <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginBottom: '20px', marginRight: '10px' }}>Edit Account</Button>
         <Button type="Submit" variant="light" size="sm" onClick={() => dispatch(logout())} disabled={isFetching} style={{ marginBottom: '20px' }}>Logout</Button>
         <Metrics />

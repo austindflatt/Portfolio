@@ -31,11 +31,12 @@ function ProjectsCollection() {
       <h2>My Projects</h2>
       <TextInput
         size="md"
+        variant="filled"
         placeholder="Search for projects"
         onChange={(e) => setSearch(e.target.value)}
         rightSectionWidth={42}
         style={{ marginBottom: '20px' }}
-        icon={<Search size={24} color='black' />}
+        icon={<Search size={20} color='black' />}
       />
       {isFetching ?
       <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />
