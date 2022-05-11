@@ -12,10 +12,10 @@ const Messages = () => {
   
   return (
   <>
-  <Paper withBorder radius="md" p="md" key={null}>
+  <Paper withBorder radius="sm" p="lg" key={null}>
     <Group>
       <div>
-        <Text color="dimmed" size="xs" transform="uppercase" weight={700}>
+        <Text color="dimmed" size="sm" transform="uppercase" weight={700}>
           Messages
         </Text>
         <Text weight={700} size="xl">{messages.length}</Text>

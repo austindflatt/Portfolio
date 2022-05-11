@@ -3,15 +3,36 @@ import { Helmet } from "react-helmet";
 import { TextInput, Textarea, Button } from '@mantine/core';
 import { BrandGithub, BrandLinkedin, BrandTwitch, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
 import { AboutContext } from '../../../context/aboutContext/AboutContext';
-import { getAbout } from '../../../context/aboutContext/apiCalls';
+import { getAbout, updateAbout } from '../../../context/aboutContext/apiCalls';
 
 const AboutData = () => {
-  const [setHeadshot] = useState(null);
+  const [headshot, setHeadshot] = useState('');
+  const [github, setGithub] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+  const [twitter, setTwitter] = useState('');
+  const [youtube, setYoutube] = useState('');
+  const [twitch, setTwitch] = useState('');
+  const [aboutMe, setAboutMe] = useState('');
+  const [aboutMeShort, setAboutMeShort] = useState('');
   const { about, dispatch } = useContext(AboutContext);
 
   useEffect(() => {
     getAbout(dispatch);
   }, [dispatch]);
+
+  const handleUpdate = () => {
+    const updatedData = {
+      headshot: headshot,
+      githubUrl: github,
+      linkedinUrl: linkedin,
+      twitterUrl: twitter,
+      youtubeUrl: youtube,
+      twitchUrl: twitch,
+      aboutMe: aboutMe,
+      aboutMeShort: aboutMeShort,
+    }
+    updateAbout(updatedData, dispatch);
+  }
 
   return (
   <>
@@ -20,70 +41,83 @@ const AboutData = () => {
     <meta name='description' content='Get in touch with me' />
     <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering job, louisville coder, hire software engineer, hire louisville software developer' />
   </Helmet>
-  <form>
-    <div>
+    {/* <div>
       <label>Upload Headshot</label>
       <br />
       <input type='file' onChange={e=>setHeadshot(e.target.files[0])}></input>
-    </div>
+    </div> */}
+    <TextInput
+    placeholder="Headshot URL"
+    label="Headshot"
+    id="headshot"
+    size="md"
+    value={about.headshot}
+    onChange={(e) => setHeadshot(e.target.value)}
+    />
     <TextInput
     placeholder="GitHub Link"
     label="GitHub Link"
     id="name"
     size="md"
-    defaultValue='hello'
-    icon={<BrandGithub size={24} />}
-    required
+    value={about.githubUrl}
+    onChange={(e) => setGithub(e.target.value)}
+    icon={<BrandGithub size={24} color="#6e5494" />}
     />
     <TextInput
     placeholder="LinkedIn Link"
     label="LinkedIn Link"
     id="company"
     size="md"
-    icon={<BrandLinkedin size={24} />}
-    required
+    value={about.linkedinUrl}
+    onChange={(e) => setLinkedin(e.target.value)}
+    icon={<BrandLinkedin size={24} color="#0a66c2" />}
     />
     <TextInput
     placeholder="Twitter Link"
     label="Twitter Link"
     id="email"
     size="md"
-    icon={<BrandTwitter size={24} />}
-    required
+    value={about.twitterUrl}
+    onChange={(e) => setTwitter(e.target.value)}
+    icon={<BrandTwitter size={24} color="#1DA1F2" />}
     />
     <TextInput
     placeholder="YouTube Link"
     label="YouTube Link"
     id="email"
     size="md"
-    icon={<BrandYoutube size={24} />}
-    required
+    value={about.youtubeUrl}
+    onChange={(e) => setYoutube(e.target.value)}
+    icon={<BrandYoutube size={24} color="red" />}
     />
     <TextInput
     placeholder="Twitch Link"
     label="Twitch Link"
     id="email"
     size="md"
-    icon={<BrandTwitch size={24} />}
-    required
+    defaultValue={about.twitchUrl}
+    onChange={(e) => setTwitch(e.target.value)}
+    icon={<BrandTwitch size={24} color="purple" />}
     />
     <Textarea
     label="About Me Bio"
-    id="message"
+    id="aboutMe"
     size="md"
-    defaultValue={about}
-    required
+    minRows={6}
+    value={about.aboutMe}
+    onChange={(e) => setAboutMe(e.target.value)}
     />
     <Textarea
     label="Short Bio"
-    id="message"
+    id="aboutMeShort"
     size="md"
-    required
+    minRows={4}
+    value={about.aboutMeShort}
+    onChange={(e) => setAboutMeShort(e.target.value)}
     />
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-      <Button type="Submit" variant="light" size="sm" color="orange">Update Details</Button>
+      <Button type="Submit" variant="light" size="sm" color="orange" onClick={handleUpdate}>Update Details</Button>
     </div>
-  </form>
   </>
   )
 }

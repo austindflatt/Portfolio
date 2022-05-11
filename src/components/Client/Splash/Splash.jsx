@@ -61,7 +61,7 @@ function Splash() {
         <div className="splash-media">
           <div className="splash-media-container">
             {isFetching ? 
-            <Skeleton><img width='330px' height='410px' /></Skeleton> : <img src={about.headshot} loading="lazy" alt="Headshot" />
+            <Skeleton><img width='330px' height='410px' alt='' /></Skeleton> : <img src={about.headshot} loading="lazy" alt="Headshot" />
             }
           </div>
         </div>

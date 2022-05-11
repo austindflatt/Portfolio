@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { TextInput, Table, Checkbox, ScrollArea, Button, Loader } from '@mantine/core';
+import { TextInput, Table, ScrollArea, Button, Loader } from '@mantine/core';
 import { VideoContext } from '../../../context/videoContext/VideoContext';
 import { deleteVideo, getVideos } from '../../../context/videoContext/apiCalls';
 import { Link } from "react-router-dom";
@@ -39,14 +39,6 @@ const VideoList = () => {
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
           <tr>
-            <th style={{ width: 40 }}>
-              <Checkbox
-              onChange={() => console.log('Clicked')}
-              checked=''
-              indeterminate=''
-              transitionDuration={0}
-              />
-            </th>
             <th>Title</th>
             <th>Added On</th>
             <th>Link</th>
@@ -68,13 +60,6 @@ const VideoList = () => {
         .map((video) => {
           return (
             <tr key={video._id}>
-            <td>
-              <Checkbox
-              checked=''
-              onChange={() => console.log('Clicked')}
-              transitionDuration={0}
-              />
-            </td>
             <td>{video.title}</td>
             <td>{video.createdAt}</td>
             <td><Link to={video.videoLink}>View Video</Link></td>

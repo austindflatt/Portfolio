@@ -1,16 +1,18 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { TextInput, Table, Checkbox, ScrollArea, Button, Modal, Loader } from '@mantine/core';
+import { TextInput, Table, ScrollArea, Button, Loader } from '@mantine/core';
 import { MessageContext } from '../../../context/messageContext/MessageContext';
 import { deleteMessage, getMessages } from '../../../context/messageContext/apiCalls';
 import { Search } from 'tabler-icons-react';
 import { Pagination } from '@mui/material';
+import ViewMessage from './ViewMessage';
 
 const MessagesList = () => {
   const { messages, isFetching, dispatch } = useContext(MessageContext);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [opened, setOpened] = useState(false);
-
+  const [viewId, setViewId] = useState('');
+  
   useEffect(() => {
     getMessages(dispatch);
   }, [dispatch]);
@@ -19,24 +21,18 @@ const MessagesList = () => {
     deleteMessage(id, dispatch);
   }
 
+  const showMessage = (id) => {
+    setViewId(id)
+    setOpened(true)
+  }
+
   return (
     <>
-    <Modal
+    <ViewMessage
+      viewId={viewId}
       opened={opened}
-      onClose={() => setOpened(false)}
-      title='From: Name of sender'
-      size="lg"
-    >
-      <div>
-        Email: example@company
-        <br />
-        Company: Company name
-        <br />
-        Sent on: date
-        <br /><br />
-        Message will go here
-      </div>
-    </Modal>
+      setOpened={setOpened}
+    />
     <TextInput
       size="md"
       variant="unstyled"
@@ -54,14 +50,6 @@ const MessagesList = () => {
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
           <tr>
-            <th style={{ width: 40 }}>
-              <Checkbox
-              onChange={() => console.log('Clicked')}
-              checked=''
-              indeterminate=''
-              transitionDuration={0}
-              />
-            </th>
             <th>Name</th>
             <th>Email</th>
             <th>Company</th>
@@ -84,19 +72,12 @@ const MessagesList = () => {
         .map((message) => {
           return (
             <tr key={message._id}>
-            <td>
-              <Checkbox
-              checked=''
-              onChange={() => console.log('Clicked')}
-              transitionDuration={0}
-              />
-            </td>
             <td>{message.name}</td>
             <td>{message.email}</td>
             <td>{message.company}</td>
             <td>{message.createdAt}</td>
             <td>
-              <Button type="Submit" variant="light" color="green" size="sm" style={{ marginRight: '10px' }} onClick={() => setOpened(true, message._id)}>View</Button>
+              <Button type="Submit" variant="light" color="green" size="sm" style={{ marginRight: '10px' }} onClick={() => showMessage(message._id)}>View</Button>
               <Button type="Submit" variant="light" color="red" size="sm" onClick={() => handleDelete(message._id)}>Delete</Button>
             </td>
           </tr>

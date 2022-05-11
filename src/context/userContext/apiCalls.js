@@ -7,7 +7,7 @@ export const getUsers = async (dispatch) => {
   try {
     const res = await axios.get('https://secure-savannah-93086.herokuapp.com/api/users', {
       headers: {
-        token: 'Bearer' + JSON.stringify(localStorage.getItem('user')).accessToken,
+        token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
     })
     dispatch(getUsersSuccess(res.data))
@@ -16,4 +16,4 @@ export const getUsers = async (dispatch) => {
   }
 }
 
-// DELETE USERS (IN PROGRESS)
+// DELETE USERS

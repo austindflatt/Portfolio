@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { TextInput, Table, Checkbox, ScrollArea, Button, Loader } from '@mantine/core';
+import { TextInput, Table, ScrollArea, Button, Loader } from '@mantine/core';
 import { SkillContext } from '../../../context/skillContext/SkillContext';
 import { deleteSkill, getSkills } from '../../../context/skillContext/apiCalls';
 import { Search } from 'tabler-icons-react';
@@ -39,14 +39,6 @@ const SkillsList = () => {
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
           <tr>
-            <th style={{ width: 40 }}>
-              <Checkbox
-              onChange={() => console.log('Clicked')}
-              checked=''
-              indeterminate=''
-              transitionDuration={0}
-              />
-            </th>
             <th>Skill Name</th>
             <th>Added On</th>
             <th>Last Updated</th>
@@ -68,13 +60,6 @@ const SkillsList = () => {
         .map((skill) => {
           return (
             <tr key={skill._id}>
-            <td>
-              <Checkbox
-              checked=''
-              onChange={() => console.log('Clicked')}
-              transitionDuration={0}
-              />
-            </td>
             <td>{skill.name}</td>
             <td>{skill.createdAt}</td>
             <td>{skill.updatedAt}</td>

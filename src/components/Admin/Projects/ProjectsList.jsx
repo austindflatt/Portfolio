@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { TextInput, Table, Checkbox, Anchor, ScrollArea, Button, Modal, Loader } from '@mantine/core';
+import { TextInput, Table, Anchor, ScrollArea, Button, Modal, Loader } from '@mantine/core';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 import { deleteProject, getProjects } from '../../../context/projectContext/apiCalls';
 import AddProject from './AddProject';
@@ -60,14 +60,6 @@ const ProjectsList = () => {
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
           <tr>
-            <th style={{ width: 40 }}>
-              <Checkbox
-              onChange={() => console.log('Clicked')}
-              checked=''
-              indeterminate=''
-              transitionDuration={0}
-              />
-            </th>
             <th>Title</th>
             <th>Added On</th>
             <th>Live Link</th>
@@ -91,13 +83,6 @@ const ProjectsList = () => {
         .map((project) => {
           return (
             <tr key={project._id}>
-            <td>
-              <Checkbox
-              checked=''
-              onChange={() => console.log('Clicked')}
-              transitionDuration={0}
-              />
-            </td>
             <td>{project.title}</td>
             <td>{project.createdAt}</td>
             <td>{project.liveLink ? <Anchor size="sm" href={project.liveLink} target='_blank'>View Live</Anchor> : <>N/A</>}</td>

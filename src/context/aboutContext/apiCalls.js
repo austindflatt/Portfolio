@@ -15,3 +15,16 @@ export const getAbout = async (dispatch) => {
     dispatch(getAboutFailure())
   }
 }
+
+// UPDATE ABOUT DATA
+export const updateAbout = async () => {
+  try {
+    await axios.put('https://secure-savannah-93086.herokuapp.com/api/about/update/624e72b4c2ce0e16eca4f860', {
+      headers: {
+        token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
+      }
+    })
+  } catch (error) {
+    console.log(error.response)
+  }
+}
