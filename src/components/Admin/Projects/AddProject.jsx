@@ -16,8 +16,7 @@ const AddProject = () => {
     setProject({ ...project, [e.target.id]:value })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     createProject(project, dispatch);
   }
 
@@ -82,8 +81,8 @@ const AddProject = () => {
     radius="lg"
     color="dark"
     id="featuredProject"
-    featured={featured}
-    onChange={() => setFeatured(!featured)}
+    checked={featured}
+    onChange={(e) => setFeatured(e.currentTarget.checked)}
     style={{ marginTop: '10px', marginBottom: '10px' }}
     />
     <Switch
@@ -92,8 +91,8 @@ const AddProject = () => {
     radius="lg"
     color="dark"
     id="showViewLive"
-    live={live}
-    onChange={() => setLive(!live)}
+    checked={live}
+    onChange={(e) => setLive(e.currentTarget.checked)}
     style={{ marginTop: '10px', marginBottom: '10px' }}
     />
 

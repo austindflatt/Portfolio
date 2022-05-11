@@ -44,7 +44,7 @@ const ProjectReducer = (state, action) => {
       };
     case "UPDATE_PROJECT_SUCCESS":
       return {
-        projects: state.projects.map(project => project._id === action.payload._id && action.payload),
+        projects: action.payload,
         isFetching: false,
         error: false
       };

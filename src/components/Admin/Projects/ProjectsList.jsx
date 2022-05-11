@@ -1,20 +1,19 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { TextInput, Table, Anchor, ScrollArea, Button, Modal, Loader } from '@mantine/core';
+import { TextInput, Table, Anchor, ScrollArea, Button, Loader } from '@mantine/core';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 import { deleteProject, getProjects } from '../../../context/projectContext/apiCalls';
-import AddProject from './AddProject';
 import EditProject from './EditProject';
 import { Search } from 'tabler-icons-react';
 import { Pagination } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ProjectsList = () => {
   const { projects, isFetching, dispatch } = useContext(ProjectContext);
   const [opened, setOpened] = useState(false);
-  const [edit, setEdit] = useState(false);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
+  const [editId, setEditId] = useState('');
   
-
   useEffect(() => {
     getProjects(dispatch);
   }, [dispatch]);
@@ -23,26 +22,24 @@ const ProjectsList = () => {
     deleteProject(id, dispatch);
   }
 
+  const showEdit = (id) => {
+    setEditId(id)
+    setOpened(true)
+  }
+
   return (
     <>
-    <Modal
-    opened={opened}
-    onClose={() => setOpened(false)}
-    title="Add Project"
-    size="lg"
-    >
-      <AddProject />
-    </Modal>
+    
+    <EditProject
+      editId={editId}
+      opened={opened}
+      setOpened={setOpened}
+    />
 
-    <Modal
-    opened={edit}
-    onClose={() => setEdit(false)}
-    title="Edit Project"
-    size="lg"
-    >
-      <EditProject />
-    </Modal>
-    <Button type="Submit" variant="light" color="green" size="sm" onClick={() => setOpened(true)}>Add New Project</Button>
+    <Link to='/add-project'>
+      <Button type="Submit" variant="light" color="green" size="sm">Add New Project</Button>
+    </Link>
+
     <TextInput
       size="md"
       variant="unstyled"
@@ -89,7 +86,7 @@ const ProjectsList = () => {
             <td><Anchor size="sm" href={project.githubLink} target='_blank'>View Code</Anchor></td>
             <td>{project.featuredProject ? <>Yes</> : <>No</>}</td>
             <td>
-              <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginRight: '10px' }} onClick={() => setEdit(true)}>Edit</Button>
+              <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginRight: '10px' }} onClick={() => showEdit(project._id)}>Edit</Button>
               <Button type="Submit" variant="light" color="red" size="sm" onClick={() => handleDelete(project._id)}>Delete</Button>
             </td>
           </tr>

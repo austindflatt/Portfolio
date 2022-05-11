@@ -44,7 +44,7 @@ export const createProject = async (project, dispatch) => {
 export const updateProject = async (project, dispatch) => {
   dispatch(updateProjectStart())
   try {
-    const res = await axios.put(`https://secure-savannah-93086.herokuapp.com/api/projects/update`, project, {
+    const res = await axios.put(`https://secure-savannah-93086.herokuapp.com/api/projects/update/${project.id}`, project, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }

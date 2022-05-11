@@ -47,7 +47,6 @@ const AboutData = () => {
       <input type='file' onChange={e=>setHeadshot(e.target.files[0])}></input>
     </div> */}
     <TextInput
-    placeholder="Headshot URL"
     label="Headshot"
     id="headshot"
     size="md"
@@ -55,7 +54,6 @@ const AboutData = () => {
     onChange={(e) => setHeadshot(e.target.value)}
     />
     <TextInput
-    placeholder="GitHub Link"
     label="GitHub Link"
     id="name"
     size="md"
@@ -64,7 +62,6 @@ const AboutData = () => {
     icon={<BrandGithub size={24} color="#6e5494" />}
     />
     <TextInput
-    placeholder="LinkedIn Link"
     label="LinkedIn Link"
     id="company"
     size="md"
@@ -73,7 +70,6 @@ const AboutData = () => {
     icon={<BrandLinkedin size={24} color="#0a66c2" />}
     />
     <TextInput
-    placeholder="Twitter Link"
     label="Twitter Link"
     id="email"
     size="md"
@@ -82,7 +78,6 @@ const AboutData = () => {
     icon={<BrandTwitter size={24} color="#1DA1F2" />}
     />
     <TextInput
-    placeholder="YouTube Link"
     label="YouTube Link"
     id="email"
     size="md"
@@ -91,11 +86,10 @@ const AboutData = () => {
     icon={<BrandYoutube size={24} color="red" />}
     />
     <TextInput
-    placeholder="Twitch Link"
     label="Twitch Link"
     id="email"
     size="md"
-    defaultValue={about.twitchUrl}
+    value={about.twitchUrl}
     onChange={(e) => setTwitch(e.target.value)}
     icon={<BrandTwitch size={24} color="purple" />}
     />

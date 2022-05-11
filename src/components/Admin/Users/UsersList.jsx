@@ -12,7 +12,6 @@ const UsersList = () => {
 
   return (
     <>
-    <Button type="Submit" variant="light" color="green" size="sm">Add New</Button>
     <ScrollArea>
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm" style={{ justifyContent: 'center' }}>
         <thead>
