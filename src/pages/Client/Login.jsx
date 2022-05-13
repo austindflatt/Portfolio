@@ -33,6 +33,7 @@ const Login = () => {
         <h2>Login to your account</h2>
         <form>
           <TextInput
+          variant="filled"
           placeholder="Enter your email"
           label="Email"
           id="email"
@@ -42,6 +43,7 @@ const Login = () => {
           required
           />
           <TextInput
+          variant="filled"
           placeholder="Enter your password"
           label="Password"
           id="password"
