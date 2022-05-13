@@ -37,7 +37,7 @@ const Login = () => {
           label="Email"
           id="email"
           onChange={(e) => setEmail(e.target.value)}
-          size="lg"
+          size="md"
           icon={<At size={14} />}
           required
           />
@@ -46,14 +46,14 @@ const Login = () => {
           label="Password"
           id="password"
           onChange={(e) => setPassword(e.target.value)}
-          size="lg"
+          size="md"
           icon={<Eye size={14} />}
           type="password"
           required
           />
 
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-            <Button type="Submit" variant="light" size="md" onClick={handleLogin} disabled={isFetching}>Login</Button>
+            <Button type="Submit" variant="light" size="sm" onClick={handleLogin} disabled={isFetching}>Login</Button>
           </div>
         </form>
       </ContainerSmall>

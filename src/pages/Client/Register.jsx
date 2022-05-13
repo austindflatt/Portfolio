@@ -55,55 +55,61 @@ const Register = () => {
         <h2>Register</h2>
         <form>
           <TextInput
+          variant="filled"
           placeholder="Enter your first name"
           label="First Name"
           id="firstName"
-          size="lg"
+          size="md"
           icon={<User size={14} />}
           ref={firstNameRef}
           required
           />
           <TextInput
+          variant="filled"
           placeholder="Enter your last name"
           label="Last Name"
           id="lastName"
-          size="lg"
+          size="md"
           icon={<User size={14} />}
           ref={lastNameRef}
           required
           />
           <TextInput
+          variant="filled"
           placeholder="Enter a username"
           label="Username"
           id="username"
-          size="lg"
+          size="md"
           icon={<User size={14} />}
           ref={usernameRef}
           required
           />
           <TextInput
+          variant="filled"
           placeholder="Enter your email"
           label="Email"
           id="email"
-          size="lg"
+          size="md"
           icon={<At size={14} />}
           ref={emailRef}
           required
           />
           <TextInput
+          variant="filled"
           placeholder="Enter company/business name"
           label="Company"
           id="company"
-          size="lg"
+          size="md"
           icon={<Building size={14} />}
           ref={companyRef}
           required
           />
           <TextInput
+          variant="filled"
           placeholder="Create a password"
           label="Password"
           id="password"
-          size="lg"
+          size="md"
           icon={<Eye size={14} />}
           type="password"
           ref={passwordRef}
@@ -111,7 +117,7 @@ const Register = () => {
           />
           
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-            <Button type="Submit" variant="light" size="md" onClick={handleFinish}>Register</Button>
+            <Button type="Submit" variant="light" size="sm" onClick={handleFinish}>Register</Button>
           </div>
 
         </form>

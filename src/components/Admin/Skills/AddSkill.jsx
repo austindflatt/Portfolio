@@ -20,6 +20,7 @@ const AddSkill = () => {
   return (
   <>
     <TextInput
+    variant="filled"
     label="Add New Skill"
     placeholder='Skill Name'
     id="name"

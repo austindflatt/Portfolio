@@ -53,42 +53,47 @@ const Contact = () => {
           If you have a question or just want to say hello, just fill out the form below and I will get back to you!
         </p>
         <TextInput
+        variant="filled"
         placeholder="Your name"
         label="Name"
         id="name"
-        size="lg"
+        size="md"
         ref={nameRef}
-        icon={<User size={24} color='black' />}
+        icon={<User size={14} />}
         required
         />
         <TextInput
+        variant="filled"
         placeholder="Company"
         label="Organization/Company"
         id="company"
-        size="lg"
+        size="md"
         ref={companyRef}
-        icon={<Building size={24} color='black' />}
+        icon={<Building size={14} />}
         required
         />
         <TextInput
+        variant="filled"
         placeholder="Your email"
         label="Email"
         id="email"
-        size="lg"
+        size="md"
         ref={emailRef}
-        icon={<At size={24} color='black' />}
+        icon={<At size={14} />}
         required
         />
         <Textarea
+        variant="filled"
         label="Message"
         id="message"
-        size="lg"
+        size="md"
+        minRows={6}
         ref={messageRef}
         required
         />
         
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-          <Button type="Submit" variant="light" size="md" onClick={handleFinish}>Send Message</Button>
+          <Button type="Submit" variant="light" size="sm" onClick={handleFinish}>Send Message</Button>
         </div>
     </ContainerSmall>
   </SectionInner>

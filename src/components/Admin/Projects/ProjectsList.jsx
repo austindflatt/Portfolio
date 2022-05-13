@@ -47,7 +47,7 @@ const ProjectsList = () => {
       onChange={(e) => setSearch(e.target.value)}
       rightSectionWidth={42}
       style={{ marginTop: '20px', marginBottom: '20px' }}
-      icon={<Search size={20} color='black' />}
+      icon={<Search size={14} />}
     />
     {isFetching ?
     <Loader variant="dots" size="xl" color="green" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} />

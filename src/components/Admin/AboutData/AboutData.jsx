@@ -47,6 +47,7 @@ const AboutData = () => {
       <input type='file' onChange={e=>setHeadshot(e.target.files[0])}></input>
     </div> */}
     <TextInput
+    variant="filled"
     label="Headshot"
     id="headshot"
     size="md"
@@ -54,6 +55,7 @@ const AboutData = () => {
     onChange={(e) => setHeadshot(e.target.value)}
     />
     <TextInput
+    variant="filled"
     label="GitHub Link"
     id="name"
     size="md"
@@ -62,6 +64,7 @@ const AboutData = () => {
     icon={<BrandGithub size={24} color="#6e5494" />}
     />
     <TextInput
+    variant="filled"
     label="LinkedIn Link"
     id="company"
     size="md"
@@ -70,6 +73,7 @@ const AboutData = () => {
     icon={<BrandLinkedin size={24} color="#0a66c2" />}
     />
     <TextInput
+    variant="filled"
     label="Twitter Link"
     id="email"
     size="md"
@@ -78,6 +82,7 @@ const AboutData = () => {
     icon={<BrandTwitter size={24} color="#1DA1F2" />}
     />
     <TextInput
+    variant="filled"
     label="YouTube Link"
     id="email"
     size="md"
@@ -86,6 +91,7 @@ const AboutData = () => {
     icon={<BrandYoutube size={24} color="red" />}
     />
     <TextInput
+    variant="filled"
     label="Twitch Link"
     id="email"
     size="md"
@@ -94,6 +100,7 @@ const AboutData = () => {
     icon={<BrandTwitch size={24} color="purple" />}
     />
     <Textarea
+    variant="filled"
     label="About Me Bio"
     id="aboutMe"
     size="md"
@@ -102,6 +109,7 @@ const AboutData = () => {
     onChange={(e) => setAboutMe(e.target.value)}
     />
     <Textarea
+    variant="filled"
     label="Short Bio"
     id="aboutMeShort"
     size="md"
