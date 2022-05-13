@@ -5,11 +5,14 @@ import { deleteSkill, getSkills } from '../../../context/skillContext/apiCalls';
 import { Search } from 'tabler-icons-react';
 import AddSkill  from './AddSkill';
 import { Pagination } from '@mui/material';
+import EditSkill from '../Skills/EditSkill';
 
 const SkillsList = () => {
   const { skills, isFetching, dispatch } = useContext(SkillContext);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
+  const [opened, setOpened] = useState(false);
+  const [editId, setEditId] = useState('');
 
   useEffect(() => {
     getSkills(dispatch);
@@ -19,8 +22,18 @@ const SkillsList = () => {
     deleteSkill(id, dispatch);
   }
 
+  const showEdit = (id) => {
+    setEditId(id)
+    setOpened(true)
+  }
+
   return (
     <>
+    <EditSkill
+      editId={editId}
+      opened={opened}
+      setOpened={setOpened}
+    />
     <AddSkill />
     <TextInput
       size="md"
@@ -64,7 +77,7 @@ const SkillsList = () => {
             <td>{skill.createdAt}</td>
             <td>{skill.updatedAt}</td>
             <td>
-              <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginRight: '10px' }}>Edit</Button>
+              <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginRight: '10px' }} onClick={() => showEdit(skill._id)}>Edit</Button>
               <Button type="Submit" variant="light" color="red" size="sm" onClick={() => handleDelete(skill._id)}>Delete</Button>
             </td>
           </tr>

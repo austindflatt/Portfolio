@@ -3,6 +3,9 @@ import {
   createSkillStart,
   createSkillSuccess,
   createSkillFailure,
+  updateSkillStart,
+  updateSkillSuccess,
+  updateSkillFailure,
   deleteSkillStart, 
   deleteSkillSuccess, 
   deleteSkillFailure, 
@@ -38,6 +41,21 @@ export const createSkill = async (skill, dispatch) => {
     dispatch(createSkillSuccess(res.data))
   } catch (error) {
     dispatch(createSkillFailure())
+  }
+}
+
+// UPDATE SKILL
+export const updateSkill = async (skill, dispatch) => {
+  dispatch(updateSkillStart())
+  try {
+    const res = await axios.put(`https://secure-savannah-93086.herokuapp.com/api/skills/update/${skill.id}`, skill, {
+      headers: {
+        token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
+      }
+    })
+    dispatch(updateSkillSuccess(res.data))
+  } catch (error) {
+    dispatch(updateSkillFailure())
   }
 }
 

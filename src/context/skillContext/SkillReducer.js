@@ -36,6 +36,24 @@ const SkillReducer = (state, action) => {
         isFetching: false,
         error: true
       };
+    case "UPDATE_SKILL_START":
+      return {
+        ...state,
+        isFetching: true,
+        error: false
+      };
+    case "UPDATE_SKILL_SUCCESS":
+      return {
+        skills: action.payload,
+        isFetching: false,
+        error: false
+      };
+    case "UPDATE_SKILL_FAILURE":
+      return {
+        ...state,
+        isFetching: false,
+        error: true
+      };
     case "DELETE_SKILL_START":
       return {
         ...state,

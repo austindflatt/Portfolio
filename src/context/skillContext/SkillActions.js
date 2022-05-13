@@ -24,6 +24,19 @@ export const createSkillFailure = () => ({
 	type: 'CREATE_SKILL_FAILURE',
 });
 
+export const updateSkillStart = () => ({
+	type: 'UPDATE_SKILL_START',
+});
+
+export const updateSkillSuccess = (skill) => ({
+	type: 'UPDATE_SKILL_SUCCESS',
+	payload: skill
+});
+
+export const updateSkillFailure = () => ({
+	type: 'UPDATE_SKILL_FAILURE',
+});
+
 export const deleteSkillStart = () => ({
 	type: 'DELETE_SKILL_START',
 });

@@ -23,6 +23,7 @@ const AddProject = () => {
   return (
   <>
     <TextInput
+    variant="filled"
     label="Thumbnail Image"
     placeholder='URL to image'
     id="image"
@@ -31,6 +32,7 @@ const AddProject = () => {
     onChange={handleChange}
     />
     <TextInput
+    variant="filled"
     label="Title"
     placeholder='Title of project'
     id="title"
@@ -39,6 +41,7 @@ const AddProject = () => {
     onChange={handleChange}
     />
     <Textarea
+    variant="filled"
     label="Description"
     id="description"
     size="md"
@@ -46,6 +49,7 @@ const AddProject = () => {
     onChange={handleChange}
     />
     <TextInput
+    variant="filled"
     label="Tech Used"
     placeholder="React, Express, Node"
     id="techUsed"
@@ -54,6 +58,7 @@ const AddProject = () => {
     onChange={handleChange}
     />
     <TextInput
+    variant="filled"
     placeholder="GitHub Link"
     label="GitHub Link"
     id="githubLink"
@@ -62,6 +67,7 @@ const AddProject = () => {
     onChange={handleChange}
     />
     <TextInput
+    variant="filled"
     placeholder="Live Link"
     label="Live Link"
     id="liveLink"
@@ -69,6 +75,7 @@ const AddProject = () => {
     onChange={handleChange}
     />
     <TextInput
+    variant="filled"
     placeholder="YouTube ID"
     label="YouTube ID"
     id="youtubeId"

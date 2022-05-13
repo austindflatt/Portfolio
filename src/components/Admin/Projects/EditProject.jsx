@@ -53,6 +53,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     size="lg"
     >
     <TextInput
+    variant="filled"
     label="Image"
     id="image"
     size="md"
@@ -60,6 +61,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     onChange={(e) => setImage(e.target.value)}
     />
     <TextInput
+    variant="filled"
     label="Title"
     id="title"
     size="md"
@@ -67,6 +69,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     onChange={(e) => setTitle(e.target.value)}
     />
     <Textarea
+    variant="filled"
     label="Description"
     id="description"
     size="md"
@@ -74,6 +77,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     onChange={(e) => setDescription(e.target.value)}
     />
     <TextInput
+    variant="filled"
     label="Tech Used"
     id="techUsed"
     size="md"
@@ -81,6 +85,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     onChange={(e) => setTechUsed(e.target.value)}
     />
     <TextInput
+    variant="filled"
     label="GitHub Link"
     id="githubLink"
     size="md"
@@ -88,6 +93,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     onChange={(e) => setGithubLink(e.target.value)}
     />
     <TextInput
+    variant="filled"
     label="Live Link"
     id="liveLink"
     size="md"
@@ -95,6 +101,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     onChange={(e) => setLiveLink(e.target.value)}
     />
     <TextInput
+    variant="filled"
     label="YouTube ID"
     id="ytId"
     size="md"

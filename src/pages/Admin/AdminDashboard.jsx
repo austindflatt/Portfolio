@@ -12,9 +12,9 @@ import Metrics from '../../components/Admin/Metrics/Metrics';
 import AboutData from '../../components/Admin/AboutData/AboutData';
 import Messages from '../../components/Admin/Messages/Messages';
 import Projects from '../../components/Admin/Projects/Projects';
-import Videos from '../../components/Admin/Videos/Videos';
+// import Videos from '../../components/Admin/Videos/Videos';
 import Skills from '../../components/Admin/Skills/Skills';
-import Users from '../../components/Admin/Users/Users';
+// import Users from '../../components/Admin/Users/Users';
 
 const Admin = () => {
   const { isFetching, dispatch } = useContext(AuthContext);
@@ -38,9 +38,9 @@ const Admin = () => {
           <Tabs.Tab label="Details"><AboutData /></Tabs.Tab>
           <Tabs.Tab label="Messages"><Messages /></Tabs.Tab>
           <Tabs.Tab label="Projects"><Projects /></Tabs.Tab>
-          <Tabs.Tab label="Videos"><Videos /></Tabs.Tab>
+          {/* <Tabs.Tab label="Videos"><Videos /></Tabs.Tab> */}
           <Tabs.Tab label="Skills"><Skills /></Tabs.Tab>
-          <Tabs.Tab label="Users"><Users /></Tabs.Tab>
+          {/* <Tabs.Tab label="Users"><Users /></Tabs.Tab> */}
         </Tabs>
       </ContainerSmall>
     </SectionInner>
