@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from 'axios'
 import { Helmet } from "react-helmet";
@@ -15,19 +15,16 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const history = useHistory();
   
-  const nameRef = useRef();
-  const companyRef = useRef();
-  const emailRef = useRef();
-  const messageRef = useRef();
-  
   const handleFinish = async (e) => {
     e.preventDefault();
-    setEmail(emailRef.current.value);
-    setName(nameRef.current.value);
-    setCompany(companyRef.current.value);
-    setMessage(messageRef.current.value);
+    const newBody = {
+      email: email,
+      name: name,
+      company: company,
+      message: message
+    }
     try {
-      await axios.post('https://secure-savannah-93086.herokuapp.com/api/messages/send', { email, name, company, message });
+      await axios.post('https://secure-savannah-93086.herokuapp.com/api/messages/send', newBody);
       history.push('/');
     } catch (error) { 
 
@@ -58,7 +55,7 @@ const Contact = () => {
         label="Name"
         id="name"
         size="md"
-        ref={nameRef}
+        onChange={(e) => setName(e.target.value)}
         icon={<User size={14} />}
         required
         />
@@ -68,7 +65,7 @@ const Contact = () => {
         label="Organization/Company"
         id="company"
         size="md"
-        ref={companyRef}
+        onChange={(e) => setCompany(e.target.value)}
         icon={<Building size={14} />}
         required
         />
@@ -78,7 +75,7 @@ const Contact = () => {
         label="Email"
         id="email"
         size="md"
-        ref={emailRef}
+        onChange={(e) => setEmail(e.target.value)}
         icon={<At size={14} />}
         required
         />
@@ -88,7 +85,7 @@ const Contact = () => {
         id="message"
         size="md"
         minRows={6}
-        ref={messageRef}
+        onChange={(e) => setMessage(e.target.value)}
         required
         />
         
