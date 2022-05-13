@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { TextInput, Textarea, Button, Switch } from '@mantine/core';
 import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
+import { Link } from 'react-router-dom';
 
 const AddProject = () => {
   const [project, setProject] = useState(null);
@@ -104,7 +105,10 @@ const AddProject = () => {
     />
 
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-      <Button type="Submit" variant="light" size="sm" onClick={handleSubmit}>Add Project</Button>
+      <Link to='/admin'>
+        <Button type="Submit" variant="light" size="sm" color="orange" style={{ marginRight: '10px' }}>Go back to Admin</Button>
+      </Link>
+      <Button type="Submit" variant="light" size="sm" color="green" onClick={handleSubmit}>Add Project</Button>
     </div>
 
   </>

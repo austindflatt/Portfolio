@@ -1,9 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
+import axios from "axios";
 import { Helmet } from "react-helmet";
 import { TextInput, Textarea, Button } from '@mantine/core';
 import { BrandGithub, BrandLinkedin, BrandTwitch, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
 import { AboutContext } from '../../../context/aboutContext/AboutContext';
-import { getAbout, updateAbout } from '../../../context/aboutContext/apiCalls';
+import { updateAbout } from '../../../context/aboutContext/apiCalls';
 
 const AboutData = () => {
   const [headshot, setHeadshot] = useState('');
@@ -14,13 +15,26 @@ const AboutData = () => {
   const [twitch, setTwitch] = useState('');
   const [aboutMe, setAboutMe] = useState('');
   const [aboutMeShort, setAboutMeShort] = useState('');
-  const { about, dispatch } = useContext(AboutContext);
+  const { dispatch } = useContext(AboutContext);
 
   useEffect(() => {
-    getAbout(dispatch);
-  }, [dispatch]);
+    const getEditData = async () => {
+      const response = await axios.get('https://secure-savannah-93086.herokuapp.com/api/about/find/624e72b4c2ce0e16eca4f860');
+      const data = response.data.payload;
+      setHeadshot(data.headshot);
+      setGithub(data.githubUrl);
+      setLinkedin(data.linkedinUrl);
+      setTwitter(data.twitterUrl);
+      setYoutube(data.youtubeUrl);
+      setTwitch(data.twitchUrl);
+      setAboutMe(data.aboutMe);
+      setAboutMeShort(data.aboutMeShort);
+    }
+    getEditData();
+  }, []);
 
-  const handleUpdate = () => {
+  const handleUpdate = (e) => {
+    e.preventDefault();
     const updatedData = {
       headshot: headshot,
       githubUrl: github,
@@ -37,7 +51,7 @@ const AboutData = () => {
   return (
   <>
   <Helmet>
-    <title>Update Portfolio Details | Austin Flatt</title>
+    <title>Manage App Info | Austin Flatt</title>
     <meta name='description' content='Get in touch with me' />
     <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering job, louisville coder, hire software engineer, hire louisville software developer' />
   </Helmet>
@@ -51,7 +65,7 @@ const AboutData = () => {
     label="Headshot"
     id="headshot"
     size="md"
-    value={about.headshot}
+    value={headshot}
     onChange={(e) => setHeadshot(e.target.value)}
     />
     <TextInput
@@ -59,7 +73,7 @@ const AboutData = () => {
     label="GitHub Link"
     id="name"
     size="md"
-    value={about.githubUrl}
+    value={github}
     onChange={(e) => setGithub(e.target.value)}
     icon={<BrandGithub size={24} color="#6e5494" />}
     />
@@ -68,7 +82,7 @@ const AboutData = () => {
     label="LinkedIn Link"
     id="company"
     size="md"
-    value={about.linkedinUrl}
+    value={linkedin}
     onChange={(e) => setLinkedin(e.target.value)}
     icon={<BrandLinkedin size={24} color="#0a66c2" />}
     />
@@ -77,7 +91,7 @@ const AboutData = () => {
     label="Twitter Link"
     id="email"
     size="md"
-    value={about.twitterUrl}
+    value={twitter}
     onChange={(e) => setTwitter(e.target.value)}
     icon={<BrandTwitter size={24} color="#1DA1F2" />}
     />
@@ -86,7 +100,7 @@ const AboutData = () => {
     label="YouTube Link"
     id="email"
     size="md"
-    value={about.youtubeUrl}
+    value={youtube}
     onChange={(e) => setYoutube(e.target.value)}
     icon={<BrandYoutube size={24} color="red" />}
     />
@@ -95,7 +109,7 @@ const AboutData = () => {
     label="Twitch Link"
     id="email"
     size="md"
-    value={about.twitchUrl}
+    value={twitch}
     onChange={(e) => setTwitch(e.target.value)}
     icon={<BrandTwitch size={24} color="purple" />}
     />
@@ -105,7 +119,7 @@ const AboutData = () => {
     id="aboutMe"
     size="md"
     minRows={6}
-    value={about.aboutMe}
+    value={aboutMe}
     onChange={(e) => setAboutMe(e.target.value)}
     />
     <Textarea
@@ -114,7 +128,7 @@ const AboutData = () => {
     id="aboutMeShort"
     size="md"
     minRows={4}
-    value={about.aboutMeShort}
+    value={aboutMeShort}
     onChange={(e) => setAboutMeShort(e.target.value)}
     />
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>

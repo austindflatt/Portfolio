@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import { Helmet } from "react-helmet";
@@ -17,23 +17,18 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const history = useHistory();
 
-  const firstNameRef = useRef();
-  const lastNameRef = useRef();
-  const usernameRef = useRef();
-  const emailRef = useRef();
-  const companyRef = useRef();
-  const passwordRef = useRef();
-
   const handleFinish = async (e) => {
     e.preventDefault();
-    setEmail(emailRef.current.value);
-    setFirstName(firstNameRef.current.value);
-    setLastName(lastNameRef.current.value);
-    setUsername(usernameRef.current.value);
-    setCompany(companyRef.current.value);
-    setPassword(passwordRef.current.value);
+    const newBody = {
+      email: email,
+      firstName: firstName,
+      lastName: lastName,
+      username: username,
+      company: company,
+      password: password
+    }
     try {
-      await axios.post('https://secure-savannah-93086.herokuapp.com/api/auth/register', { email, firstName, lastName, username, company, password });
+      await axios.post('https://secure-savannah-93086.herokuapp.com/api/auth/register', newBody);
       history.push('/login');
     } catch (error) {
       
@@ -61,7 +56,7 @@ const Register = () => {
           id="firstName"
           size="md"
           icon={<User size={14} />}
-          ref={firstNameRef}
+          onChange={(e) => setFirstName(e.target.value)}
           required
           />
           <TextInput
@@ -71,7 +66,7 @@ const Register = () => {
           id="lastName"
           size="md"
           icon={<User size={14} />}
-          ref={lastNameRef}
+          onChange={(e) => setLastName(e.target.value)}
           required
           />
           <TextInput
@@ -81,7 +76,7 @@ const Register = () => {
           id="username"
           size="md"
           icon={<User size={14} />}
-          ref={usernameRef}
+          onChange={(e) => setUsername(e.target.value)}
           required
           />
           <TextInput
@@ -91,7 +86,7 @@ const Register = () => {
           id="email"
           size="md"
           icon={<At size={14} />}
-          ref={emailRef}
+          onChange={(e) => setEmail(e.target.value)}
           required
           />
           <TextInput
@@ -101,7 +96,7 @@ const Register = () => {
           id="company"
           size="md"
           icon={<Building size={14} />}
-          ref={companyRef}
+          onChange={(e) => setCompany(e.target.value)}
           required
           />
           <TextInput
@@ -112,7 +107,7 @@ const Register = () => {
           size="md"
           icon={<Eye size={14} />}
           type="password"
-          ref={passwordRef}
+          onChange={(e) => setPassword(e.target.value)}
           required
           />
           

@@ -30,7 +30,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
   }, [editId]);
 
   const handleUpdate = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const updatedData = {
       id: editId,
       image: image,
