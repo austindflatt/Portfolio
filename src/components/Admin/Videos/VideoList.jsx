@@ -19,6 +19,10 @@ const VideoList = () => {
     deleteVideo(id, dispatch);
   }
 
+  const handleUpdate = () => {
+    console.log('editing');
+  }
+
   return (
     <>
     <Button type="Submit" variant="light" color="green" size="sm">Add New Video</Button>
