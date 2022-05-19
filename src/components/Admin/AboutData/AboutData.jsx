@@ -16,10 +16,11 @@ const AboutData = () => {
   const [aboutMe, setAboutMe] = useState('');
   const [aboutMeShort, setAboutMeShort] = useState('');
   const { dispatch } = useContext(AboutContext);
+  const editId = '624e72b4c2ce0e16eca4f860';
 
   useEffect(() => {
     const getEditData = async () => {
-      const response = await axios.get('https://secure-savannah-93086.herokuapp.com/api/about/find/624e72b4c2ce0e16eca4f860');
+      const response = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/about/find/${editId}`);
       const data = response.data.payload;
       setHeadshot(data.headshot);
       setGithub(data.githubUrl);
@@ -31,11 +32,12 @@ const AboutData = () => {
       setAboutMeShort(data.aboutMeShort);
     }
     getEditData();
-  }, []);
+  }, [editId]);
 
   const handleUpdate = (e) => {
     e.preventDefault();
     const updatedData = {
+      id: editId,
       headshot: headshot,
       githubUrl: github,
       linkedinUrl: linkedin,

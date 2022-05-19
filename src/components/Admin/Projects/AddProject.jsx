@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { TextInput, Textarea, Button, Switch } from '@mantine/core';
+import { TextInput, Textarea, Button } from '@mantine/core';
 import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 import { Link } from 'react-router-dom';
@@ -7,10 +7,8 @@ import { Link } from 'react-router-dom';
 const AddProject = () => {
   const [project, setProject] = useState(null);
   const { dispatch } = useContext(ProjectContext);
-  const [featured, setFeatured] = useState(false);
-  const [live, setLive] = useState(false);
-
-  console.log(featured)
+  // const [featured, setFeatured] = useState(false);
+  // const [live, setLive] = useState(false);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -83,25 +81,21 @@ const AddProject = () => {
     size="md"
     onChange={handleChange}
     />
-    <Switch
+    <TextInput
+    variant="filled"
+    placeholder="true or false"
     label="Featured Project"
-    size="md"
-    radius="lg"
-    color="dark"
     id="featuredProject"
-    checked={featured}
-    onChange={(e) => setFeatured(e.currentTarget.checked)}
-    style={{ marginTop: '10px', marginBottom: '10px' }}
-    />
-    <Switch
-    label="Show Live Button"
     size="md"
-    radius="lg"
-    color="dark"
+    onChange={handleChange}
+    />
+    <TextInput
+    variant="filled"
+    placeholder="true or false"
+    label="Show Live"
     id="showViewLive"
-    checked={live}
-    onChange={(e) => setLive(e.currentTarget.checked)}
-    style={{ marginTop: '10px', marginBottom: '10px' }}
+    size="md"
+    onChange={handleChange}
     />
 
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>

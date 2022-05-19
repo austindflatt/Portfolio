@@ -1,5 +1,8 @@
 import axios from 'axios';
 import { 
+  updateAboutStart,
+  updateAboutSuccess,
+  updateAboutFailure,
   getAboutFailure, 
   getAboutStart, 
   getAboutSuccess 
@@ -17,14 +20,16 @@ export const getAbout = async (dispatch) => {
 }
 
 // UPDATE ABOUT DATA
-export const updateAbout = async () => {
+export const updateAbout = async (about, dispatch) => {
+  dispatch(updateAboutStart())
   try {
-    await axios.put('https://secure-savannah-93086.herokuapp.com/api/about/update/624e72b4c2ce0e16eca4f860', {
+    const res = await axios.put(`https://secure-savannah-93086.herokuapp.com/api/about/update/${about.id}`, about, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
     })
+    dispatch(updateAboutSuccess(res.data))
   } catch (error) {
-    console.log(error.response)
+    dispatch(updateAboutFailure())
   }
 }
