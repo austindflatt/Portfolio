@@ -46,8 +46,7 @@ const Contact = () => {
       <h2>Contact Me</h2>
         <p>
           Don't hesitate to reach out if you’re in need of a developer. 
-          Whether that means you need a website, web app, want to collaborate on a project, or if you’re looking to fill a full-time position. 
-          If you have a question or just want to say hello, just fill out the form below and I will get back to you!
+          Whether that means you need a website, web app, or if you’re looking to fill a full-time position.
         </p>
         <TextInput
         variant="filled"
