@@ -2,10 +2,10 @@ import React, { useState, useContext, useEffect } from 'react';
 import { TextInput, Table, Anchor, ScrollArea, Button, Loader } from '@mantine/core';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 import { deleteProject, getProjects } from '../../../context/projectContext/apiCalls';
-import EditProject from './EditProject';
 import { Search } from 'tabler-icons-react';
 import { Pagination } from '@mui/material';
 import AddProject from './AddProject';
+import EditProject from './EditProject';
 
 const ProjectsList = () => {
   const { projects, isFetching, dispatch } = useContext(ProjectContext);

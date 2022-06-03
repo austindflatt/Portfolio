@@ -31,6 +31,7 @@ const AddSkill = ({ openedAdd, setOpenedAdd }) => {
     placeholder="e.g. React"
     id="name"
     size="md"
+    required
     onChange={handleChange}
     />
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>

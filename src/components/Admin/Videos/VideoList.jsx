@@ -5,11 +5,16 @@ import { deleteVideo, getVideos } from '../../../context/videoContext/apiCalls';
 import { Link } from "react-router-dom";
 import { Search } from 'tabler-icons-react';
 import { Pagination } from '@mui/material';
+import AddVideo from './AddVideo';
+import EditVideo from './EditVideo';
 
 const VideoList = () => {
   const { videos, isFetching, dispatch } = useContext(VideoContext);
+  const [opened, setOpened] = useState(false);
+  const [openedAdd, setOpenedAdd] = useState(false);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
+  const [editId, setEditId] = useState('');
 
   useEffect(() => {
     getVideos(dispatch);
@@ -19,9 +24,31 @@ const VideoList = () => {
     deleteVideo(id, dispatch);
   }
 
+  const showEdit = (id) => {
+    setEditId(id);
+    setOpened(true);
+  }
+
+  const showAdd = () => {
+    setOpenedAdd(true);
+  }
+
   return (
     <>
-    <Button type="Submit" variant="light" color="green" size="sm">Add New Video</Button>
+
+    <EditVideo
+      editId={editId}
+      opened={opened}
+      setOpened={setOpened}
+    />
+
+    <AddVideo
+      openedAdd={openedAdd}
+      setOpenedAdd={setOpenedAdd}
+    />
+
+    <Button type="Submit" variant="light" color="green" size="sm" onClick={() => showAdd()}>Add New Video</Button>
+
     <TextInput
       size="md"
       variant="unstyled"
@@ -64,7 +91,7 @@ const VideoList = () => {
             <td>{video.createdAt}</td>
             <td><Link to={video.videoLink}>View Video</Link></td>
             <td>
-              <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginRight: '10px' }}>Edit</Button>
+              <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginRight: '10px' }} onClick={() => showEdit(video._id)}>Edit</Button>
               <Button type="Submit" variant="light" color="red" size="sm" onClick={() => handleDelete(video._id)}>Delete</Button>
             </td>
           </tr>
