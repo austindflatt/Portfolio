@@ -4,10 +4,9 @@ import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 
 const AddProject = ({ openedAdd, setOpenedAdd }) => {
-  const [project, setProject] = useState(null);
   const { dispatch } = useContext(ProjectContext);
   const [image, setImage] = useState('');
-  const [url,setUrl] = useState("");
+  // const [url, setUrl] = useState("");
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [techUsed, setTechUsed] = useState([]);
@@ -16,12 +15,17 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
   const [youtubeId, setYoutubeId] = useState('');
   const [featured, setFeatured] = useState(false);
 
-  const handleChange = (e) => {
-    const value = e.target.value;
-    setProject({ ...project, [e.target.id]:value })
-  }
-
   const handleSubmit = () => {
+    const project = {
+      image: image,
+      title: title,
+      description: description,
+      techUsed: techUsed,
+      liveLink: liveLink,
+      githubLink: githubLink,
+      youtubeId: youtubeId,
+      featuredProject: featured
+    }
     createProject(project, dispatch);
   }
 
@@ -33,22 +37,23 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     title={`Add New Project`}
     size="lg"
     >
-    {/* <TextInput
+    <TextInput
     variant="filled"
     label="Thumbnail Image"
     placeholder='URL to image'
     id="image"
     size="md"
     required
-    onChange={handleChange}
-    /> */}
+    onChange={(e) => setImage(e.target.value)}
+    />
     <Text size="sm" weight={500}>Upload Project Image</Text>
-    <input 
+    {/* <input 
     id="image" 
     type="file"
+    accept="image/*"
     onChange={(e) => setImage(e.target.files[0])}
     style={{ marginBottom: '10px' }}
-    />
+    /> */}
     <TextInput
     variant="filled"
     label="Title"
@@ -56,15 +61,16 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     id="title"
     size="md"
     required
-    onChange={handleChange}
+    onChange={(e) => setTitle(e.target.value)}
     />
     <Textarea
     variant="filled"
     label="Description"
     id="description"
+    placeholder="Give a description of this project"
     size="md"
     required
-    onChange={handleChange}
+    onChange={(e) => setDescription(e.target.value)}
     />
     <TextInput
     variant="filled"
@@ -73,7 +79,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     id="techUsed"
     size="md"
     required
-    onChange={handleChange}
+    onChange={(e) => setTechUsed(e.target.value)}
     />
     <TextInput
     variant="filled"
@@ -82,7 +88,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     id="githubLink"
     size="md"
     required
-    onChange={handleChange}
+    onChange={(e) => setGithubLink(e.target.value)}
     />
     <TextInput
     variant="filled"
@@ -90,7 +96,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     label="Live Link"
     id="liveLink"
     size="md"
-    onChange={handleChange}
+    onChange={(e) => setLiveLink(e.target.value)}
     />
     <TextInput
     variant="filled"
@@ -98,25 +104,8 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     label="YouTube ID"
     id="youtubeId"
     size="md"
-    onChange={handleChange}
+    onChange={(e) => setYoutubeId(e.target.value)}
     />
-    {/* <TextInput
-    variant="filled"
-    placeholder="true or false"
-    label="Featured Project"
-    id="featuredProject"
-    size="md"
-    onChange={handleChange}
-    />
-    <TextInput
-    variant="filled"
-    placeholder="true or false"
-    label="Show Live"
-    id="showViewLive"
-    size="md"
-    onChange={handleChange}
-    /> */}
-
     <Switch 
     label="Show as a featured project" 
     size="md" 
