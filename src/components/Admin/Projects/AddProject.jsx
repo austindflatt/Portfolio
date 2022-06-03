@@ -1,11 +1,19 @@
 import React, { useState, useContext } from 'react';
-import { TextInput, Textarea, Button, Switch, Modal } from '@mantine/core';
+import { TextInput, Textarea, Text, Button, Switch, Modal } from '@mantine/core';
 import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 
 const AddProject = ({ openedAdd, setOpenedAdd }) => {
   const [project, setProject] = useState(null);
   const { dispatch } = useContext(ProjectContext);
+  const [image, setImage] = useState('');
+  const [url,setUrl] = useState("");
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [techUsed, setTechUsed] = useState([]);
+  const [liveLink, setLiveLink] = useState('');
+  const [githubLink, setGithubLink] = useState('');
+  const [youtubeId, setYoutubeId] = useState('');
   const [featured, setFeatured] = useState(false);
 
   const handleChange = (e) => {
@@ -25,7 +33,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     title={`Add New Project`}
     size="lg"
     >
-    <TextInput
+    {/* <TextInput
     variant="filled"
     label="Thumbnail Image"
     placeholder='URL to image'
@@ -33,13 +41,14 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     size="md"
     required
     onChange={handleChange}
-    />
-    {/* <input 
-    id="image-file" 
-    type="file"
-    accept="image/*"
-    onChange={(e) => handleChange(e.target.files[0])}
     /> */}
+    <Text size="sm" weight={500}>Upload Project Image</Text>
+    <input 
+    id="image" 
+    type="file"
+    onChange={(e) => setImage(e.target.files[0])}
+    style={{ marginBottom: '10px' }}
+    />
     <TextInput
     variant="filled"
     label="Title"
@@ -60,7 +69,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     <TextInput
     variant="filled"
     label="Tech Used"
-    placeholder="React, Express, Node"
+    placeholder="JavaScript, React, MERN"
     id="techUsed"
     size="md"
     required

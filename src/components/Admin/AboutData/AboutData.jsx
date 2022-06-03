@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
-import { TextInput, Textarea, Button } from '@mantine/core';
+import { TextInput, Textarea, Text, Button } from '@mantine/core';
 import { BrandGithub, BrandLinkedin, BrandTwitch, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
 import { AboutContext } from '../../../context/aboutContext/AboutContext';
 import { updateAbout } from '../../../context/aboutContext/apiCalls';
@@ -62,13 +62,20 @@ const AboutData = () => {
       <br />
       <input type='file' onChange={e=>setHeadshot(e.target.files[0])}></input>
     </div> */}
-    <TextInput
+    {/* <TextInput
     variant="filled"
     label="Headshot"
     id="headshot"
     size="md"
     value={headshot}
     onChange={(e) => setHeadshot(e.target.value)}
+    /> */}
+    <Text size="sm" weight={500}>Upload Your Headshot</Text>
+    <input 
+    id="headshot" 
+    type="file"
+    onChange={(e) => setHeadshot(e.target.files[0])}
+    style={{ marginBottom: '10px' }}
     />
     <TextInput
     variant="filled"
