@@ -5,11 +5,12 @@ import { deleteProject, getProjects } from '../../../context/projectContext/apiC
 import EditProject from './EditProject';
 import { Search } from 'tabler-icons-react';
 import { Pagination } from '@mui/material';
-import { Link } from 'react-router-dom';
+import AddProject from './AddProject';
 
 const ProjectsList = () => {
   const { projects, isFetching, dispatch } = useContext(ProjectContext);
   const [opened, setOpened] = useState(false);
+  const [openedAdd, setOpenedAdd] = useState(false);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [editId, setEditId] = useState('');
@@ -23,8 +24,12 @@ const ProjectsList = () => {
   }
 
   const showEdit = (id) => {
-    setEditId(id)
-    setOpened(true)
+    setEditId(id);
+    setOpened(true);
+  }
+
+  const showAdd = () => {
+    setOpenedAdd(true);
   }
 
   return (
@@ -36,9 +41,12 @@ const ProjectsList = () => {
       setOpened={setOpened}
     />
 
-    <Link to='/add-project'>
-      <Button type="Submit" variant="light" color="green" size="sm">Add New Project</Button>
-    </Link>
+    <AddProject
+      openedAdd={openedAdd}
+      setOpenedAdd={setOpenedAdd}
+    />
+
+    <Button type="Submit" variant="light" color="green" size="sm" onClick={() => showAdd()}>Add New Project</Button>
 
     <TextInput
       size="md"

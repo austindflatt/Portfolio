@@ -1,10 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { TextInput, Textarea, Button } from '@mantine/core';
+import { TextInput, Textarea, Button, Modal } from '@mantine/core';
 import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
-import { Link } from 'react-router-dom';
 
-const AddProject = () => {
+const AddProject = ({ openedAdd, setOpenedAdd }) => {
   const [project, setProject] = useState(null);
   const { dispatch } = useContext(ProjectContext);
   // const [featured, setFeatured] = useState(false);
@@ -21,7 +20,13 @@ const AddProject = () => {
 
   return (
   <>
-    <TextInput
+    <Modal
+    opened={openedAdd}
+    onClose={() => setOpenedAdd(false)}
+    title={`Add New Project`}
+    size="lg"
+    >
+    {/* <TextInput
     variant="filled"
     label="Thumbnail Image"
     placeholder='URL to image'
@@ -29,6 +34,12 @@ const AddProject = () => {
     size="md"
     required
     onChange={handleChange}
+    /> */}
+    <input 
+    id="image-file" 
+    type="file"
+    accept="image/*"
+    onChange={(e) => handleChange(e.target.files[0])}
     />
     <TextInput
     variant="filled"
@@ -99,11 +110,10 @@ const AddProject = () => {
     />
 
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
-      <Link to='/admin'>
-        <Button type="Submit" variant="light" size="sm" color="orange" style={{ marginRight: '10px' }}>Go back to Admin</Button>
-      </Link>
       <Button type="Submit" variant="light" size="sm" color="green" onClick={handleSubmit}>Add Project</Button>
     </div>
+
+    </Modal>
 
   </>
   )

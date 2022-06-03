@@ -3,7 +3,6 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { HeaderNav, Main, Login, Register, Contact, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle, AdminDashboard } from './components';
 import { AuthContext } from './context/authContext/AuthContext';
-import CreateProject from './pages/Admin/CreateProject';
 
 const App = () => {
   const { user } = useContext(AuthContext);
@@ -34,10 +33,6 @@ const App = () => {
 
           <Route path='/admin'>
             {user ? <AdminDashboard /> : <Main />}
-          </Route>
-
-          <Route path='/add-project'>
-            {user ? <CreateProject /> : <Main />}
           </Route>
 
           <Route path='/contact' component={Contact} />

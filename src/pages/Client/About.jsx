@@ -56,7 +56,7 @@ function AboutPage() {
       ]}
       >
         {skills.map((skill) => (
-        <Chips variant="filled" key={skill._id} radius="md" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', }}>
+        <Chips variant="filled" key={skill._id} radius="md" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
           <Chip style={{ marginRight: '10px', marginBottom: '10px' }}>{skill.name}</Chip>
         </Chips>
         ))}
