@@ -1,13 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { TextInput, Textarea, Button, Modal } from '@mantine/core';
+import { TextInput, Textarea, Button, Switch, Modal } from '@mantine/core';
 import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 
 const AddProject = ({ openedAdd, setOpenedAdd }) => {
   const [project, setProject] = useState(null);
   const { dispatch } = useContext(ProjectContext);
-  // const [featured, setFeatured] = useState(false);
-  // const [live, setLive] = useState(false);
+  const [featured, setFeatured] = useState(false);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -26,7 +25,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     title={`Add New Project`}
     size="lg"
     >
-    {/* <TextInput
+    <TextInput
     variant="filled"
     label="Thumbnail Image"
     placeholder='URL to image'
@@ -34,13 +33,13 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     size="md"
     required
     onChange={handleChange}
-    /> */}
-    <input 
+    />
+    {/* <input 
     id="image-file" 
     type="file"
     accept="image/*"
     onChange={(e) => handleChange(e.target.files[0])}
-    />
+    /> */}
     <TextInput
     variant="filled"
     label="Title"
@@ -92,7 +91,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     size="md"
     onChange={handleChange}
     />
-    <TextInput
+    {/* <TextInput
     variant="filled"
     placeholder="true or false"
     label="Featured Project"
@@ -107,6 +106,15 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     id="showViewLive"
     size="md"
     onChange={handleChange}
+    /> */}
+
+    <Switch 
+    label="Show as a featured project" 
+    size="md" 
+    id="featuredProject" 
+    checked={featured} 
+    onChange={(e) => setFeatured(!featured)} 
+    style={{ marginTop: '10px' }}
     />
 
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>

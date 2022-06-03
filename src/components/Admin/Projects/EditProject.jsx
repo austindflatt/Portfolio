@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { TextInput, Textarea, Button, Modal } from '@mantine/core';
+import { TextInput, Textarea, Switch, Button, Modal } from '@mantine/core';
 import { updateProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 
@@ -13,6 +13,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
   const [liveLink, setLiveLink] = useState('');
   const [githubLink, setGithubLink] = useState('');
   const [youtubeId, setYoutubeId] = useState('');
+  const [featured, setFeatured] = useState(false);
 
   useEffect(() => {
     const getEditData = async () => {
@@ -25,6 +26,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
       setLiveLink(data.liveLink);
       setGithubLink(data.githubLink);
       setYoutubeId(data.youtubeId);
+      setFeatured(data.featuredProject);
     }
     getEditData();
   }, [editId]);
@@ -107,6 +109,14 @@ const EditProject = ({ editId, opened, setOpened }) => {
     size="md"
     value={youtubeId}
     onChange={(e) => setYoutubeId(e.target.value)}
+    />
+    <Switch 
+    label="Show as a featured project" 
+    size="md" 
+    id="featuredProject" 
+    checked={featured} 
+    onChange={(e) => setFeatured(!featured)} 
+    style={{ marginTop: '10px' }}
     />
 
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>

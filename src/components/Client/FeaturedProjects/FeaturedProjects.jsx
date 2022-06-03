@@ -47,7 +47,7 @@ function ProjectsHome() {
                 </svg>
               </a>
             </Tooltip>
-            {project.showViewLive ? 
+            {project.liveLink ? 
             <Tooltip position="bottom" placement="center" gutter={10} label='View Live'>
               <a href={project.liveLink} target="_blank" rel="noreferrer" className="project-link">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" className="project-ext" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#262626">
