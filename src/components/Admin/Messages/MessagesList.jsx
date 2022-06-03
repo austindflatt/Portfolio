@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { TextInput, Table, ScrollArea, Button, Loader } from '@mantine/core';
+import { TextInput, Title, Table, ScrollArea, Button, Loader } from '@mantine/core';
 import { MessageContext } from '../../../context/messageContext/MessageContext';
 import { deleteMessage, getMessages } from '../../../context/messageContext/apiCalls';
 import { Search } from 'tabler-icons-react';

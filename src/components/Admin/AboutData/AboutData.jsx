@@ -57,26 +57,21 @@ const AboutData = () => {
     <meta name='description' content='Get in touch with me' />
     <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering job, louisville coder, hire software engineer, hire louisville software developer' />
   </Helmet>
-    {/* <div>
-      <label>Upload Headshot</label>
-      <br />
-      <input type='file' onChange={e=>setHeadshot(e.target.files[0])}></input>
-    </div> */}
-    {/* <TextInput
+    <TextInput
     variant="filled"
     label="Headshot"
     id="headshot"
     size="md"
     value={headshot}
     onChange={(e) => setHeadshot(e.target.value)}
-    /> */}
-    <Text size="sm" weight={500}>Upload Your Headshot</Text>
+    />
+    {/* <Text size="sm" weight={500}>Upload Your Headshot</Text>
     <input 
     id="headshot" 
     type="file"
     onChange={(e) => setHeadshot(e.target.files[0])}
     style={{ marginBottom: '10px' }}
-    />
+    /> */}
     <TextInput
     variant="filled"
     label="GitHub Link"
