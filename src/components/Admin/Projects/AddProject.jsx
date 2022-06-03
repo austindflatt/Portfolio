@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { TextInput, Textarea, Text, Button, Switch, Modal } from '@mantine/core';
+import { TextInput, Textarea, Button, Switch, Modal } from '@mantine/core';
 import { createProject } from '../../../context/projectContext/apiCalls';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 
@@ -46,7 +46,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     required
     onChange={(e) => setImage(e.target.value)}
     />
-    <Text size="sm" weight={500}>Upload Project Image</Text>
+    {/* <Text size="sm" weight={500}>Upload Project Image</Text> */}
     {/* <input 
     id="image" 
     type="file"
