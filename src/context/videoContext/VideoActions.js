@@ -1,9 +1,9 @@
 export const getVideosStart = () => ({
-	type: 'GET_VideoS_START',
+	type: 'GET_VIDEOS_START',
 });
 
 export const getVideosSuccess = (videos) => ({
-	type: 'GET_VideoS_SUCCESS',
+	type: 'GET_VIDEOS_SUCCESS',
 	payload: videos
 });
 
@@ -34,7 +34,7 @@ export const updateVideoSuccess = (video) => ({
 });
 
 export const updateVideoFailure = () => ({
-	type: 'UPDATE_Video_FAILURE',
+	type: 'UPDATE_VIDEO_FAILURE',
 });
 
 export const deleteVideoStart = () => ({
