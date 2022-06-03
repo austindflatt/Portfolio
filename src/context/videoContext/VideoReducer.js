@@ -14,7 +14,43 @@ const VideoReducer = (state, action) => {
       };
 	  case "GET_VIDEOS_FAILURE":
       return {
-        videos: [],
+        ...state,
+        isFetching: false,
+        error: true
+      };
+    case "CREATE_VIDEO_START":
+      return {
+        ...state,
+        isFetching: true,
+        error: false
+      };
+    case "CREATE_VIDEO_SUCCESS":
+      return {
+        videos: [...state.videos, action.payload],
+        isFetching: false,
+        error: false
+      };
+    case "CREATE_VIDEO_FAILURE":
+      return {
+        ...state,
+        isFetching: false,
+        error: true
+      };
+    case "UPDATE_VIDEO_START":
+      return {
+        ...state,
+        isFetching: true,
+        error: false
+      };
+    case "UPDATE_VIDEO_SUCCESS":
+      return {
+        videos: action.payload,
+        isFetching: false,
+        error: false
+      };
+    case "UPDATE_VIDEO_FAILURE":
+      return {
+        ...state,
         isFetching: false,
         error: true
       };

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
-import { TextInput, Textarea, Text, Button } from '@mantine/core';
+import { TextInput, Textarea, Button } from '@mantine/core';
 import { BrandGithub, BrandLinkedin, BrandTwitch, BrandTwitter, BrandYoutube } from 'tabler-icons-react';
 import { AboutContext } from '../../../context/aboutContext/AboutContext';
 import { updateAbout } from '../../../context/aboutContext/apiCalls';
