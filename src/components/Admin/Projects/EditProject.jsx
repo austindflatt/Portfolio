@@ -41,7 +41,8 @@ const EditProject = ({ editId, opened, setOpened }) => {
       techUsed: techUsed,
       liveLink: liveLink,
       githubLink: githubLink,
-      youtubeId: youtubeId
+      youtubeId: youtubeId,
+      featuredProject: featured
     }
     updateProject(updatedData, dispatch);
   }
@@ -105,7 +106,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
     <TextInput
     variant="filled"
     label="YouTube ID"
-    id="ytId"
+    id="youtubeId"
     size="md"
     value={youtubeId}
     onChange={(e) => setYoutubeId(e.target.value)}
@@ -114,8 +115,8 @@ const EditProject = ({ editId, opened, setOpened }) => {
     label="Show as a featured project" 
     size="md" 
     id="featuredProject" 
-    checked={featured} 
-    onChange={(e) => setFeatured(!featured)} 
+    checked={featured}
+    onChange={() => setFeatured(!featured)} 
     style={{ marginTop: '10px' }}
     />
 

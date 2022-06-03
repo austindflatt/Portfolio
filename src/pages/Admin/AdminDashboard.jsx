@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import Container from "../../components/styles/Container";
 import ContainerSmall from "../../components/styles/ContainerSmall";
 import SectionInner from "../../components/styles/SectionInner";
-import { Tabs, Button } from '@mantine/core';
+import { Tabs, Title, Button } from '@mantine/core';
 
 import { AuthContext } from "../../context/authContext/AuthContext";
 import { logout } from "../../context/authContext/AuthActions";
@@ -19,6 +19,7 @@ import Skills from '../../components/Admin/Skills/Skills';
 const Admin = () => {
   const { isFetching, dispatch } = useContext(AuthContext);
   const username = JSON.parse(localStorage.getItem('user')).firstName;
+  const admin = JSON.parse(localStorage.getItem('user')).isAdmin;
   return (
   <>
   <Helmet>
@@ -29,6 +30,8 @@ const Admin = () => {
     <SectionInner>
       <br />
       <ContainerSmall>
+        { admin ?
+        <>
         <h2>Admin Dashboard</h2>
         <p>Welcome {username}</p>
         <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginBottom: '20px', marginRight: '10px' }}>Edit Account</Button>
@@ -42,6 +45,8 @@ const Admin = () => {
           <Tabs.Tab label="Skills"><Skills /></Tabs.Tab>
           {/* <Tabs.Tab label="Users"><Users /></Tabs.Tab> */}
         </Tabs>
+        </> : <div style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }}><Title order={3}>You do not have permission to access this</Title></div>
+        }
       </ContainerSmall>
     </SectionInner>
   </>

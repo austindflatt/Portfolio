@@ -111,7 +111,7 @@ const AddProject = ({ openedAdd, setOpenedAdd }) => {
     size="md" 
     id="featuredProject" 
     checked={featured} 
-    onChange={(e) => setFeatured(!featured)} 
+    onChange={() => setFeatured(!featured)} 
     style={{ marginTop: '10px' }}
     />
 
