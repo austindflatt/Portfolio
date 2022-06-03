@@ -6,7 +6,6 @@ import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 const AddProject = ({ openedAdd, setOpenedAdd }) => {
   const { dispatch } = useContext(ProjectContext);
   const [image, setImage] = useState('');
-  // const [url, setUrl] = useState("");
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [techUsed, setTechUsed] = useState([]);

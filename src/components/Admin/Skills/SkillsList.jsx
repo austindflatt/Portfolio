@@ -12,6 +12,7 @@ const SkillsList = () => {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
   const [opened, setOpened] = useState(false);
+  const [openedAdd, setOpenedAdd] = useState(false);
   const [editId, setEditId] = useState('');
 
   useEffect(() => {
@@ -23,8 +24,12 @@ const SkillsList = () => {
   }
 
   const showEdit = (id) => {
-    setEditId(id)
-    setOpened(true)
+    setEditId(id);
+    setOpened(true);
+  }
+
+  const showAdd = () => {
+    setOpenedAdd(true);
   }
 
   return (
@@ -34,7 +39,14 @@ const SkillsList = () => {
       opened={opened}
       setOpened={setOpened}
     />
-    <AddSkill />
+
+    <AddSkill 
+      openedAdd={openedAdd}
+      setOpenedAdd={setOpenedAdd}
+    />
+    
+    <Button type="Submit" variant="light" color="green" size="sm" onClick={() => showAdd()}>Add New Skill</Button>
+
     <TextInput
       size="md"
       variant="unstyled"
