@@ -1,24 +1,31 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { Tooltip, TextInput, Loader } from '@mantine/core';
+import { Tooltip, Button, TextInput, Loader } from '@mantine/core';
 import ContainerSmall from '../../components/styles/ContainerSmall';
 import SectionInner from '../../components/styles/SectionInner';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../../components/styles/Projects';
 import { Search } from 'tabler-icons-react';
 import { ProjectContext } from '../../context/projectContext/ProjectContext';
 import { getProjects } from '../../context/projectContext/apiCalls';
+import { Link } from 'react-router-dom';
 
 function ProjectsCollection() {
   const [search, setSearch] = useState('');
+  const [showAmount, setShowAmount] = useState(6);
   const { projects, isFetching, dispatch } = useContext(ProjectContext);
   
   useEffect(() => {
     getProjects(dispatch);
   }, [dispatch]);
+
+  const slice = projects.slice(0, showAmount);
+
+  const viewMore = () => {
+    setShowAmount(showAmount + showAmount);
+  }
   
   return (
   <>
-
   <Helmet>
   <title>All Projects | Austin Flatt</title>
   <meta name='description' content='Archive of all my projects.' />
@@ -43,7 +50,7 @@ function ProjectsCollection() {
       :
       <>
       <ProjectHome>
-        {projects.filter((project) => {
+        {slice.filter((project) => {
           if(search === ''){
             return true
           } else if(project.title.toLowerCase().includes(search.toLowerCase())){
@@ -51,7 +58,7 @@ function ProjectsCollection() {
           }
           return false
         })
-        .slice(0, 12).map((project, idx) => (
+        .map((project, idx) => (
         
         <ProjectHomeCard key={idx}>
           <ImageBox>
@@ -84,6 +91,11 @@ function ProjectsCollection() {
         </ProjectHomeCard>
         ))}
         </ProjectHome>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
+          <Link to='projects'>
+            <Button variant="light" size="sm" onClick={() => viewMore()}>View More</Button>
+          </Link>
+        </div>
         </>
         }
 
