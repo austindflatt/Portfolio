@@ -1,20 +1,33 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import ContainerSmall from '../../styles/ContainerSmall';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../../styles/Projects';
-import { Button, Tooltip, Loader } from '@mantine/core';
+import { Button, Tooltip, Loader, Anchor } from '@mantine/core';
 import { ProjectContext } from '../../../context/projectContext/ProjectContext';
 import { getProjects } from '../../../context/projectContext/apiCalls';
+import ViewProject from '../ProjectModal/ProjectModal';
 
 function ProjectsHome() {
   const { projects, isFetching, dispatch } = useContext(ProjectContext);
+  const [opened, setOpened] = useState(false);
+  const [viewId, setViewId] = useState('');
 
   useEffect(() => {
     getProjects(dispatch);
   }, [dispatch]);
 
+  const showProject = (id) => {
+    setViewId(id)
+    setOpened(true)
+  }
+
   return (
   <>
+  <ViewProject
+    viewId={viewId}
+    opened={opened}
+    setOpened={setOpened}
+  />
   <ContainerSmall>
     <h2 style={{ textAlign: 'left' }}>Featured Projects</h2>
     {isFetching ? 
@@ -34,9 +47,9 @@ function ProjectsHome() {
       .map((project, key) => (
       <ProjectHomeCard key={key}>
         <ImageBox>
-        <a href={project.liveLink} target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>
+        <Anchor onClick={() => showProject(project._id)} style={{ textDecoration: 'none' }}>
           <ProjectImage src={project.image} loading="lazy" alt={project.title} />
-        </a>
+        </Anchor>
         </ImageBox>
         <ProjectHomeLinks>
           <ProjectWrapper>
