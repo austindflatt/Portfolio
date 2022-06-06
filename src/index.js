@@ -7,22 +7,25 @@ import { UserContextProvider } from './context/userContext/UserContext';
 import { SkillContextProvider } from './context/skillContext/SkillContext';
 import { VideoContextProvider } from './context/videoContext/VideoContext';
 import { AboutContextProvider } from './context/aboutContext/AboutContext';
+import { AlertProvider } from './context/alertContext/AlertContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<AuthContextProvider>
-		<ProjectContextProvider>
-			<MessageContextProvider>
-				<UserContextProvider>
-					<SkillContextProvider>
-						<VideoContextProvider>
-							<AboutContextProvider>
-								<App />
-							</AboutContextProvider>
-						</VideoContextProvider>
-					</SkillContextProvider>
-				</UserContextProvider>
-			</MessageContextProvider>
-		</ProjectContextProvider>
+		<AlertProvider>
+			<ProjectContextProvider>
+				<MessageContextProvider>
+					<UserContextProvider>
+						<SkillContextProvider>
+							<VideoContextProvider>
+								<AboutContextProvider>
+									<App />
+								</AboutContextProvider>
+							</VideoContextProvider>
+						</SkillContextProvider>
+					</UserContextProvider>
+				</MessageContextProvider>
+			</ProjectContextProvider>
+		</AlertProvider>
 	</AuthContextProvider>
 )
