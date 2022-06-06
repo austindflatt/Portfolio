@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { Tooltip, Button, TextInput, Loader } from '@mantine/core';
+import { Tooltip, Button, TextInput, Anchor, Loader } from '@mantine/core';
 import ContainerSmall from '../../components/styles/ContainerSmall';
 import SectionInner from '../../components/styles/SectionInner';
 import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../../components/styles/Projects';
@@ -8,10 +8,13 @@ import { Search } from 'tabler-icons-react';
 import { ProjectContext } from '../../context/projectContext/ProjectContext';
 import { getProjects } from '../../context/projectContext/apiCalls';
 import { Link } from 'react-router-dom';
+import ViewProject from '../../components/Client/ProjectModal/ProjectModal';
 
 function ProjectsCollection() {
   const [search, setSearch] = useState('');
   const [showAmount, setShowAmount] = useState(6);
+  const [opened, setOpened] = useState(false);
+  const [viewId, setViewId] = useState('');
   const { projects, isFetching, dispatch } = useContext(ProjectContext);
   
   useEffect(() => {
@@ -23,6 +26,11 @@ function ProjectsCollection() {
   const viewMore = () => {
     setShowAmount(showAmount + showAmount);
   }
+
+  const showProject = (id) => {
+    setViewId(id)
+    setOpened(true)
+  }
   
   return (
   <>
@@ -31,6 +39,12 @@ function ProjectsCollection() {
   <meta name='description' content='Archive of all my projects.' />
   <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering equipment, louisville coding' />
   </Helmet>
+
+  <ViewProject
+    viewId={viewId}
+    opened={opened}
+    setOpened={setOpened}
+  />
   
   <ContainerSmall>
     <SectionInner>
@@ -62,9 +76,9 @@ function ProjectsCollection() {
         
         <ProjectHomeCard key={idx}>
           <ImageBox>
-          <a href={project.liveLink} target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>
+          <Anchor onClick={() => showProject(project._id)} style={{ textDecoration: 'none' }}>
             <ProjectImage src={project.image} loading="lazy" alt={project.title} />
-          </a>
+          </Anchor>
           </ImageBox>
           <ProjectHomeLinks>
             <ProjectWrapper>
@@ -98,7 +112,6 @@ function ProjectsCollection() {
         </div>
         </>
         }
-
     </SectionInner>
   </ContainerSmall>
   </>
