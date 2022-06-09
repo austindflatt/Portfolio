@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import Container from "../../components/styles/Container";
 import ContainerSmall from "../../components/styles/ContainerSmall";
@@ -12,11 +12,21 @@ import Messages from '../../components/Admin/Messages/Messages';
 import Projects from '../../components/Admin/Projects/Projects';
 import Videos from '../../components/Admin/Videos/Videos';
 import Skills from '../../components/Admin/Skills/Skills';
+import EditAccount from "../../components/Admin/Account/EditAccount";
 
 const Admin = () => {
   const { isFetching, dispatch } = useContext(AuthContext);
   const username = JSON.parse(localStorage.getItem('user')).firstName;
   const admin = JSON.parse(localStorage.getItem('user')).isAdmin;
+  const userId = JSON.parse(localStorage.getItem('user'))._id;
+  const [editId, setEditId] = useState('');
+  const [opened, setOpened] = useState(false);
+
+  const showEdit = (id) => {
+    setEditId(id);
+    setOpened(true);
+  }
+
   return (
   <>
   <Helmet>
@@ -26,12 +36,19 @@ const Admin = () => {
   <Container />
     <SectionInner>
       <br />
+
+      <EditAccount
+      editId={editId}
+      opened={opened}
+      setOpened={setOpened}
+    />
+
       <ContainerSmall>
         { admin ?
         <>
         <h2>Admin Dashboard</h2>
         <p>Welcome {username}</p>
-        <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginBottom: '20px', marginRight: '10px' }}>Edit Account</Button>
+        <Button type="Submit" variant="light" color="orange" size="sm" style={{ marginBottom: '20px', marginRight: '10px' }} onClick={() => showEdit(userId)}>Edit Account</Button>
         <Button type="Submit" variant="light" size="sm" onClick={() => dispatch(logout())} disabled={isFetching} style={{ marginBottom: '20px' }}>Logout</Button>
         <Metrics />
         <Tabs variant="pills">
