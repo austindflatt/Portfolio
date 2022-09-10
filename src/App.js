@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { HeaderNav, Main, Login, Contact, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle, AdminDashboard, Register } from './components';
+import { HeaderNav, Main, Contact, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle } from './components';
 import { AuthContext } from './context/authContext/AuthContext';
 
 const App = () => {
@@ -23,18 +23,6 @@ const App = () => {
         <Switch>
 
           <Route exact path='/' component={Main} />
-          <Route path='/login'>
-            {user ? <Redirect to='/admin'/> : <Login />}
-          </Route>
-          
-          <Route path='/register'>
-            {user ? <Redirect to='/'/> : <Register />}
-          </Route>
-
-          <Route path='/admin'>
-            {user ? <AdminDashboard /> : <Main />}
-          </Route>
-
           <Route path='/contact' component={Contact} />
           <Route path='/about' component={AboutPage} />
           <Route exact path='/projects' component={ProjectsCollection} />

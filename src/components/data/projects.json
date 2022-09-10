@@ -1,0 +1,41 @@
+[
+	{
+		"title": "Voltaic",
+		"description": "A web app that allows users to sign up and find electric vehicle charging stations and also allows them to share their home charger",
+		"techUsed": "MongoDB, Express, React, Node",
+		"image": "images/projects/voltaic.png",
+		"githubLink": "https://github.com/austindflatt/voltaic",
+		"liveLink": "https://www.voltaicapp.com/",
+		"featuredProject": true
+	},
+	{
+		"title": "hodlsell",
+		"description": "A crypto currency web app that allows users to track crypto currencies and view a chart of the crypto's price history",
+		"techUsed": "React",
+		"githubLink": "https://github.com/austindflatt/crypto-currency-react",
+		"liveLink": "https://hodlsell.com/",
+		"showViewLive": true,
+		"featuredProject": true,
+		"image": "images/projects/crypto-react.png"
+	},
+	{
+		"title": "Apple E-Commerce",
+		"description": "An Apple inspired eCommerce web app that lets users register and sign in to add items to their cart/checkout. Once a user successfully checks out, they can then go to their account profile and view their transaction history",
+		"techUsed": "MongoDB, Express, React, Node",
+		"image": "images/projects/ecommerce.png",
+		"githubLink": "https://github.com/austindflatt/ecommerce-client",
+		"liveLink": "https://ecommerce-client-five.vercel.app/",
+		"showViewLive": true,
+		"featuredProject": true
+	},
+	{
+		"title": "Sticksy",
+		"description": "Sticksy is a web app built with React that lets users create and store notes",
+		"techUsed": "React",
+		"githubLink": "https://github.com/austindflatt/sticksy",
+		"liveLink": "https://sticksy.vercel.app/",
+		"showViewLive": true,
+		"featuredProject": true,
+		"image": "https://www.austinflatt.com/images/projects/sticksy.png"
+	}
+]
