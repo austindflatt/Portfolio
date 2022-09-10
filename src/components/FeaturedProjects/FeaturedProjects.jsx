@@ -54,7 +54,7 @@ function ProjectsHome() {
     </ProjectHome>
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
       <Link to='projects'>
-      <Button variant="light" size="sm">View All Projects</Button>
+      <Button variant='outline' color="green" radius="xl" size="md">View All Projects</Button>
       </Link>
     </div>
     <br /><br />

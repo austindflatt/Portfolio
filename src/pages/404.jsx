@@ -23,7 +23,7 @@ const PageNotFound = () => {
         <NotFoundHeading>404</NotFoundHeading>
         <NotFoundSubHeading>Sorry, this page doesn't exist or you spelled something wrong.</NotFoundSubHeading>
         <Link to="/">
-        <Button variant="light" size="md">Go Home</Button>
+        <Button color="green" radius="xl" size="lg">Go Home</Button>
         </Link>
       </Error>
     </ContainerSmall>

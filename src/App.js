@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { HeaderNav, Main, Contact, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle } from './components';
+import { HeaderNav, Main, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle } from './components';
 
 const App = () => {
 
@@ -21,10 +21,8 @@ const App = () => {
         <Switch>
 
           <Route exact path='/' component={Main} />
-          <Route path='/contact' component={Contact} />
           <Route path='/about' component={AboutPage} />
           <Route exact path='/projects' component={ProjectsCollection} />
-          <Route path='/contact' component={Contact} />
           <Route path='/404' component={PageNotFound} />
           <Route path='/*' component={PageNotFound} />
           

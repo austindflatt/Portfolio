@@ -83,7 +83,7 @@ function ProjectsCollection() {
         </ProjectHome>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
           <Link to='projects'>
-            <Button variant="light" size="sm" onClick={() => viewMore()}>View More</Button>
+            <Button variant='outline' color="green" radius="xl" size="md" onClick={() => viewMore()}>Load More</Button>
           </Link>
         </div>
     </SectionInner>
