@@ -8,7 +8,6 @@ import { SimpleGrid, Chips, Chip } from '@mantine/core';
 
 function AboutPage() {
   const [skills, setSkills] = useState([]);
-  const [about, setAbout] = useState([]);
   
   useEffect(() => {
     const getSkills = async () => {
@@ -19,15 +18,6 @@ function AboutPage() {
         console.log(error)
       }
     }
-    const getAbout = async () => {
-      try {
-        const res = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/about/find/624e72b4c2ce0e16eca4f860`)
-        setAbout(res.data.payload)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getAbout();
     getSkills();
   }, [])
 
@@ -43,7 +33,12 @@ function AboutPage() {
     <br />
     <ContainerSmall>
       <h2>About Me</h2>
-      {about.aboutMe}
+      <p>
+        I'm a Software Engineer with a passion for building things. I love building and creating, whether those things are web applications, or even projects at home. 
+        I'm a problem solver and I just love watching my thoughts come to life on screen. Ever since I can remember, I've always had an interest and passion for tech. 
+        I specialize in full stack development and make it my mission to create accessible and user-friendly applications and websites. 
+        Other than coding, I spend my free time playing video games, and reading.
+      </p>
       <br /><br />
       <h2>My Skills</h2>
       <p>I’ve learned and gained a solid understanding of these technologies.</p>
