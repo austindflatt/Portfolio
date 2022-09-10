@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { HeaderNav, Main, Contact, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle } from './components';
-import { AuthContext } from './context/authContext/AuthContext';
 
 const App = () => {
-  const { user } = useContext(AuthContext);
 
   return (
     <div>
