@@ -12,7 +12,6 @@ function HeaderNav() {
         <LinksUnordered>
         <NavLink exact to="projects" className="links" activeClassName="links-active">Projects</NavLink>
         <NavLink exact to="about" className="links" activeClassName="links-active">About</NavLink>
-        <NavLink exact to="contact" className="links" activeClassName="links-active">Contact</NavLink>
         </LinksUnordered>
       </HeaderInner>
     </ContainerSmall>
