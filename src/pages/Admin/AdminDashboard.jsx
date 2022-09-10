@@ -43,7 +43,7 @@ const Admin = () => {
         <p>Welcome {username}</p>
         <Button type="Submit" variant="light" size="sm" onClick={() => dispatch(logout())} disabled={isFetching} style={{ marginBottom: '20px' }}>Logout</Button>
         <Metrics />
-        <Tabs variant="pills">
+        <Tabs>
           <Tabs.Tab label="Messages"><Messages /></Tabs.Tab>
           <Tabs.Tab label="Projects"><Projects /></Tabs.Tab>
           <Tabs.Tab label="Videos"><Videos /></Tabs.Tab>
