@@ -10,7 +10,7 @@ function ViewMessage({ viewId, opened, setOpened }) {
   const [message, setMessage] = useState('');
   useEffect(() => {
     const getMessageData = async () => {
-      const response = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/messages/find/${viewId}`, {
+      const response = await axios.get(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/messages/find/${viewId}`, {
         headers: {
           token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
         }

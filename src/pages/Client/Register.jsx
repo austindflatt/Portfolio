@@ -28,7 +28,7 @@ const Register = () => {
       password: password
     }
     try {
-      await axios.post('https://secure-savannah-93086.herokuapp.com/api/auth/register', newBody);
+      await axios.post('http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/auth/register', newBody);
       history.push('/login');
     } catch (error) {
       

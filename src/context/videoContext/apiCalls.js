@@ -18,7 +18,7 @@ import {
 export const getVideos = async (dispatch) => {
   dispatch(getVideosStart())
   try {
-    const res = await axios.get('https://secure-savannah-93086.herokuapp.com/api/videos')
+    const res = await axios.get('http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/videos')
     dispatch(getVideosSuccess(res.data))
   } catch (error) {
     dispatch(getVideosFailure())
@@ -29,7 +29,7 @@ export const getVideos = async (dispatch) => {
 export const createVideo = async (video, dispatch) => {
   dispatch(createVideoStart())
   try {
-    const res = await axios.post(`https://secure-savannah-93086.herokuapp.com/api/videos/create`, video, {
+    const res = await axios.post(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/videos/create`, video, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
@@ -44,7 +44,7 @@ export const createVideo = async (video, dispatch) => {
 export const updateVideo = async (video, dispatch) => {
   dispatch(updateVideoStart())
   try {
-    const res = await axios.put(`https://secure-savannah-93086.herokuapp.com/api/videos/update/${video.id}`, video, {
+    const res = await axios.put(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/videos/update/${video.id}`, video, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
@@ -59,7 +59,7 @@ export const updateVideo = async (video, dispatch) => {
 export const deleteVideo = async (id, dispatch) => {
   dispatch(deleteVideoStart())
   try {
-    await axios.delete(`https://secure-savannah-93086.herokuapp.com/api/videos/delete/${id}`, {
+    await axios.delete(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/videos/delete/${id}`, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }

@@ -24,10 +24,9 @@ const Contact = () => {
       message: message
     }
     try {
-      await axios.post('https://secure-savannah-93086.herokuapp.com/api/messages/send', newBody);
+      await axios.post('http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/messages/send', newBody);
       history.push('/');
     } catch (error) { 
-
     }
   }
   

@@ -9,7 +9,7 @@ import { getAbout } from '../../../context/aboutContext/apiCalls';
 
 function Splash() {
   const { user } = useContext(AuthContext);
-  const { about, isFetching, dispatch } = useContext(AboutContext);
+  const { isFetching, dispatch } = useContext(AboutContext);
 
   useEffect(() => {
     getAbout(dispatch);

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
 import Container from "../../components/styles/Container";
 import ContainerSmall from "../../components/styles/ContainerSmall";
@@ -7,7 +7,6 @@ import { Tabs, Title, Button } from '@mantine/core';
 import { AuthContext } from "../../context/authContext/AuthContext";
 import { logout } from "../../context/authContext/AuthActions";
 import Metrics from '../../components/Admin/Metrics/Metrics';
-import AboutData from '../../components/Admin/AboutData/AboutData';
 import Messages from '../../components/Admin/Messages/Messages';
 import Projects from '../../components/Admin/Projects/Projects';
 import Videos from '../../components/Admin/Videos/Videos';
@@ -17,14 +16,6 @@ const Admin = () => {
   const { isFetching, dispatch } = useContext(AuthContext);
   const username = JSON.parse(localStorage.getItem('user')).firstName;
   const admin = JSON.parse(localStorage.getItem('user')).isAdmin;
-  const userId = JSON.parse(localStorage.getItem('user'))._id;
-  const [editId, setEditId] = useState('');
-  const [opened, setOpened] = useState(false);
-
-  const showEdit = (id) => {
-    setEditId(id);
-    setOpened(true);
-  }
 
   return (
   <>

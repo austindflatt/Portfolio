@@ -5,7 +5,7 @@ import { deleteMessageStart, deleteMessageSuccess, deleteMessageFailure, getMess
 export const getMessages = async (dispatch) => {
   dispatch(getMessagesStart())
   try {
-    const res = await axios.get('https://secure-savannah-93086.herokuapp.com/api/messages', {
+    const res = await axios.get('http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/messages', {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
@@ -20,7 +20,7 @@ export const getMessages = async (dispatch) => {
 export const deleteMessage = async (id, dispatch) => {
   dispatch(deleteMessageStart())
   try {
-    await axios.delete(`https://secure-savannah-93086.herokuapp.com/api/messages/delete/${id}`, {
+    await axios.delete(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/messages/delete/${id}`, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }

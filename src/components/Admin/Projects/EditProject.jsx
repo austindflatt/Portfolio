@@ -17,7 +17,7 @@ const EditProject = ({ editId, opened, setOpened }) => {
 
   useEffect(() => {
     const getEditData = async () => {
-      const response = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/projects/find/${editId}`);
+      const response = await axios.get(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/projects/find/${editId}`);
       const data = response.data.payload;
       setImage(data.image);
       setTitle(data.title);

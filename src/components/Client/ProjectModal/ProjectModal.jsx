@@ -8,7 +8,7 @@ function ViewProject({ viewId, opened, setOpened }) {
   const [tech, setTechUsed] = useState('');
   useEffect(() => {
     const getProjectData = async () => {
-      const response = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/projects/find/${viewId}`);
+      const response = await axios.get(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/projects/find/${viewId}`);
       const data = response.data.payload;
       setTitle(data.title);
       setDescription(data.description);

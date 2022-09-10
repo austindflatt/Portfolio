@@ -12,7 +12,7 @@ function AboutPage() {
   useEffect(() => {
     const getSkills = async () => {
       try {
-        const res = await axios.get(`https://secure-savannah-93086.herokuapp.com/api/skills`)
+        const res = await axios.get(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/skills`)
         setSkills(res.data)
       } catch (error) {
         console.log(error)

@@ -4,7 +4,7 @@ import { loginFailure, loginStart, loginSuccess } from "./AuthActions";
 export const login = async (user, dispatch) => {
   dispatch(loginStart());
   try {
-    const res = await axios.post('https://secure-savannah-93086.herokuapp.com/api/auth/login', user);
+    const res = await axios.post('http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/auth/login', user);
     res.data.isAdmin && dispatch(loginSuccess(res.data))
     dispatch(loginSuccess(res.data));
   } catch (error) {

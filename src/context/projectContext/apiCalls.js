@@ -18,7 +18,7 @@ import {
 export const getProjects = async (dispatch) => {
   dispatch(getProjectsStart())
   try {
-    const res = await axios.get('https://secure-savannah-93086.herokuapp.com/api/projects')
+    const res = await axios.get('http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/projects')
     dispatch(getProjectsSuccess(res.data))
   } catch (error) {
     dispatch(getProjectsFailure())
@@ -29,7 +29,7 @@ export const getProjects = async (dispatch) => {
 export const createProject = async (project, dispatch) => {
   dispatch(createProjectStart())
   try {
-    const res = await axios.post(`https://secure-savannah-93086.herokuapp.com/api/projects/create`, project, {
+    const res = await axios.post(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/projects/create`, project, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
@@ -44,7 +44,7 @@ export const createProject = async (project, dispatch) => {
 export const updateProject = async (project, dispatch) => {
   dispatch(updateProjectStart())
   try {
-    const res = await axios.put(`https://secure-savannah-93086.herokuapp.com/api/projects/update/${project.id}`, project, {
+    const res = await axios.put(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/projects/update/${project.id}`, project, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
@@ -59,7 +59,7 @@ export const updateProject = async (project, dispatch) => {
 export const deleteProject = async (id, dispatch) => {
   dispatch(deleteProjectStart())
   try {
-    await axios.delete(`https://secure-savannah-93086.herokuapp.com/api/projects/delete/${id}`, {
+    await axios.delete(`http://portfolioserver-env.eba-mrpmux5a.us-east-2.elasticbeanstalk.com/api/projects/delete/${id}`, {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       }
