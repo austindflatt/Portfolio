@@ -44,8 +44,8 @@ function Splash() {
             </SocialLink>
           </Social>
           <div className="splash-cta">
-            <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}><Button color="green" radius="xl" size="lg">My Resume</Button></a>
-            <a href='mailto:austin@flattdevelopment.com'><Button color="green" radius="xl" size="lg">Contact Me</Button></a>
+            <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}><Button color="green" radius="lg" size="md">My Resume</Button></a>
+            <a href='mailto:austin@flattdevelopment.com'><Button color="green" radius="lg" size="md">Contact Me</Button></a>
           </div>
           </div>
         <div className="splash-media">
