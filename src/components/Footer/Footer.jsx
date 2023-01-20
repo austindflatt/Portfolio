@@ -7,7 +7,6 @@ function Footer() {
   <>
   <ContainerSmall>
   <FooterCopyright>
-    <br />Made with 💚 and various tech in Louisville
     <br />Designed and built by Austin Flatt
   </FooterCopyright>
   </ContainerSmall>

@@ -2,14 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 	:root {
-	--main: #007CF0;
+	--main: #000;
 	--main-tint: #007cf010;
 	--bg: #fff;
 	--main-text: #000;
 	--focus: #22cc52;
-	--green: #22cc52;
-	--orange: #FF4D4D;
-	--yellow: #ffbd2e;
+	--green: #868e96;
 	--border-radius: 4px;
 	}
 
@@ -245,7 +243,7 @@ const GlobalStyle = createGlobalStyle`
 	
 	.splash-paragraph {
 		margin-bottom: 32px;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 	}
 	
 	.splash-cta {
@@ -256,11 +254,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 	
 	.splash-media {
-		position: relative;
+		display: block;
 	}
 	
 	.splash-media-container {
-		position: relative;
+
 	}
 	
 	.splash-media-image {
@@ -325,7 +323,7 @@ const GlobalStyle = createGlobalStyle`
 		.splash-paragraph {
 			margin-bottom: 32px;
 			animation: fadeIn 2s forwards;
-			font-size: 1.3rem;
+			font-size: 1.1rem;
 			line-height: 1.35;
 			letter-spacing: -0.01em;
 		}
@@ -350,8 +348,8 @@ const GlobalStyle = createGlobalStyle`
 		}
 	
 		.splash-media img {
-			width: 330px;
-			border-radius: 6px;
+
+
 		}
 	
 		.splash-media img:hover {
@@ -362,9 +360,6 @@ const GlobalStyle = createGlobalStyle`
 	
 	@media (max-width: 814px) {
 		.splash-media img {
-			display: none;
-			width: 300px;
-			border-radius: 6px;
 		}
 	}
 	/* End Splash Styling */
@@ -480,13 +475,44 @@ const GlobalStyle = createGlobalStyle`
 	display: inherit;
 
 	&:hover {
-	color: var(--main);
+	color: #868e96;
 	}
 }
 
 	.links-active {
-	color: var(--main);
+	color: #868e96;
 }
+
+.photo-deck {
+	/* background: lightblue; */
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .photo-deck > div {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	will-change: transform;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .photo-deck > div > div {
+	background-color: #fff;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	will-change: transform;
+	border: 1em solid #fff;
+	border-bottom: 4em solid #fff;
+	border-radius: 3px;
+	box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  }
+
 `
 
 export default GlobalStyle

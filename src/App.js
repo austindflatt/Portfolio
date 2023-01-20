@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { HeaderNav, Main, AboutPage, ProjectsCollection, PageNotFound, Footer, GlobalStyle } from './components';
+import Blog from './pages/Blog';
+import Uses from './pages/Uses';
 
 const App = () => {
 
@@ -22,7 +24,9 @@ const App = () => {
 
           <Route exact path='/' component={Main} />
           <Route path='/about' component={AboutPage} />
+          <Route path='/blog' component={Blog} />
           <Route exact path='/projects' component={ProjectsCollection} />
+          <Route exact path='/uses' component={Uses} />
           <Route path='/404' component={PageNotFound} />
           <Route path='/*' component={PageNotFound} />
           

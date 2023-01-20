@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button } from '@mantine/core';
+import { Avatar } from '@mantine/core';
 import ContainerSmall from '../styles/ContainerSmall';
-import { Social, SocialLink } from '../styles/Splash'
+import { Social, SocialLink } from '../styles/Splash';
+import {Box} from "@mui/material";
 
 function Splash() {
+  const transition = 'all 250ms ease';
 
   return (
   <>
@@ -14,7 +17,7 @@ function Splash() {
           <p className="splash-name">Hey my name is</p>
           <h1 className="splash-title">Austin Flatt.</h1>
           <p className="splash-paragraph">
-            I'm a Software Engineer 🚀 living in Louisville, Kentucky.
+            I'm a software engineer, and a content creator living in Louisville, Kentucky. I own a development company called <a href='https://www.flattdevelopment.com/' target="_blank">Flatt Development</a>.
           </p>
           <Social>
             <SocialLink href="https://github.com/austindflatt" rel="noreferrer" target="_blank">
@@ -44,14 +47,22 @@ function Splash() {
             </SocialLink>
           </Social>
           <div className="splash-cta">
-            <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}><Button color="green" radius="lg" size="md">My Resume</Button></a>
-            <a href='mailto:austin@flattdevelopment.com'><Button color="green" radius="lg" size="md">Contact Me</Button></a>
+            <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}><Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>My Resume</Button></a>
+            <a href='mailto:austin@flattdevelopment.com'><Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>Contact Me</Button></a>
           </div>
           </div>
         <div className="splash-media">
-          <div className="splash-media-container">
-            <img src="https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/me.png" loading="lazy" alt="Headshot" />
-          </div>
+          <Box 
+            alt={'Headshot'}
+            style={{border: '8px dashed #000', boxShadow: '', objectFit: 'cover', objectPosition: 'center'
+            }}
+            sx={{":hover": {transform: 'translateY(-3px)', transition: transition}}}
+            component={'img'} 
+            src="https://i.imgur.com/tozifl9.png"
+            width={{xs: '35vh', md: '40vh'}}
+            height={{xs: '35vh', md: '40vh'}}
+            borderRadius={'50%'} p={'0.75rem'} mb={{xs: '1rem', sm: 0}} mr={{xs: 0, md: '0rem'}}
+            />
         </div>
       </div>
     </ContainerSmall>

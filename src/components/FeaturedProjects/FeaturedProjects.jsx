@@ -6,6 +6,7 @@ import { Button, Tooltip, Anchor } from '@mantine/core';
 import projects from '../data/projects.json'
 
 function ProjectsHome() {
+  const transition = 'all 250ms ease'
 
   return (
   <>
@@ -54,7 +55,7 @@ function ProjectsHome() {
     </ProjectHome>
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
       <Link to='projects'>
-      <Button variant='outline' color="green" radius="xl" size="md">View All Projects</Button>
+      <Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>View All Projects</Button>
       </Link>
     </div>
     <br /><br />

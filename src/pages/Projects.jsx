@@ -17,6 +17,8 @@ function ProjectsCollection() {
   const viewMore = () => {
     setShowAmount(showAmount + showAmount);
   }
+
+  const transition = 'all 250ms ease';
   
   return (
   <>
@@ -83,7 +85,7 @@ function ProjectsCollection() {
         </ProjectHome>
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
           <Link to='projects'>
-            <Button variant='outline' color="green" radius="xl" size="md" onClick={() => viewMore()}>Load More</Button>
+            <Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}} onClick={() => viewMore()}>Load More</Button>
           </Link>
         </div>
     </SectionInner>
