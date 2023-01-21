@@ -23,7 +23,7 @@ function AboutPage() {
     <ContainerSmall>
       <h2>About Me</h2>
       <p>
-      I'm a software engineer with a passion for building things. I love building and creating, whether those things are mobile apps, or even projects at home. 
+      I'm a software engineer with a passion for building things. I love building and creating, whether those things are mobile apps or web apps. 
       I'm a problem solver and a creative that enjoys watching my thoughts come to life on screen. Ever since I can remember, I've always had an interest and passion for tech. 
       I specialize in full stack development and make it my mission to create accessible and user-friendly applications and websites. 
       {/* When I'm not coding I'm usually spending time with my girlfriend and our two dogs. We have a French Bulldog and an American Bully, their names are Brinx and Keg. */}
