@@ -33,12 +33,22 @@ export const ProjectBox = styled.div`
 
 export const ProjectImage = styled.img`
     width: 100%;
-    height: 240px;
+    height: 200px;
     opacity: 1;
 	border-radius: 4px;
     backgroundImage: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .85) 90%);
     transition: transform 0.4s ease;
     transform-origin: 50% 50%;}
+
+    @media (max-width:641px) {
+        width: 100%;
+        height: 221px;
+        opacity: 1;
+        border-radius: 4px;
+        backgroundImage: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .85) 90%);
+        transition: transform 0.4s ease;
+        transform-origin: 50% 50%;}
+    }
 
     @media (min-width:641px) {
         &:hover {
@@ -50,8 +60,14 @@ export const ProjectImage = styled.img`
 
 export const ImageBox = styled.div`
     width: 100%;
-    height: 240px;
+    height: 200px;
     overflow:hidden;
+
+    @media (max-width:641px) {
+        width: 100%;
+        height: 221px;
+        overflow:hidden;
+    }
 `;
 
 export const ProjectHomeLinks = styled.div`

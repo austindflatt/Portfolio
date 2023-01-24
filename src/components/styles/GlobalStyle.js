@@ -91,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: none;
 
 		&:hover {
-		color: var(--green);
+		color: #C00;
 		}
 	}
 
@@ -304,11 +304,7 @@ const GlobalStyle = createGlobalStyle`
 		}
 	
 		.splash-copy {
-			padding-top: 40px;
-			padding-right: 48px;
-			min-width: 448px;
 			max-width: 512px;
-			z-index: 1;
 		}
 	
 		.splash-title {
@@ -475,12 +471,12 @@ const GlobalStyle = createGlobalStyle`
 	display: inherit;
 
 	&:hover {
-	color: #868e96;
+	color: #C00;
 	}
 }
 
 	.links-active {
-	color: #868e96;
+	color: #C00;
 }
 
 .photo-deck {

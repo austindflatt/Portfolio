@@ -3,10 +3,8 @@ import { Helmet } from 'react-helmet';
 import Container from '../components/styles/Container';
 import ContainerSmall from '../components/styles/ContainerSmall';
 import SectionInner from '../components/styles/SectionInner';
-import { SimpleGrid, Chips, Chip } from '@mantine/core';
+import { SimpleGrid } from '@mantine/core';
 import skills from '../components/data/skills.json';
-import PHOTOS from '../components/PhotoDeck/photos.json';
-import Deck from '../components/PhotoDeck';
 
 function AboutPage() {
 
@@ -47,9 +45,7 @@ function AboutPage() {
       ]}
       >
         {skills.map((skill) => (
-        <Chips variant="filled" key={skill._id} radius="md" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', }}>
-          <Chip style={{ marginRight: '10px', marginBottom: '10px' }}>{skill.name}</Chip>
-        </Chips>
+        <li key={skill._id} style={{ marginRight: '10px', marginBottom: '10px', fontSize: '1rem' }}>{skill.name}</li>
         ))}
       </SimpleGrid>
     </ContainerSmall>

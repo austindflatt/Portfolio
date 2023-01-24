@@ -13,11 +13,24 @@ function Splash() {
   <div className="splash">
     <ContainerSmall>
       <div className="splash-inner">
+      <div className="splash-media">
+          <Box 
+            alt={'Headshot'}
+            style={{ boxShadow: '', objectFit: 'cover', objectPosition: 'center'
+            }}
+            sx={{":hover": {transform: 'translateY(-3px)', transition: transition}}}
+            component={'img'} 
+            src="https://i.imgur.com/tozifl9.png"
+            width={{xs: '20vh', md: '25vh'}}
+            height={{xs: '20vh', md: '25vh'}}
+            borderRadius={'50%'} p={'0.75rem'} mb={{xs: '1rem', sm: 0}} mr={{xs: 0, md: '0rem'}}
+            />
+        </div>
         <div className="splash-copy">
-          <p className="splash-name">Hey my name is</p>
-          <h1 className="splash-title">Austin Flatt.</h1>
+          {/* <p className="splash-name">Hey my name is</p> */}
+          <h1 className="splash-title">Austin Flatt</h1>
           <p className="splash-paragraph">
-            I'm a software engineer, and a content creator living in Louisville, Kentucky. I own a development company called <a href='https://www.flattdevelopment.com/' target="_blank">Flatt Development</a>.
+            I'm a full-stack software engineer, content creator, and a lifelong learner living in Louisville, Kentucky.
           </p>
           <Social>
             <SocialLink href="https://github.com/austindflatt" rel="noreferrer" target="_blank">
@@ -45,16 +58,21 @@ function Splash() {
                 <path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z"/>
               </svg>
             </SocialLink>
+            <SocialLink href="https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf" rel="noreferrer" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="35" height="40" viewBox="0 0 24 24" fill="#25262b" fill-rule="evenodd" clip-rule="evenodd">
+            <path d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-3 17h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/>
+              </svg>
+            </SocialLink>
           </Social>
-          <div className="splash-cta">
+          {/* <div className="splash-cta">
             <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}><Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>My Resume</Button></a>
             <a href='mailto:austin@flattdevelopment.com'><Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>Contact Me</Button></a>
+          </div> */}
           </div>
-          </div>
-        <div className="splash-media">
+          {/* <div className="splash-media">
           <Box 
             alt={'Headshot'}
-            style={{border: '8px dashed #000', boxShadow: '', objectFit: 'cover', objectPosition: 'center'
+            style={{ boxShadow: '', objectFit: 'cover', objectPosition: 'center'
             }}
             sx={{":hover": {transform: 'translateY(-3px)', transition: transition}}}
             component={'img'} 
@@ -63,7 +81,7 @@ function Splash() {
             height={{xs: '35vh', md: '40vh'}}
             borderRadius={'50%'} p={'0.75rem'} mb={{xs: '1rem', sm: 0}} mr={{xs: 0, md: '0rem'}}
             />
-        </div>
+        </div> */}
       </div>
     </ContainerSmall>
   </div>
