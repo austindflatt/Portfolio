@@ -6,7 +6,7 @@ export const Error = styled.div`
 `;
 
 export const NotFoundHeading = styled.h1`
-    color: var(--green);
+    color: #FFF;
     font-size: clamp(100px, 25vw, 200px);
     line-height: 1;
 `;
@@ -14,7 +14,8 @@ export const NotFoundHeading = styled.h1`
 export const NotFoundSubHeading = styled.p`
     font-size: clamp(30px, 5vw, 50px);
 	font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
+	color: #cbc8d0;
 `;
 
 export const Lost = styled.div`

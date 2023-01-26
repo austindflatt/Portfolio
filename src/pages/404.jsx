@@ -24,7 +24,33 @@ const PageNotFound = () => {
         <NotFoundHeading>404</NotFoundHeading>
         <NotFoundSubHeading>Sorry, this page doesn't exist or you spelled something wrong.</NotFoundSubHeading>
         <Link to="/">
-        <Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>Go Home</Button>
+        <Button 
+        radius="md" 
+        size="md" 
+        styles={(theme) => ({
+          root: {
+            backgroundColor: 'rgba(18,18,18)',
+            border: '1px solid #2b3031',
+            borderRadius: '5px',
+            color: '#cbc8d0',
+            fontFamily: 'Readex Pro',
+            fontWeight: '300',
+            paddingLeft: 20,
+            paddingRight: 20,
+  
+            '&:hover': {
+              backgroundColor: 'rgba(18,18,18)',
+              transition: transition
+            },
+          },
+  
+          leftIcon: {
+            marginRight: 15,
+          },
+        })}
+        >
+          Go Home
+        </Button>
         </Link>
       </Error>
     </ContainerSmall>
