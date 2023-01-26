@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 import ContainerSmall from '../components/styles/ContainerSmall';
 import SectionInner from '../components/styles/SectionInner';
 
-const Uses = () => {
+const Blog = () => {
 
   return (
   <>
   <Helmet>
-    <title>Uses | Austin Flatt</title>
+    <title>Blog | Austin Flatt</title>
     <meta name='description' content='Page Not Found' />
     <meta name='keywords' content='Austin Flatt, austin flatt, louisville software developer, software engineer, software engineering equipment, louisville coding' />
   </Helmet>
@@ -16,10 +16,9 @@ const Uses = () => {
   <SectionInner>
     <br />
     <ContainerSmall>
-      <h2>Uses</h2>
+      <h2>Blog</h2>
       <p>
-      This is my list of software tools that I use frequently. 
-      I do my best at updating it whenever a change occurs.
+        I've been writing mostly about mobile and web application development and tech in general.
       </p>
       </ContainerSmall>
   </SectionInner>
@@ -27,4 +26,4 @@ const Uses = () => {
   )
 }
 
-export default Uses;
+export default Blog;

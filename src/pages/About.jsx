@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Container from '../components/styles/Container';
 import ContainerSmall from '../components/styles/ContainerSmall';
 import SectionInner from '../components/styles/SectionInner';
-import { SimpleGrid } from '@mantine/core';
+import { SimpleGrid, Image } from '@mantine/core';
 import skills from '../components/data/skills.json';
 
 function AboutPage() {
@@ -26,6 +26,14 @@ function AboutPage() {
       I specialize in full stack development and make it my mission to create accessible and user-friendly applications and websites. 
       {/* When I'm not coding I'm usually spending time with my girlfriend and our two dogs. We have a French Bulldog and an American Bully, their names are Brinx and Keg. */}
       </p>
+      {/* <div style={{ width: '100%', height: '200px', marginLeft: 'auto', marginRight: 'auto' }}>
+      <Image
+        radius="md"
+        src="https://i.imgur.com/nCW5RIc.jpg"
+        alt="Random unsplash image"
+        caption="My dog begging for treats"
+      />
+      </div> */}
       {/* <div>
       <img src='https://i.imgur.com/P0KxMpK.jpg' width='300' style={{ marginRight: 15 }} />
       <img src='https://i.imgur.com/UrdEIcF.jpg' width='300' style={{ marginRight: 15 }} />
@@ -45,7 +53,7 @@ function AboutPage() {
       ]}
       >
         {skills.map((skill) => (
-        <li key={skill._id} style={{ marginRight: '10px', marginBottom: '10px', fontSize: '1rem', listStyle: 'none', color: '#cbc8d0' }}>{skill.name}</li>
+        <li key={skill._id} style={{ marginRight: '10px', marginBottom: '10px', fontSize: '.8rem', fontWeight: '300', listStyle: 'none', color: '#cbc8d0' }}>{skill.name}</li>
         ))}
       </SimpleGrid>
     </ContainerSmall>

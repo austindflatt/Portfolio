@@ -173,7 +173,8 @@ const GlobalStyle = createGlobalStyle`
 		margin-top: 0;
 		margin-bottom: 24px;
 		color: var(--secondary-text);
-		font-size: 1rem;
+		font-size: .8rem;
+		font-weight: 300;
 		line-height: 1.35;
 		letter-spacing: -0.01em;
 	}

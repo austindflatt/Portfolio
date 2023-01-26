@@ -59,10 +59,66 @@ function Splash() {
               </svg>
             </SocialLink>
           </Social>
-          {/* <div className="splash-cta">
-            <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}><Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>My Resume</Button></a>
-            <a href='mailto:austin@flattdevelopment.com'><Button color="dark" radius="md" size="md" sx={{":hover": {transition: transition}}}>Contact Me</Button></a>
-          </div> */}
+          <div className="splash-cta">
+            <a href='https://austinflatt-public-assets.s3.us-east-2.amazonaws.com/public/01Austin_Flatt_Resume.pdf' target='_blank' rel="noreferrer" style={{ marginRight: '20px' }}>
+              <Button 
+              radius="md" 
+              size="sm" 
+              styles={(theme) => ({
+                root: {
+                  backgroundColor: 'rgba(18,18,18)',
+                  border: '1px solid #2b3031',
+                  borderRadius: '5px',
+                  color: '#cbc8d0',
+                  fontFamily: 'Readex Pro',
+                  fontWeight: '300',
+                  paddingLeft: 20,
+                  paddingRight: 20,
+        
+                  '&:hover': {
+                    backgroundColor: 'rgba(18,18,18)',
+                    transition: transition
+                  },
+                },
+        
+                leftIcon: {
+                  marginRight: 15,
+                },
+              })}
+              >
+                My Resume
+              </Button>
+            </a>
+            <a href='mailto:austin@flattdevelopment.com'>
+              <Button 
+              radius="md" 
+              size="sm" 
+              styles={(theme) => ({
+                root: {
+                  backgroundColor: 'rgba(18,18,18)',
+                  border: '1px solid #2b3031',
+                  borderRadius: '5px',
+                  color: '#cbc8d0',
+                  fontFamily: 'Readex Pro',
+                  fontWeight: '300',
+                  paddingLeft: 20,
+                  paddingRight: 20,
+        
+                  '&:hover': {
+                    backgroundColor: 'rgba(18,18,18)',
+                    transition: transition
+                  },
+                },
+        
+                leftIcon: {
+                  marginRight: 15,
+                },
+              })}
+              >
+                Contact Me
+              </Button>
+            </a>
+          </div>
           </div>
           {/* <div className="splash-media">
           <Box 
