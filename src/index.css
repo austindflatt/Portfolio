@@ -2,8 +2,39 @@
 
 * {
 	box-sizing: content-box;
+	scroll-behavior: smooth;
   }
   
 body {
 	font-family: Readex Pro;
+}
+
+.card--article-preview {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #2b3031;
+}
+
+.article-preview__body {
+    display: flex;
+    align-items: center;
+}
+
+.article-preview__body>h3 {
+    margin-right: 0.5em;
+	font-size: 28px;
+}
+
+.card--article-preview strong {
+    font-weight: 400;
+	font-size: 18px;
+	color: #FFF;
+}
+
+.card--article-preview small {
+    font-weight: 100;
+	font-size: 12px;
 }

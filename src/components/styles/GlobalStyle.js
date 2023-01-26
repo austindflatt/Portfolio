@@ -163,12 +163,6 @@ const GlobalStyle = createGlobalStyle`
 		color: var(--main-text);
 	}
 	
-	.h3,
-	  h3 {
-		margin-top: 36px;
-		margin-bottom: 12px;
-	}
-	
 	p {
 		margin-top: 0;
 		margin-bottom: 24px;
@@ -463,7 +457,7 @@ const GlobalStyle = createGlobalStyle`
 	font-weight: 500;
 	font-size: 25px;
 	text-decoration: none;
-	color: #adb0b1;
+	color: #FFF;
 	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 

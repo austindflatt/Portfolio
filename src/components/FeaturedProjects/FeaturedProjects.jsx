@@ -12,7 +12,7 @@ function ProjectsHome() {
   return (
   <>
   <ContainerSmall>
-    <h2 style={{ textAlign: 'left' }}>Recent projects</h2>
+    <h2 style={{ textAlign: 'left' }}>Recent Projects</h2>
     <ProjectHome>
       {projects
       .filter((project) => {
