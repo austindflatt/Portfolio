@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Header = styled.header`
     width: 100%;
     height: 80px;
-    background-color: hsla(0,0%,100%,0.8);
+    background-color: rgba(18, 18, 18, 0.8);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     display: flex;
@@ -28,7 +28,7 @@ export const NavLogo = styled.a`
     font-weight: 500;
     font-size: 25px;
     text-decoration: none;
-    color: var(--main);
+    color: #adb0b1;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 `;
 
@@ -54,8 +54,8 @@ export const LinksUnordered = styled.ul`
 `;
 
 export const Links = styled.a`
-    color: var(--main-text);
-    font-family: Fira Sans,sans-serif;
+    color: #adb0b1;
+    font-family: Readex Pro;
     font-size: 17px;
     margin: 10px;
     padding: 0;

@@ -84,6 +84,6 @@ export const SocialLink = styled.a`
 	margin-bottom: 32px;
 
     &:hover {
-        color: var(--main);
+        color: #FFF;
     }
 `;

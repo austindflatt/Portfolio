@@ -45,7 +45,7 @@ function AboutPage() {
       ]}
       >
         {skills.map((skill) => (
-        <li key={skill._id} style={{ marginRight: '10px', marginBottom: '10px', fontSize: '1rem' }}>{skill.name}</li>
+        <li key={skill._id} style={{ marginRight: '10px', marginBottom: '10px', fontSize: '1rem', listStyle: 'none', color: '#cbc8d0' }}>{skill.name}</li>
         ))}
       </SimpleGrid>
     </ContainerSmall>

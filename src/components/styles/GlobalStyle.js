@@ -1,14 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
+	@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
 	:root {
-	--main: #000;
+	--main: #adb0b1;
 	--main-tint: #007cf010;
-	--bg: #fff;
-	--main-text: #000;
-	--focus: #22cc52;
+	--main-text: #FFF;
+	--secondary-text: #cbc8d0;
 	--green: #868e96;
-	--border-radius: 4px;
 	}
 
 	::selection {
@@ -23,7 +24,9 @@ const GlobalStyle = createGlobalStyle`
 	}
 	
 	body {
-		background: var(--bg);
+		font-family: 'Readex Pro';
+		background: rgba(18,18,18);
+		color: #FFF;
 		margin: 0;
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
@@ -43,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 		border: 0;
 		display: block;
 		height: 1px;
-		background: #e9edf3;
+		background: #2b3031;
 		margin-top: 24px;
 		margin-bottom: 24px;
 	}
@@ -82,7 +85,7 @@ const GlobalStyle = createGlobalStyle`
 	  input,
 	  select,
 	  textarea {
-		font-family: Fira Sans,sans-serif;
+		font-family: Readex Pro;
 	}
 	
 	a {
@@ -91,7 +94,7 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: none;
 
 		&:hover {
-		color: #C00;
+		color: #FFF;
 		}
 	}
 
@@ -115,19 +118,19 @@ const GlobalStyle = createGlobalStyle`
 	
 	.h2,
 	  h2 {
-		font-size: 32px;
-		line-height: 42px;
+		font-size: 1.5rem;
+		line-height: 2rem;
 		letter-spacing: -0.1px;
-		color: var(--main-text)
+		color: #FFF;
 	}
 	
 	@media (min-width: 814px) {
 		.h2,
 		h2 {
-			font-size: 38px;
-			line-height: 48px;
+			font-size: 1.5rem;
+			line-height: 2rem;
 			letter-spacing: -0.1px;
-			color: var(--main-text)
+			color: #FFF;
 		}
 	}
 	
@@ -169,22 +172,20 @@ const GlobalStyle = createGlobalStyle`
 	p {
 		margin-top: 0;
 		margin-bottom: 24px;
-		color: var(--main-text);
+		color: var(--secondary-text);
 		font-size: 1rem;
 		line-height: 1.35;
 		letter-spacing: -0.01em;
-		color: #262626;
 	}
 	
 	@media (max-width: 639px) {
 		p {
 			margin-top: 0;
 			margin-bottom: 24px;
-			color: var(--main-text);
+			color: var(--secondary-text);
 			font-size: 1rem;
 			line-height: 1.35;
 			letter-spacing: -0.01em;
-			color: #262626;
 		}
 	}
 
@@ -243,7 +244,10 @@ const GlobalStyle = createGlobalStyle`
 	
 	.splash-paragraph {
 		margin-bottom: 32px;
-		font-size: 1.1rem;
+		font-size: 1em;
+		font-weight: 300;
+		color: #cbc8d0;
+		font-family: Readex Pro;
 	}
 	
 	.splash-cta {
@@ -319,7 +323,8 @@ const GlobalStyle = createGlobalStyle`
 		.splash-paragraph {
 			margin-bottom: 32px;
 			animation: fadeIn 2s forwards;
-			font-size: 1.1rem;
+			font-size: 1em;
+			font-weight: 300;
 			line-height: 1.35;
 			letter-spacing: -0.01em;
 		}
@@ -411,7 +416,7 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: none;
 		&:hover {
 			transition: all 300ms ease 0s;
-			fill: #000;
+			fill: #FFF;
 		}
 	}
 
@@ -457,13 +462,13 @@ const GlobalStyle = createGlobalStyle`
 	font-weight: 500;
 	font-size: 25px;
 	text-decoration: none;
-	color: var(--main);
+	color: #adb0b1;
 	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 	.links {
-	color: var(--main-text);
-	font-family: Fira Sans,sans-serif;
+	color: #adb0b1;
+	font-family: Readex Pro;
 	font-size: 17px;
 	margin: 10px;
 	padding: 0;
@@ -471,44 +476,13 @@ const GlobalStyle = createGlobalStyle`
 	display: inherit;
 
 	&:hover {
-	color: #C00;
+	color: #FFF;
 	}
 }
 
 	.links-active {
-	color: #C00;
+	color: #FFF;
 }
-
-.photo-deck {
-	/* background: lightblue; */
-	position: fixed;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-  }
-  
-  .photo-deck > div {
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	will-change: transform;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  }
-  
-  .photo-deck > div > div {
-	background-color: #fff;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	will-change: transform;
-	border: 1em solid #fff;
-	border-bottom: 4em solid #fff;
-	border-radius: 3px;
-	box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-  }
-
 `
 
 export default GlobalStyle

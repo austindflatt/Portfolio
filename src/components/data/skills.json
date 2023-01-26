@@ -1,50 +1,47 @@
 [
 	{
-		"name": "Django"
-	},
-	{
-		"name": "jQuery"
-	},
-	{
-		"name": "Vercel"
-	},
-	{
-		"name": "Heroku"
-	},
-	{
-		"name": "Git & GitHub"
-	},
-	{
-		"name": "Mantine UI"
-	},
-	{
-		"name": "MySQL"
-	},
-	{
-		"name": "Material UI"
-	},
-	{
 		"name": "JavaScript"
 	},
 	{
 		"name": "Python"
 	},
 	{
-		"name": "CSS3"
+		"name": "SQL"
 	},
 	{
-		"name": "HTML5"
+		"name": "React"
+	},
+	{
+		"name": "React Native"
+	},
+	{
+		"name": "jQuery"
+	},
+	{
+		"name": "HTML"
+	},
+	{
+		"name": "CSS"
+	},
+	{
+		"name": "AWS"
+	},
+	{
+		"name": "Mantine UI"
+	},
+	{
+		"name": "Material UI"
 	},
 	{
 		"name": "Node.js"
 	},
 	{
-		"name": "Express"
-	},
-	{
 		"name": "MongoDB"
 	},
 	{
-		"name": "React"
+		"name": "MySQL"
+	},
+	{
+		"name": "Microsoft Excel"
 	}
 ]
