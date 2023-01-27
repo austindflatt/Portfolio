@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import ContainerSmall from '../styles/ContainerSmall';
-import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../styles/Projects';
+import { ProjectHome, ProjectHomeCard, ProjectImage, ProjectImageParent, ProjectHomeLinks, ProjectWrapper, ProjectTitle, ImageBox } from '../styles/Projects';
 import { Button, Tooltip, Anchor } from '@mantine/core';
 import projects from '../data/projects.json';
 import { Code } from 'tabler-icons-react';
@@ -26,13 +26,15 @@ function ProjectsHome() {
       .map((project, key) => (
       <ProjectHomeCard key={key}>
         <ImageBox>
-        <Anchor onClick={null} style={{ textDecoration: 'none' }}>
+        <Anchor href={project.liveLink ? project.liveLink : project.githubLink} target="_blank" style={{ textDecoration: 'none' }}>
           <ProjectImage src={project.image} loading="lazy" alt={project.title} />
         </Anchor>
         </ImageBox>
+        <ProjectTitle>{project.title}</ProjectTitle>
       </ProjectHomeCard>
       ))}
     </ProjectHome>
+
     <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '20px' }}>
       <Link to='projects'>
         <Button 

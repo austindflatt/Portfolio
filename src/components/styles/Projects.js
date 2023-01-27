@@ -86,7 +86,6 @@ export const ProjectWrapper = styled.div`
 export const ProjectTitle = styled.span`
     font-size: 16px;
 	transition: all 0.2s ease 0s;
-
 `;
 
 export const SectionInner = styled.div`

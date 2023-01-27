@@ -1,22 +1,22 @@
 [
 	{
-		"title": "hodlsell",
+		"title": "Bit Bubbles",
+		"description": "Interactive bubble chart for crypto currencies",
+		"techUsed": "React",
+		"githubLink": "https://github.com/austindflatt/crypto-currency-react",
+		"liveLink": "https://crypto-currency-react-bdzgrked3-austindflatt-gmailcom.vercel.app/",
+		"showViewLive": true,
+		"featuredProject": true,
+		"image": "images/projects/BitBubbles.png"
+	},
+	{
+		"title": "GitHub Profile Finder",
 		"description": "A crypto currency web app that allows users to track crypto currencies and view a chart of the crypto's price history",
 		"techUsed": "React",
 		"githubLink": "https://github.com/austindflatt/crypto-currency-react",
-		"liveLink": "https://hodlsell.com/",
+		"liveLink": "https://github-profile-finder-puce.vercel.app/",
 		"showViewLive": true,
 		"featuredProject": true,
-		"image": "https://www.austinflatt.com/images/projects/crypto-react.png"
-	},
-	{
-		"title": "Sticksy",
-		"description": "Sticksy is a web app built with React that lets users create and store notes",
-		"techUsed": "React",
-		"githubLink": "https://github.com/austindflatt/sticksy",
-		"liveLink": "https://sticksy.vercel.app/",
-		"showViewLive": true,
-		"featuredProject": true,
-		"image": "https://www.austinflatt.com/images/projects/sticksy.png"
+		"image": "images/projects/GithubFinder.png"
 	}
 ]

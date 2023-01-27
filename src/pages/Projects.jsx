@@ -59,10 +59,11 @@ function ProjectsCollection() {
         
         <ProjectHomeCard key={idx}>
           <ImageBox>
-          <Anchor onClick={null} style={{ textDecoration: 'none' }}>
+          <Anchor href={project.liveLink ? project.liveLink : project.githubLink} target="_blank" style={{ textDecoration: 'none' }}>
             <ProjectImage src={project.image} loading="lazy" alt={project.title} />
           </Anchor>
           </ImageBox>
+          <ProjectTitle>{project.title}</ProjectTitle>
         </ProjectHomeCard>
         ))}
         </ProjectHome>
