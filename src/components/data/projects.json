@@ -4,7 +4,7 @@
 		"description": "Interactive bubble chart for crypto currencies",
 		"techUsed": "React",
 		"githubLink": "https://github.com/austindflatt/crypto-currency-react",
-		"liveLink": "https://crypto-currency-react-bdzgrked3-austindflatt-gmailcom.vercel.app/",
+		"liveLink": "https://crypto-currency-react.vercel.app/",
 		"showViewLive": true,
 		"featuredProject": true,
 		"image": "images/projects/BitBubbles.png"
