@@ -1,13 +1,13 @@
 [
 	{
-		"title": "Bit Bubbles",
-		"description": "Interactive bubble chart for crypto currencies",
+		"title": "Heat Viz",
+		"description": "Real-time heat map of the top 150 cryptocurrencies.",
 		"techUsed": "React",
-		"githubLink": "https://github.com/austindflatt/crypto-currency-react",
+		"githubLink": "https://github.com/austindflatt/HeatViz",
 		"liveLink": "https://crypto-currency-react.vercel.app/",
 		"showViewLive": true,
 		"featuredProject": true,
-		"image": "images/projects/BitBubbles.png"
+		"image": "images/projects/HeatViz.png"
 	},
 	{
 		"title": "GitHub Profile Finder",
